@@ -270,20 +270,19 @@
 @media (max-width: 768px) { .pz-pod-included__row { grid-template-columns: 1fr; gap: 8px; } }
 
 /* REAL TALK — flower bg */
-.pz-pod-real { background: url('http://priscillazaehringer.com/wp-content/uploads/2026/03/StockSnap_EFOSONDLX9-scaled.jpg') center/cover no-repeat; position: relative; overflow: hidden; }
-.pz-pod-real::before { content: ''; position: absolute; inset: 0; background: rgba(61,53,53,0.82); }; }
+.pz-pod-real { background: url('http://priscillazaehringer.com/wp-content/uploads/2026/03/StockSnap_EFOSONDLX9-scaled.jpg') center/cover no-repeat; position: relative; overflow: hidden; padding: 80px 0; }
+.pz-pod-real::before { content: ''; position: absolute; inset: 0; background: rgba(61,53,53,0.82); }
 .pz-pod-real__header { text-align: center; margin-bottom: 10px; position: relative; z-index: 1; }
-.pz-pod-real__header .t-sm { color: var(--blush); margin-bottom: 10px; }
-.pz-pod-real__header .t-lg { color: var(--soft-cream); margin-bottom: 10px; }
-.pz-pod-real__header p { color: rgba(248,243,239,0.45); max-width: 520px; margin: 0 auto; }
+.pz-pod-real__header .t-lg { font-size: clamp(2.2rem, 4vw, 3.2rem); color: var(--soft-cream); margin-bottom: 10px; }
+.pz-pod-real__header p { font-size: 1.2rem; color: rgba(248,243,239,0.85); max-width: 600px; margin: 12px auto 32px; }
 .pz-pod-real__cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; position: relative; z-index: 1; }
-.pz-pod-real__card { padding: 22px 20px; background: rgba(247,243,239,0.12); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); border: 1px solid rgba(248,243,239,0.1); border-radius: 12px; transition: all 0.4s ease; }
+.pz-pod-real__card { padding: 32px 28px; background: rgba(247,243,239,0.12); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); border: 1px solid rgba(248,243,239,0.1); border-radius: 12px; transition: all 0.4s ease; }
 .pz-pod-real__card:hover { background: rgba(247,243,239,0.18); }
-.pz-pod-real__card h3 { font-family: 'Libre Caslon Text', serif; font-weight: 700; font-size: 1.15rem; color: var(--white); margin-bottom: 8px; }
-.pz-pod-real__card p { font-size: 1.05rem; color: rgba(248,243,239,0.7); line-height: 1.7; }
-.pz-pod-real__closer { text-align: center; margin-top: 18px; position: relative; z-index: 1; }
-.pz-pod-real__closer p { font-family: 'Dancing Script', cursive; font-size: 1.2rem; color: var(--blush); }
-@media (max-width: 768px) { .pz-pod-real__cards { grid-template-columns: 1fr; } }
+.pz-pod-real__card h3 { font-family: 'Libre Caslon Text', serif; font-weight: 700; font-size: 1.25rem; color: #FFFFFF; margin-bottom: 8px; }
+.pz-pod-real__card p { font-size: 1.05rem; color: rgba(248,243,239,0.82); line-height: 1.8; }
+.pz-pod-real__closer { text-align: center; margin-top: 36px; position: relative; z-index: 1; }
+.pz-pod-real__closer p { font-family: 'Dancing Script', cursive; font-size: 1.4rem; color: var(--blush); }
+@media (max-width: 768px) { .pz-pod-real__cards { grid-template-columns: 1fr; } .pz-pod-real { padding: 56px 0; } }
 
 /* FIT CHECK */
 .pz-pod-fit { background: var(--white); }
@@ -546,10 +545,8 @@
   <section class="pz-pod-real sec">
     <div class="wrap">
       <div class="pz-pod-real__header reveal">
-        <div class="t-sm">Real Talk</div>
-        <span class="accent-line accent-line--c"></span>
         <h2 class="t-lg">A few things I want you to know before we start.</h2>
-        <p class="t-body">I'm going to hype you up. But I'm also going to be real with you, because that's who I am.</p>
+        <p>I'm going to hype you up. But I'm also going to be real with you, because that's who I am.</p>
       </div>
       <div class="pz-pod-real__cards">
         <div class="pz-pod-real__card reveal d1"><h3>Podcasting is a long game.</h3><p>Every episode you publish makes the next one more valuable. Your audience grows over time. Trust compounds. But if you're looking for something that delivers results next week, this isn't it.</p></div>
