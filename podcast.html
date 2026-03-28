@@ -301,15 +301,16 @@
 .pz-pod-faq__header { text-align: center; margin-bottom: 10px; }
 .pz-pod-faq__header .t-sm { color: var(--gray); margin-bottom: 10px; }
 .pz-pod-faq__list { max-width: 800px; margin: 0 auto; }
-.pz-pod-faq__item { background: var(--dark); margin-bottom: 8px; border-radius: 10px; overflow: hidden; transition: box-shadow 0.3s ease; }
-.pz-pod-faq__item:hover { box-shadow: 0 4px 20px rgba(61,53,53,0.12); }
-.pz-pod-faq__q { width: 100%; display: flex; justify-content: space-between; align-items: flex-start; padding: 16px 20px; background: none; border: none; cursor: pointer; text-align: left; font-family: 'Libre Caslon Text', serif; font-weight: 700; font-size: 0.95rem; color: var(--soft-cream); line-height: 1.4; transition: color 0.2s; word-wrap: break-word; overflow-wrap: break-word; white-space: normal; }
+.pz-pod-faq__item { background: var(--soft-cream); margin-bottom: 8px; border-radius: 10px; overflow: hidden; transition: box-shadow 0.3s ease, background 0.3s ease; border: 1px solid rgba(201,160,155,0.2); }
+.pz-pod-faq__item:hover { box-shadow: 0 4px 20px rgba(61,53,53,0.04); }
+.pz-pod-faq__item.open { background: var(--soft-blush); }
+.pz-pod-faq__q { width: 100%; display: flex; justify-content: space-between; align-items: flex-start; padding: 18px 20px; background: none; border: none; cursor: pointer; text-align: left; font-family: 'Libre Caslon Text', serif; font-weight: 400; font-size: 1.05rem; color: var(--dark); line-height: 1.4; transition: color 0.2s; word-wrap: break-word; overflow-wrap: break-word; white-space: normal; }
 .pz-pod-faq__q:hover { color: var(--blush); }
-.pz-pod-faq__icon { width: 18px; height: 18px; min-width: 18px; flex-shrink: 0; margin-left: 12px; margin-top: 2px; transition: transform 0.3s ease; }
+.pz-pod-faq__icon { width: 18px; height: 18px; min-width: 18px; flex-shrink: 0; margin-left: 12px; margin-top: 2px; transition: transform 0.3s ease; color: var(--blush); }
 .pz-pod-faq__item.open .pz-pod-faq__icon { transform: rotate(45deg); }
 .pz-pod-faq__a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
 .pz-pod-faq__item.open .pz-pod-faq__a { max-height: 300px; }
-.pz-pod-faq__a-inner { padding: 0 24px 20px; font-size: 0.9rem; color: rgba(248,243,239,0.6); line-height: 1.75; }
+.pz-pod-faq__a-inner { padding: 0 24px 20px; font-size: 0.95rem; color: var(--gray); line-height: 1.75; }
 
 /* FINAL CTA */
 .pz-pod-final { background: var(--white); }
