@@ -1638,7 +1638,10 @@
   margin-bottom: 10px;
   overflow: hidden;
   border-radius: 10px;
+  border: 1px solid rgba(201,160,155,0.2);
+  transition: background 0.3s ease;
 }
+.pz-faq__item.active { background: var(--soft-rose); }
 
 .pz-faq__q {
   width: 100%;
@@ -1670,6 +1673,7 @@
   margin-left: 14px;
   margin-top: 3px;
   transition: transform 0.3s ease;
+  color: var(--rosewood);
 }
 
 .pz-faq__item.active .pz-faq__icon { transform: rotate(45deg); }
@@ -1684,7 +1688,7 @@
 
 .pz-faq__a-inner {
   padding: 0 24px 22px;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   color: var(--moss);
   line-height: 1.8;
 }
@@ -2268,12 +2272,12 @@
   <section class="pz-faq">
     <div class="pz-faq__layout">
       <h2 class="h-lg anim">Questions you're probably asking.</h2>
-      <div class="pz-faq__item anim" style="background:#F7F3EF!important;"><button class="pz-faq__q" style="background:transparent!important;color:#3D3535!important;">"I've tried ads before and lost money. Why would this be different?"<svg class="pz-faq__icon" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#3D3535" stroke-width="1.5"/></svg></button><div class="pz-faq__a"><div class="pz-faq__a-inner" style="background:transparent!important;color:#4A4A4A!important;">Most failed ad campaigns aren't actually an ad problem. They're an infrastructure problem. Broken funnels, unclear messaging, bad tracking. That's exactly why I audit everything before we spend a dollar. We're not repeating old mistakes.</div></div></div>
-      <div class="pz-faq__item anim" style="background:#F7F3EF!important;"><button class="pz-faq__q" style="background:transparent!important;color:#3D3535!important;">"How much of my time will this take?"<svg class="pz-faq__icon" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#3D3535" stroke-width="1.5"/></svg></button><div class="pz-faq__a"><div class="pz-faq__a-inner" style="background:transparent!important;color:#4A4A4A!important;">Minimal. You'll approve creative, hop on a check-in call once or twice a month, and make business decisions when needed. I handle everything else. Most clients spend about 2–4 hours per month actively involved.</div></div></div>
-      <div class="pz-faq__item anim" style="background:#F7F3EF!important;"><button class="pz-faq__q" style="background:transparent!important;color:#3D3535!important;">"Can you guarantee results?"<svg class="pz-faq__icon" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#3D3535" stroke-width="1.5"/></svg></button><div class="pz-faq__a"><div class="pz-faq__a-inner" style="background:transparent!important;color:#4A4A4A!important;">No ethical ads manager can. What I can promise: strategic thinking, honest communication, solid infrastructure, and campaigns set up to give you the best possible shot. The market decides if they buy, but I make sure we're giving them every reason to.</div></div></div>
-      <div class="pz-faq__item anim" style="background:#F7F3EF!important;"><button class="pz-faq__q" style="background:transparent!important;color:#3D3535!important;">"What if I need to pause or my business changes?"<svg class="pz-faq__icon" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#3D3535" stroke-width="1.5"/></svg></button><div class="pz-faq__a"><div class="pz-faq__a-inner" style="background:transparent!important;color:#4A4A4A!important;">We start with a 90-day commitment because that's how long it takes to properly test and optimize. After that, we're month-to-month. Life happens. I'll work with you.</div></div></div>
-      <div class="pz-faq__item anim" style="background:#F7F3EF!important;"><button class="pz-faq__q" style="background:transparent!important;color:#3D3535!important;">"Do I need to understand Facebook ads?"<svg class="pz-faq__icon" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#3D3535" stroke-width="1.5"/></svg></button><div class="pz-faq__a"><div class="pz-faq__a-inner" style="background:transparent!important;color:#4A4A4A!important;">Not at all. That's literally what you're hiring me for. I'll keep you informed on what matters, but you don't need to become an ads expert.</div></div></div>
-      <div class="pz-faq__item anim" style="background:#F7F3EF!important;"><button class="pz-faq__q" style="background:transparent!important;color:#3D3535!important;">"Are ads only good for making sales?"<svg class="pz-faq__icon" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#3D3535" stroke-width="1.5"/></svg></button><div class="pz-faq__a"><div class="pz-faq__a-inner" style="background:transparent!important;color:#4A4A4A!important;">One of the biggest misconceptions. Ads can build brand awareness, grow your email list, nurture warm audiences, fill webinars or masterclasses, and drive sales. We'll figure out which roles make the most sense for where you are right now.</div></div></div>
+      <div class="pz-faq__item anim"><button class="pz-faq__q">"I've tried ads before and lost money. Why would this be different?"<svg class="pz-faq__icon" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#C9A09B" stroke-width="1.5"/></svg></button><div class="pz-faq__a"><div class="pz-faq__a-inner">Most failed ad campaigns aren't actually an ad problem. They're an infrastructure problem. Broken funnels, unclear messaging, bad tracking. That's exactly why I audit everything before we spend a dollar. We're not repeating old mistakes.</div></div></div>
+      <div class="pz-faq__item anim"><button class="pz-faq__q">"How much of my time will this take?"<svg class="pz-faq__icon" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#C9A09B" stroke-width="1.5"/></svg></button><div class="pz-faq__a"><div class="pz-faq__a-inner">Minimal. You'll approve creative, hop on a check-in call once or twice a month, and make business decisions when needed. I handle everything else. Most clients spend about 2–4 hours per month actively involved.</div></div></div>
+      <div class="pz-faq__item anim"><button class="pz-faq__q">"Can you guarantee results?"<svg class="pz-faq__icon" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#C9A09B" stroke-width="1.5"/></svg></button><div class="pz-faq__a"><div class="pz-faq__a-inner">No ethical ads manager can. What I can promise: strategic thinking, honest communication, solid infrastructure, and campaigns set up to give you the best possible shot. The market decides if they buy, but I make sure we're giving them every reason to.</div></div></div>
+      <div class="pz-faq__item anim"><button class="pz-faq__q">"What if I need to pause or my business changes?"<svg class="pz-faq__icon" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#C9A09B" stroke-width="1.5"/></svg></button><div class="pz-faq__a"><div class="pz-faq__a-inner">We start with a 90-day commitment because that's how long it takes to properly test and optimize. After that, we're month-to-month. Life happens. I'll work with you.</div></div></div>
+      <div class="pz-faq__item anim"><button class="pz-faq__q">"Do I need to understand Facebook ads?"<svg class="pz-faq__icon" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#C9A09B" stroke-width="1.5"/></svg></button><div class="pz-faq__a"><div class="pz-faq__a-inner">Not at all. That's literally what you're hiring me for. I'll keep you informed on what matters, but you don't need to become an ads expert.</div></div></div>
+      <div class="pz-faq__item anim"><button class="pz-faq__q">"Are ads only good for making sales?"<svg class="pz-faq__icon" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#C9A09B" stroke-width="1.5"/></svg></button><div class="pz-faq__a"><div class="pz-faq__a-inner">One of the biggest misconceptions. Ads can build brand awareness, grow your email list, nurture warm audiences, fill webinars or masterclasses, and drive sales. We'll figure out which roles make the most sense for where you are right now.</div></div></div>
     </div>
   </section>
 
