@@ -311,24 +311,22 @@
 .pz-pod-faq__item.open .pz-pod-faq__a { max-height: 300px; }
 .pz-pod-faq__a-inner { padding: 0 24px 20px; font-size: 1.1rem; color: var(--gray); line-height: 1.75; }
 
-/* FINAL CTA */
-.pz-pod-final { background: var(--white); }
-.pz-pod-final__header { text-align: center; margin-bottom: 10px; }
-.pz-pod-final__header .t-sm { color: var(--blush); margin-bottom: 10px; }
-.pz-pod-final__steps { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 28px; max-width: 900px; margin-left: auto; margin-right: auto; }
-.pz-pod-final__step { background: var(--white); padding: 32px 28px; border-radius: 12px; text-align: center; }
-.pz-pod-final__step-num { font-family: 'Dancing Script', cursive; font-weight: 700; font-size: 3.5rem; color: var(--blush); opacity: 0.35; line-height: 1; margin-bottom: 10px; }
-.pz-pod-final__step h4 { font-family: 'Libre Caslon Text', serif; font-weight: 700; font-size: 1.4rem; color: var(--dark); margin-bottom: 6px; text-transform: none; }
-.pz-pod-final__step p { font-size: 1.05rem; color: #4A4A4A; line-height: 1.6; }
-.pz-pod-final__steps-cta { text-align: center; margin-bottom: 28px; }
-.pz-pod-final__box { background: url('http://priscillazaehringer.com/wp-content/uploads/2026/03/pexels-leticia-alvares-1805702-32922278-scaled.jpg') center/cover no-repeat; padding: 80px 24px; text-align: center; position: relative; overflow: hidden; border-radius: 0; margin: 0 -24px; }
-.pz-pod-final__box::before { content: ''; position: absolute; inset: 0; background: rgba(61,53,53,0.72); }
-.pz-pod-final__box .pz-pod-final__statement { font-family: 'Libre Caslon Text', serif; font-size: 1.5rem; font-style: italic; color: var(--soft-cream); line-height: 1.5; margin-bottom: 20px; position: relative; z-index: 1; }
-.pz-pod-final__box > p { color: rgba(248,243,239,0.7); font-size: 1.1rem; max-width: 480px; margin: 0 auto 22px; position: relative; z-index: 1; }
-.pz-pod-final__box .cta { background: var(--blush); color: var(--white); position: relative; z-index: 1; }
-.pz-pod-final__box .cta:hover { background: var(--white); color: var(--dark); }
-@media (max-width: 768px) { .pz-pod-final__steps { grid-template-columns: 1fr 1fr; gap: 16px; } }
-@media (max-width: 480px) { .pz-pod-final__steps { grid-template-columns: 1fr; } .pz-pod .cta { width: 100%; justify-content: center; } }
+/* NEXT STEPS — editorial */
+.pz-pod-next { background: var(--cream); padding: 80px 24px; }
+.pz-pod-next__inner { max-width: 700px; margin: 0 auto; text-align: center; }
+.pz-pod-next__cursive { font-family: 'Dancing Script', cursive; font-size: 1.3rem; color: var(--blush); margin-bottom: 12px; }
+.pz-pod-next__heading { font-family: 'Libre Caslon Text', serif; font-weight: 400; font-size: clamp(2rem, 4vw, 3rem); color: var(--dark); line-height: 1.2; margin-bottom: 20px; }
+.pz-pod-next__body { font-family: 'Karla', sans-serif; font-size: 1.15rem; color: #4A4A4A; line-height: 1.9; margin-bottom: 32px; }
+.pz-pod-next__list { list-style: none; text-align: left; max-width: 520px; margin: 0 auto 36px; }
+.pz-pod-next__list li { font-family: 'Karla', sans-serif; font-size: 1.1rem; font-weight: 400; color: #4A4A4A; padding: 6px 0 6px 24px; position: relative; line-height: 1.7; }
+.pz-pod-next__list li::before { content: '♥'; position: absolute; left: 0; color: var(--blush); }
+
+/* FINAL CTA — full-bleed dark */
+.pz-pod-final { background: var(--dark); padding: 100px 24px; text-align: center; }
+.pz-pod-final__inner { max-width: 700px; margin: 0 auto; }
+.pz-pod-final__cursive { font-family: 'Dancing Script', cursive; font-size: 1.4rem; color: var(--blush); margin-bottom: 16px; }
+.pz-pod-final__heading { font-family: 'Libre Caslon Text', serif; font-weight: 400; font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: var(--soft-cream); line-height: 1.3; margin-bottom: 28px; }
+@media (max-width: 480px) { .pz-pod .cta { width: 100%; justify-content: center; } }
 
 /* PITCHING */
 .pz-pod-pitch { background: var(--dark); }
@@ -610,22 +608,28 @@
     </div>
   </section>
 
+  <!-- NEXT STEPS -->
+  <section class="pz-pod-next">
+    <div class="pz-pod-next__inner">
+      <div class="pz-pod-next__cursive reveal">so, what happens next?</div>
+      <h2 class="pz-pod-next__heading reveal">It starts with one honest conversation.</h2>
+      <p class="pz-pod-next__body reveal">Tell me about your business, where you are with podcasting, and what you're hoping to build. I'll tell you honestly whether I think we're a good fit — and if we are, we'll put together a plan that's built around your show, your audience, and your goals.</p>
+      <ul class="pz-pod-next__list reveal">
+        <li>You submit an inquiry and tell me about your business</li>
+        <li>We get on a call and figure out if this is the right fit</li>
+        <li>I put together a custom proposal for your show</li>
+        <li>We build something worth listening to</li>
+      </ul>
+      <div class="reveal"><a href="https://airtable.com/app8DpJx3YXpj9SN3/pagvkC3QPvpknEQRC/form" class="cta cta--rose"><span class="heart">♥</span> Submit Your Inquiry</a></div>
+    </div>
+  </section>
+
   <!-- FINAL CTA -->
-  <section class="pz-pod-final sec">
-    <div class="wrap">
-      <div class="pz-pod-final__header reveal"><h2 class="t-lg" style="color:var(--dark);">Ready to build a podcast that actually works for your business?</h2></div>
-      <div class="pz-pod-final__steps">
-        <div class="pz-pod-final__step reveal d1"><div class="pz-pod-final__step-num">01</div><h4>Submit an Inquiry</h4><p>Tell me about your business and where you are with podcasting.</p></div>
-        <div class="pz-pod-final__step reveal d2"><div class="pz-pod-final__step-num">02</div><h4>Let's Talk</h4><p>An honest conversation about your goals and whether this is the right fit.</p></div>
-        <div class="pz-pod-final__step reveal d3"><div class="pz-pod-final__step-num">03</div><h4>Custom Proposal</h4><p>A plan built specifically for your show and your business.</p></div>
-        <div class="pz-pod-final__step reveal d4"><div class="pz-pod-final__step-num">04</div><h4>Let's Build</h4><p>Systems, rhythm, and a podcast that becomes a real marketing asset.</p></div>
-      </div>
-      <div class="pz-pod-final__steps-cta reveal"><a href="https://airtable.com/app8DpJx3YXpj9SN3/pagvkC3QPvpknEQRC/form" class="cta cta--rose"><span class="heart">♥</span> Submit Your Inquiry</a></div>
-      <div class="pz-pod-final__box reveal">
-        <p class="pz-pod-final__statement">If you've been sitting on this idea, this is your sign to stop sitting.</p>
-        <p>Let's talk about your podcast and figure out the right plan for your business.</p>
-        <a href="https://airtable.com/app8DpJx3YXpj9SN3/pagvkC3QPvpknEQRC/form" class="cta"><span class="heart">♥</span> Submit Your Inquiry</a>
-      </div>
+  <section class="pz-pod-final">
+    <div class="pz-pod-final__inner">
+      <div class="pz-pod-final__cursive reveal">you've been thinking about this long enough.</div>
+      <h2 class="pz-pod-final__heading reveal">Your podcast isn't going to build itself. But with the right support, it doesn't have to feel hard.</h2>
+      <div class="reveal"><a href="https://airtable.com/app8DpJx3YXpj9SN3/pagvkC3QPvpknEQRC/form" class="cta cta--outline-light"><span class="heart">♥</span> Let's Build Your Podcast</a></div>
     </div>
   </section>
 
