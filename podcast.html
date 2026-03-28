@@ -168,11 +168,7 @@
 .pz-pod-before__callout { margin: 20px 0; padding: 18px 22px; background: var(--cream); border-left: 3px solid var(--blush); border-radius: 8px; font-family: 'Libre Caslon Text', serif; font-size: 1.1rem; font-style: italic; line-height: 1.55; }
 .pz-pod-before__visual { position: relative; }
 .pz-pod-before__img { width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 10px; }
-.pz-pod-before__content-counter { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 16px; }
-.pz-pod-before__counter-item { text-align: center; padding: 16px 10px; border-right: 1px solid var(--silver); }
-.pz-pod-before__counter-item:last-child { border-right: none; }
-.pz-pod-before__counter-num { font-family: 'Libre Caslon Text', serif; font-weight: 700; font-size: 2.4rem; color: var(--blush); line-height: 1; }
-.pz-pod-before__counter-lbl { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mauve); margin-top: 4px; }
+.pz-pod-before__statement { font-family: 'Libre Caslon Text', serif; font-style: italic; font-size: clamp(1.6rem, 3vw, 2.4rem); color: var(--dark); text-align: center; line-height: 1.4; margin-top: 16px; }
 @media (max-width: 900px) { .pz-pod-before__grid { grid-template-columns: 1fr; gap: 22px; } .pz-pod-before__visual { order: -1; } }
 
 /* ABOUT — ombre gradient */
@@ -181,7 +177,7 @@
 .pz-pod-about__inner .t-sm { color: var(--blush); margin-bottom: 10px; }
 .pz-pod-about__inner .t-lg { color: var(--dark); margin-bottom: 10px; }
 .pz-pod-about__inner p { color: var(--gray); font-size: 1.02rem; line-height: 1.85; margin-bottom: 10px; max-width: 640px; margin-left: auto; margin-right: auto; }
-.pz-pod-about__quote { margin: 28px auto; padding: 24px 32px; background: var(--white); border-radius: 12px; max-width: 580px; font-family: 'Libre Caslon Text', serif; font-size: 1.2rem; font-style: italic; color: var(--dark); line-height: 1.55; box-shadow: 0 4px 20px rgba(61,53,53,0.04); }
+.pz-pod-about__quote { margin: 28px 0; font-family: 'Libre Caslon Text', serif; font-size: 1.25rem; font-style: italic; color: var(--dark); line-height: 1.55; max-width: 640px; margin-left: auto; margin-right: auto; }
 .pz-pod-about__stat-row { display: flex; justify-content: center; gap: 26px; margin-top: 14px; padding-top: 18px; border-top: 1px solid rgba(200,196,196,0.2); }
 .pz-pod-about__stat-item { text-align: center; }
 .pz-pod-about__stat-num { font-family: 'Libre Caslon Text', serif; font-weight: 700; font-size: 2.4rem; color: var(--blush); line-height: 1; }
@@ -417,12 +413,10 @@
           </div>
         </div>
         <div class="pz-pod-trust__content reveal-right">
-          <div class="t-sm">Why Podcast?</div>
-          <span class="accent-line"></span>
           <h2 class="t-lg">You've been thinking about this for a while. Trust that instinct.</h2>
           <p>You have expertise people need to hear. You've probably thought about starting a podcast more than once, only to keep putting it off because it felt like too much to figure out.</p>
           <p>That instinct is right. A podcast is one of the most powerful tools a business owner can build. Nothing else lets you show up in someone's earbuds every week, build trust at that depth, and create a body of work that compounds over time.</p>
-          <p><strong>But a podcast only works if it's built on a solid strategy.</strong></p>
+          <p style="font-size:1.3rem;color:var(--dark);">But a podcast only works if it's built on a solid strategy.</p>
           <p>Not a content calendar. Not a vague idea of "I'll interview interesting people." A real strategy that connects your podcast to your business so that every episode is doing something for you.</p>
         </div>
       </div>
@@ -434,26 +428,10 @@
     <div class="wrap">
       <div class="pz-pod-before__grid">
         <div class="pz-pod-before__content reveal">
-          <div class="t-sm">Before You Hit Record</div>
-          <span class="accent-line"></span>
           <h2 class="t-lg">Most people start their podcast the wrong way.</h2>
           <p>Pick a name, buy a mic, record a few episodes, upload them, hope for the best. Three months later? Burned out. Inconsistent.</p>
           <p>When you have the right strategy and the right support from the start, podcasting becomes something you actually look forward to.</p>
-          <div class="pz-pod-before__callout">One conversation becomes 15+ pieces of content. An email. Social posts. Blog material. Audiograms. Video clips. Your podcast doesn't just live on Apple and Spotify... it fuels everything.</div>
-          <div class="pz-pod-before__content-counter" id="pz-counters">
-            <div class="pz-pod-before__counter-item reveal d1">
-              <div class="pz-pod-before__counter-num" data-target="1" data-suffix="">0</div>
-              <div class="pz-pod-before__counter-lbl">Conversation</div>
-            </div>
-            <div class="pz-pod-before__counter-item reveal d2">
-              <div class="pz-pod-before__counter-num" data-target="15" data-suffix="+">0</div>
-              <div class="pz-pod-before__counter-lbl">Content Pieces</div>
-            </div>
-            <div class="pz-pod-before__counter-item reveal d3">
-              <div class="pz-pod-before__counter-num" data-target="inf" data-suffix="">&infin;</div>
-              <div class="pz-pod-before__counter-lbl">Shelf Life</div>
-            </div>
-          </div>
+          <p class="pz-pod-before__statement reveal">One conversation. Fifteen pieces of content. Infinite shelf life.</p>
         </div>
         <div class="pz-pod-before__visual reveal-right" style="position:relative;">
           <img class="pz-pod-before__img" src="http://priscillazaehringer.com/wp-content/uploads/2026/01/freepik__talk__57386.png" alt="Podcast conversation">
