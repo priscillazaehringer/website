@@ -255,19 +255,16 @@
 .pz-pod-process__result span { color: var(--blush); font-weight: 700; }
 @media (max-width: 768px) { .pz-pod-process__timeline::before { left: 24px; } .pz-pod-process__step { grid-template-columns: 48px 1fr; gap: 16px; } .pz-pod-process__step-card { padding: 18px 20px; } }
 
-/* INCLUDED — editorial rows */
+/* INCLUDED — centered column */
 .pz-pod-included { background: var(--cream); }
-.pz-pod-included__header { text-align: center; margin-bottom: 10px; }
-.pz-pod-included__header .t-sm { color: var(--blush); margin-bottom: 10px; }
-.pz-pod-included__rows { max-width: 900px; margin: 0 auto; }
-.pz-pod-included__row { display: grid; grid-template-columns: 200px 1fr; gap: 32px; padding: 28px 0; border-bottom: 1px solid var(--silver); }
-.pz-pod-included__row:last-child { border-bottom: none; }
-.pz-pod-included__row-label { font-family: 'Karla', sans-serif; font-weight: 700; font-size: 0.88rem; color: var(--dark); padding-top: 2px; }
-.pz-pod-included__row-items { display: flex; flex-wrap: wrap; gap: 4px 24px; }
-.pz-pod-included__row-items li { font-size: 1.05rem; color: #4A4A4A; line-height: 1.7; list-style: none; padding-left: 14px; position: relative; }
-.pz-pod-included__row-items li::before { content: ''; position: absolute; left: 0; top: 11px; width: 5px; height: 5px; border-radius: 50%; background: var(--blush); }
-.pz-pod-included__bottom { text-align: center; margin-top: 18px; font-family: 'Dancing Script', cursive; font-size: 1.1rem; color: var(--blush); }
-@media (max-width: 768px) { .pz-pod-included__row { grid-template-columns: 1fr; gap: 8px; } }
+.pz-pod-included__inner { max-width: 680px; margin: 0 auto; padding: 80px 24px; text-align: center; }
+.pz-pod-included__inner > h2 { font-family: 'Libre Caslon Text', serif; font-weight: 400; font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: var(--dark); margin-bottom: 36px; }
+.pz-pod-included__item { padding: 28px 0; border-top: 1px solid rgba(61,53,53,0.1); }
+.pz-pod-included__item-label { font-family: 'Karla', sans-serif; font-weight: 700; font-size: 0.88rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--dark); margin-bottom: 12px; }
+.pz-pod-included__item-label span { color: var(--blush); margin-right: 6px; }
+.pz-pod-included__item ul { list-style: none; }
+.pz-pod-included__item li { font-family: 'Karla', sans-serif; font-weight: 400; font-size: 1.05rem; color: var(--gray); line-height: 1.75; margin-bottom: 2px; }
+.pz-pod-included__bottom { margin-top: 28px; font-family: 'Dancing Script', cursive; font-size: 1.1rem; color: var(--blush); }
 
 /* REAL TALK — flower bg */
 .pz-pod-real { background: url('http://priscillazaehringer.com/wp-content/uploads/2026/03/StockSnap_EFOSONDLX9-scaled.jpg') center/cover no-repeat; position: relative; overflow: hidden; padding: 80px 0; }
@@ -522,19 +519,48 @@
   </section>
 
   <!-- INCLUDED -->
-  <section class="pz-pod-included sec">
-    <div class="wrap">
-      <div class="pz-pod-included__header reveal">
-        <div class="t-sm">What You Get</div>
-        <span class="accent-line accent-line--c"></span>
-        <h2 class="t-lg">Everything that's included.</h2>
+  <section class="pz-pod-included">
+    <div class="pz-pod-included__inner">
+      <h2 class="reveal">Everything that's included.</h2>
+
+      <div class="pz-pod-included__item reveal">
+        <div class="pz-pod-included__item-label"><span>✓</span> Pre-Production & Strategy</div>
+        <ul>
+          <li>You show up to every interview already aligned with your audience</li>
+          <li>Your guests are vetted, briefed, and ready to make great content</li>
+          <li>Every episode has a purpose — not just a topic</li>
+          <li>Your show gets in front of the right rooms before you hit record</li>
+        </ul>
       </div>
-      <div class="pz-pod-included__rows">
-        <div class="pz-pod-included__row reveal d1"><div class="pz-pod-included__row-label">Pre-Production & Strategy</div><ul class="pz-pod-included__row-items"><li>You show up to every interview already aligned with your audience</li><li>Your guests are vetted, briefed, and ready to make great content</li><li>Every episode has a purpose — not just a topic</li><li>Your show gets in front of the right rooms before you hit record</li></ul></div>
-        <div class="pz-pod-included__row reveal d2"><div class="pz-pod-included__row-label">Production & Publishing</div><ul class="pz-pod-included__row-items"><li>A polished, professional episode every single time</li><li>Video-ready if you're on camera — nothing amateur makes it through</li><li>Live on every platform without you touching a thing</li><li>YouTube optimized so your content keeps working after it publishes</li></ul></div>
-        <div class="pz-pod-included__row reveal d3"><div class="pz-pod-included__row-label">Marketing & Repurposing</div><ul class="pz-pod-included__row-items"><li>One conversation becomes a week of content across every channel</li><li>Your audience gets an email that actually makes them listen</li><li>Show notes that double as SEO-friendly blog posts</li><li>Social content, audiograms, clips — all handled</li></ul></div>
-        <div class="pz-pod-included__row reveal d4"><div class="pz-pod-included__row-label">Ongoing Support</div><ul class="pz-pod-included__row-items"><li>Direct access to me — not a support ticket, not an account manager</li><li>A publishing rhythm that fits your life, not the other way around</li></ul></div>
+
+      <div class="pz-pod-included__item reveal">
+        <div class="pz-pod-included__item-label"><span>✓</span> Production & Publishing</div>
+        <ul>
+          <li>A polished, professional episode every single time</li>
+          <li>Video-ready if you're on camera — nothing amateur makes it through</li>
+          <li>Live on every platform without you touching a thing</li>
+          <li>YouTube optimized so your content keeps working after it publishes</li>
+        </ul>
       </div>
+
+      <div class="pz-pod-included__item reveal">
+        <div class="pz-pod-included__item-label"><span>✓</span> Marketing & Repurposing</div>
+        <ul>
+          <li>One conversation becomes a week of content across every channel</li>
+          <li>Your audience gets an email that actually makes them listen</li>
+          <li>Show notes that double as SEO-friendly blog posts</li>
+          <li>Social content, audiograms, clips — all handled</li>
+        </ul>
+      </div>
+
+      <div class="pz-pod-included__item reveal">
+        <div class="pz-pod-included__item-label"><span>✓</span> Ongoing Support</div>
+        <ul>
+          <li>Direct access to me — not a support ticket, not an account manager</li>
+          <li>A publishing rhythm that fits your life, not the other way around</li>
+        </ul>
+      </div>
+
       <p class="pz-pod-included__bottom reveal">no long-term contracts. no inflated retainers. no pressure.</p>
     </div>
   </section>
