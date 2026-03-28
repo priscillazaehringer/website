@@ -268,7 +268,7 @@
 .pzh-hero::before {
   content: '';
   position: absolute; inset: 0;
-  background: rgba(61,53,53,0.84);
+  background: rgba(61,53,53,0.55);
 }
 
 .pzh-hero__content {
@@ -305,20 +305,31 @@
   display: block;
   font-family: 'Dancing Script', cursive;
   font-weight: 400;
-  font-size: clamp(1.4rem, 2.8vw, 2rem);
-  color: var(--mauve); margin-top: 2px;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  color: var(--soft-cream); margin-top: 2px;
 }
 
 /* HERO SUBTITLE — was 1.05rem, now 1.2rem */
 .pzh-hero__subtitle {
   font-size: 1.2rem;
-  color: rgba(248,243,239,0.5);
+  color: rgba(248,243,239,0.85);
   margin: 14px auto 20px; line-height: 1.8;
   max-width: 440px;
 }
 
 @media (max-width: 900px) {
   .pzh-hero { min-height: 65vh; }
+}
+
+.pzh-hero .btn-primary {
+  background: transparent;
+  border: 2px solid var(--soft-cream);
+  color: var(--soft-cream);
+}
+.pzh-hero .btn-primary:hover {
+  background: var(--blush);
+  border-color: var(--blush);
+  color: var(--white);
 }
 
 /* ============================================
@@ -997,9 +1008,9 @@
     <div class="pzh-hero__content">
       <div class="pzh-hero__eyebrow fade-up">Priscilla Zaehringer</div>
       <h1 class="heading-xl fade-up stagger-1">
-        <span class="pzh-hero__line-top">Your Business Operations</span>
-        <span class="pzh-hero__line-pop">& Marketing</span>
-        <span class="pzh-hero__line-script">Partner</span>
+        <span class="pzh-hero__line-top">Your Business</span>
+        <span class="pzh-hero__line-pop">Operations & Marketing</span>
+        <span class="pzh-hero__line-script">Partner.</span>
       </h1>
       <p class="body-text pzh-hero__subtitle fade-up stagger-2">
         Strategic support for service-based entrepreneurs who are ready for a real partner. I'll help you run it, market it, and grow it.
