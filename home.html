@@ -373,6 +373,25 @@
   text-align: center; max-width: 720px; margin: 0 auto 14px;
 }
 
+.pzh-problem__intro h2 {
+  font-family: 'Libre Caslon Text', serif;
+  font-weight: 400;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  color: var(--dark);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.pzh-problem__intro p {
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #4A4A4A;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
 .pzh-problem__intro .heading-sm { color: var(--blush); margin-bottom: 6px; }
 .pzh-problem__intro p { margin-top: 8px !important; margin-bottom: 0 !important; color: var(--gray); }
 
@@ -433,7 +452,7 @@
 .pzh-flip__front, .pzh-flip__back {
   backface-visibility: hidden;
   border-radius: 12px;
-  padding: 14px 16px;
+  padding: 40px 36px;
   text-align: center;
 }
 
@@ -444,6 +463,8 @@
   flex-direction: column;
   justify-content: center;
   height: 100%;
+  box-shadow: 0 8px 32px rgba(61,53,53,0.08);
+  border-top: 3px solid rgba(201,160,155,0.4);
 }
 
 .pzh-flip__back {
@@ -452,8 +473,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 16px 18px;
+  padding: 40px 36px;
   height: 100%;
+  box-shadow: 0 8px 32px rgba(61,53,53,0.08);
 }
 
 .pzh-flip__front, .pzh-flip__back { position: relative; }
@@ -469,18 +491,17 @@
 .pzh-flip__front h3 {
   font-family: 'Libre Caslon Text', serif;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   color: var(--dark);
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 
-/* FLIP STAT — was 0.95rem, now 1.08rem */
 .pzh-flip__stat {
   font-family: 'Karla', sans-serif;
-  font-weight: 600;
-  font-size: 1.08rem;
-  color: var(--dark);
-  line-height: 1.5;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #4A4A4A;
+  line-height: 1.85;
 }
 
 /* FLIP HINT — was 0.68rem, now 0.8rem */
@@ -507,16 +528,14 @@
 }
 
 .pzh-problem__bottom {
-  text-align: center; max-width: 640px; margin: 0 auto;
+  text-align: center; max-width: 680px; margin: 0 auto;
 }
 
-/* PROBLEM BOTTOM — was 1.2rem, now 1.35rem */
 .pzh-problem__bottom p {
   font-family: 'Libre Caslon Text', serif;
-  font-size: 1.35rem; color: var(--dark); line-height: 1.5;
+  font-weight: 400;
+  font-size: 1.5rem; color: var(--dark); line-height: 1.5;
 }
-
-.pzh-problem__bottom strong { color: var(--blush); font-weight: 700; }
 
 @media (max-width: 768px) {
   .pzh-problem__wall { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
@@ -1048,9 +1067,8 @@
     <span class="float-deco float-heart" style="top: 8%; right: 10%; transform: rotate(-12deg);">♥</span>
     <div class="pz-container">
       <div class="pzh-problem__intro fade-up">
-        <div class="heading-sm">If We're Being Real…</div>
-        <span class="accent-line accent-line--center"></span>
-        <h2 class="heading-lg">You know your business needs more support. But every option feels like a compromise.</h2>
+        <h2>Growing your business shouldn't mean growing your headcount.</h2>
+        <p>Most support options leave you choosing between too much overhead or too little help. There's a better way.</p>
       </div>
 
       <div class="pzh-problem__wall">
@@ -1058,12 +1076,12 @@
           <div class="pzh-flip__inner">
             <div class="pzh-flip__front">
               <div class="pzh-flip__emoji">🔁</div>
-              <h3>The Hiring Spiral</h3>
-              <p class="pzh-flip__stat">A VA for tasks. A copywriter for content. An ads manager. A podcast editor. An OBM to manage them all. Suddenly you're running a team you never wanted.</p>
+              <h3>The Revolving Door</h3>
+              <p class="pzh-flip__stat">A new hire for every gap. A VA, a copywriter, an ads manager... suddenly you're managing a team instead of building a business.</p>
               <div class="pzh-flip__hint">tap to flip ↻</div>
             </div>
             <div class="pzh-flip__back">
-              <p>You didn't start a business to become an HR department. But that's exactly where DIY hiring leads.</p>
+              <p>You hired help to get time back. Instead you got a new job — briefing, following up, and connecting dots between people who don't talk to each other.</p>
             </div>
           </div>
         </div>
@@ -1072,12 +1090,12 @@
           <div class="pzh-flip__inner">
             <div class="pzh-flip__front">
               <div class="pzh-flip__emoji">😮‍💨</div>
-              <h3>The Burnout Build</h3>
-              <p class="pzh-flip__stat">Every hour you spend on backend ops, content, and systems is an hour not spent on the work only you can do.</p>
+              <h3>The Operator Trap</h3>
+              <p class="pzh-flip__stat">Every hour you spend on systems and content is an hour not spent on the work that only you can do.</p>
               <div class="pzh-flip__hint">tap to flip ↻</div>
             </div>
             <div class="pzh-flip__back">
-              <p>If your rate is $150+/hr, spending 20 hours a week on $20/hr tasks is quietly costing you everything.</p>
+              <p>At $150+/hr, spending 20 hours a week on backend ops isn't just exhausting — it's quietly costing you everything.</p>
             </div>
           </div>
         </div>
@@ -1086,20 +1104,19 @@
           <div class="pzh-flip__inner">
             <div class="pzh-flip__front">
               <div class="pzh-flip__emoji">📉</div>
-              <h3>The Stall</h3>
-              <p class="pzh-flip__stat">The podcast. The ads. The systems still living in your head. Everything that would move the needle keeps getting pushed to next month.</p>
+              <h3>The Indefinite Backlog</h3>
+              <p class="pzh-flip__stat">The podcast. The strategy. The thing that would actually move the needle. Still sitting on next month's list.</p>
               <div class="pzh-flip__hint">tap to flip ↻</div>
             </div>
             <div class="pzh-flip__back">
-              <p>Next month never comes. Not because you don't want it to — because you're too busy keeping the lights on.</p>
+              <p>Next month never comes. Not because you don't want it to — because you're too busy keeping the lights on to ever get ahead.</p>
             </div>
           </div>
         </div>
       </div>
 
       <div class="pzh-problem__bottom fade-up">
-        <span class="accent-line accent-line--center"></span>
-        <p>You don't need five different hires. You need <strong>one person who gets it</strong> and can think strategically AND execute.</p>
+        <p>You don't need five hires. You need one person who <em style="font-style:italic;color:var(--blush);">thinks AND does</em> — so you can stop managing and start leading.</p>
       </div>
     </div>
   </section>
