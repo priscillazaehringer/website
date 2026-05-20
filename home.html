@@ -962,20 +962,13 @@
   border-radius: 14px;
   padding: 28px 24px;
   text-align: center;
-  cursor: pointer;
   transition: all 0.4s ease;
   border: 2px solid transparent;
 }
 
 .pzh-pick__card:hover {
   border-color: rgba(201,160,155,0.3);
-  transform: translateY(-3px);
   box-shadow: 0 8px 28px rgba(61,53,53,0.06);
-}
-
-.pzh-pick__card.picked {
-  border-color: #C9A09B;
-  background: var(--soft-blush);
 }
 
 .pzh-pick__emoji {
@@ -993,16 +986,6 @@
 }
 
 .pzh-pick__reveal {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.5s ease, opacity 0.4s ease 0.1s, margin 0.4s ease;
-  margin-top: 0;
-}
-
-.pzh-pick__card.picked .pzh-pick__reveal {
-  max-height: 400px;
-  opacity: 1;
   margin-top: 16px;
 }
 
@@ -1128,6 +1111,51 @@
     </div>
   </section>
 
+  <!-- SERVICES -->
+  <section class="pzh-services pz-section" id="pzh-services" style="position: relative;">
+    <span class="float-deco float-heart float-heart--lg" style="top: 6%; right: 6%; transform: rotate(10deg);">♥</span>
+    <div class="pz-container">
+      <div class="pzh-services__header fade-up">
+        <div class="heading-sm">Ways We Can Work Together</div>
+        <span class="accent-line accent-line--center"></span>
+        <h2 class="heading-lg">What brings you here?</h2>
+      </div>
+      <p class="pzh-services__sub body-text fade-up" style="text-align:center;max-width:480px;margin:0 auto 24px;font-family:'Dancing Script',cursive;font-size:1.3rem;color:#C9A09B;">which one sounds like you? ♥</p>
+
+      <div class="pzh-pick__grid">
+        <div class="pzh-pick__card fade-up stagger-1">
+          <div class="pzh-pick__emoji">🎙️</div>
+          <div class="pzh-pick__prompt">I want to start or grow a podcast</div>
+          <div class="pzh-pick__reveal">
+            <p>You've been thinking about this for a while. You know a podcast could be powerful for your business, but you need someone who handles everything so you can just show up and talk.</p>
+            <p style="font-family:'Dancing Script',cursive;color:#C9A09B;font-size:1.2rem;margin:10px 0;">that's exactly what I do. ♥</p>
+            <a href="https://priscillazaehringer.com/services/podcast/" class="btn-primary" style="display:inline-flex;align-items:center;gap:6px;background:#C9A09B;color:#fff;padding:17px 38px;border-radius:50px;font-family:'Karla',sans-serif;font-weight:500;font-size:0.88rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;margin-top:6px;">♥ Learn About Podcast Production</a>
+          </div>
+        </div>
+
+        <div class="pzh-pick__card fade-up stagger-2">
+          <div class="pzh-pick__emoji">📣</div>
+          <div class="pzh-pick__prompt">I'm ready to run ads that actually work</div>
+          <div class="pzh-pick__reveal">
+            <p>You've outgrown organic, maybe you've tried ads before and it didn't go well. You need someone who builds a real strategy around your business, not a recycled template.</p>
+            <p style="font-family:'Dancing Script',cursive;color:#C9A09B;font-size:1.2rem;margin:10px 0;">let's make your ad spend count. ♥</p>
+            <a href="https://priscillazaehringer.com/ads/" class="btn-primary" style="display:inline-flex;align-items:center;gap:6px;background:#C9A09B;color:#fff;padding:17px 38px;border-radius:50px;font-family:'Karla',sans-serif;font-weight:500;font-size:0.88rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;margin-top:6px;">♥ Learn About Ad Management</a>
+          </div>
+        </div>
+
+        <div class="pzh-pick__card fade-up stagger-3">
+          <div class="pzh-pick__emoji">⚙️</div>
+          <div class="pzh-pick__prompt">I need someone to run the backend of my business</div>
+          <div class="pzh-pick__reveal">
+            <p>You're doing everything yourself and it's not sustainable. You need an operations partner who keeps the wheels turning so you can focus on the work that actually moves the needle.</p>
+            <p style="font-family:'Dancing Script',cursive;color:#C9A09B;font-size:1.2rem;margin:10px 0;">this is coming soon, but let's talk. ♥</p>
+            <a href="https://scheduler.zoom.us/priscilla-zaehringer/clarity-call" class="btn-primary" style="display:inline-flex;align-items:center;gap:6px;background:#C9A09B;color:#fff;padding:17px 38px;border-radius:50px;font-family:'Karla',sans-serif;font-weight:500;font-size:0.88rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;margin-top:6px;">♥ Book a Clarity Call</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ABOUT -->
   <section class="pzh-about pz-section" style="position: relative;">
     <span class="float-deco float-heart float-heart--mauve float-heart--sm" style="bottom: 15%; right: 8%; transform: rotate(15deg);">♥</span>
@@ -1146,51 +1174,6 @@
           <div class="pzh-about__quote-card">
             <p>I don't just pick up the tasks you hand me. I pick up the slack, and I wear as many hats as you do.</p>
             <div class="quote-attr">Priscilla</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section class="pzh-services pz-section" id="pzh-services" style="position: relative;">
-    <span class="float-deco float-heart float-heart--lg" style="top: 6%; right: 6%; transform: rotate(10deg);">♥</span>
-    <div class="pz-container">
-      <div class="pzh-services__header fade-up">
-        <div class="heading-sm">Ways We Can Work Together</div>
-        <span class="accent-line accent-line--center"></span>
-        <h2 class="heading-lg">What brings you here?</h2>
-      </div>
-      <p class="pzh-services__sub body-text fade-up" style="text-align:center;max-width:480px;margin:0 auto 24px;font-family:'Dancing Script',cursive;font-size:1.3rem;color:#C9A09B;">tap the one that sounds like you ♥</p>
-
-      <div class="pzh-pick__grid">
-        <div class="pzh-pick__card fade-up stagger-1" onclick="pzPick(this)">
-          <div class="pzh-pick__emoji">🎙️</div>
-          <div class="pzh-pick__prompt">I want to start or grow a podcast</div>
-          <div class="pzh-pick__reveal">
-            <p>You've been thinking about this for a while. You know a podcast could be powerful for your business, but you need someone who handles everything so you can just show up and talk.</p>
-            <p style="font-family:'Dancing Script',cursive;color:#C9A09B;font-size:1.2rem;margin:10px 0;">that's exactly what I do. ♥</p>
-            <a href="https://priscillazaehringer.com/services/podcast/" class="btn-primary" style="display:inline-flex;align-items:center;gap:6px;background:#C9A09B;color:#fff;padding:17px 38px;border-radius:50px;font-family:'Karla',sans-serif;font-weight:500;font-size:0.88rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;margin-top:6px;">♥ Learn About Podcast Production</a>
-          </div>
-        </div>
-
-        <div class="pzh-pick__card fade-up stagger-2" onclick="pzPick(this)">
-          <div class="pzh-pick__emoji">📣</div>
-          <div class="pzh-pick__prompt">I'm ready to run ads that actually work</div>
-          <div class="pzh-pick__reveal">
-            <p>You've outgrown organic, maybe you've tried ads before and it didn't go well. You need someone who builds a real strategy around your business, not a recycled template.</p>
-            <p style="font-family:'Dancing Script',cursive;color:#C9A09B;font-size:1.2rem;margin:10px 0;">let's make your ad spend count. ♥</p>
-            <a href="https://priscillazaehringer.com/ads/" class="btn-primary" style="display:inline-flex;align-items:center;gap:6px;background:#C9A09B;color:#fff;padding:17px 38px;border-radius:50px;font-family:'Karla',sans-serif;font-weight:500;font-size:0.88rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;margin-top:6px;">♥ Learn About Ad Management</a>
-          </div>
-        </div>
-
-        <div class="pzh-pick__card fade-up stagger-3" onclick="pzPick(this)">
-          <div class="pzh-pick__emoji">⚙️</div>
-          <div class="pzh-pick__prompt">I need someone to run the backend of my business</div>
-          <div class="pzh-pick__reveal">
-            <p>You're doing everything yourself and it's not sustainable. You need an operations partner who keeps the wheels turning so you can focus on the work that actually moves the needle.</p>
-            <p style="font-family:'Dancing Script',cursive;color:#C9A09B;font-size:1.2rem;margin:10px 0;">this is coming soon, but let's talk. ♥</p>
-            <a href="https://scheduler.zoom.us/priscilla-zaehringer/clarity-call" class="btn-primary" style="display:inline-flex;align-items:center;gap:6px;background:#C9A09B;color:#fff;padding:17px 38px;border-radius:50px;font-family:'Karla',sans-serif;font-weight:500;font-size:0.88rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;margin-top:6px;">♥ Book a Clarity Call</a>
           </div>
         </div>
       </div>
@@ -1303,18 +1286,6 @@
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.pz-home .fade-up, .pz-home .fade-in').forEach(function(el) { observer.observe(el); });
 })();
-
-function pzPick(card) {
-  var cards = document.querySelectorAll('.pzh-pick__card');
-  var wasPicked = card.classList.contains('picked');
-  cards.forEach(function(c) { c.classList.remove('picked'); });
-  if (!wasPicked) {
-    card.classList.add('picked');
-    setTimeout(function() {
-      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }, 200);
-  }
-}
 </script>
 
 <script type="application/ld+json">
