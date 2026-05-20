@@ -2397,54 +2397,38 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
+  "@graph": [
     {
-      "@type": "Question",
-      "name": "I've tried ads before and lost money. Why would this be different?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Most failed ad campaigns aren't actually an ad problem. They're an infrastructure problem. Broken funnels, unclear messaging, bad tracking. That's exactly why I audit everything before we spend a dollar. We're not repeating old mistakes."
-      }
+      "@type": "Person",
+      "@id": "https://priscillazaehringer.com/#person",
+      "name": "Priscilla Zaehringer",
+      "url": "https://priscillazaehringer.com/",
+      "image": "https://priscillazaehringer.com/wp-content/uploads/2026/02/freepik__priscilla-black-and-white-editorial-lifestyle-phot__98082.png",
+      "jobTitle": "Online Business Manager & Marketing Partner",
+      "description": "Iowa-based partner offering Meta ads management, podcast production, and business operations support for small business owners.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "IA",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://www.instagram.com/priscillazaehringer/",
+        "https://www.facebook.com/priscillazaehringer",
+        "https://www.pinterest.com/priscillazaehringer/"
+      ]
     },
     {
-      "@type": "Question",
-      "name": "How much of my time will this take?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Minimal. You'll approve creative, hop on a check-in call once or twice a month, and make business decisions when needed. I handle everything else. Most clients spend about 2–4 hours per month actively involved."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can you guarantee results?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No ethical ads manager can. What I can promise: strategic thinking, honest communication, solid infrastructure, and campaigns set up to give you the best possible shot. The market decides if they buy, but I make sure we're giving them every reason to."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What if I need to pause or my business changes?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We start with a 90-day commitment because that's how long it takes to properly test and optimize. After that, we're month-to-month. Life happens. I'll work with you."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do I need to understand Facebook ads?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Not at all. That's literally what you're hiring me for. I'll keep you informed on what matters, but you don't need to become an ads expert."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Are ads only good for making sales?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "One of the biggest misconceptions. Ads can build brand awareness, grow your email list, nurture warm audiences, fill webinars or masterclasses, and drive sales. We'll figure out which roles make the most sense for where you are right now."
+      "@type": "Service",
+      "@id": "https://priscillazaehringer.com/ads/#service",
+      "serviceType": "Meta Ads Management",
+      "name": "Meta Ads Management",
+      "description": "Done-with-you Meta ads management — strategy, setup, and ongoing optimization from an Iowa-based partner who keeps you in the loop.",
+      "provider": { "@id": "https://priscillazaehringer.com/#person" },
+      "areaServed": "US",
+      "url": "https://priscillazaehringer.com/ads/",
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Small business owners"
       }
     }
   ]
