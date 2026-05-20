@@ -767,3 +767,44 @@ function pzPhoneSlide(n) {
   }, { passive: true });
 })();
 </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://priscillazaehringer.com/#person",
+      "name": "Priscilla Zaehringer",
+      "url": "https://priscillazaehringer.com/",
+      "image": "https://priscillazaehringer.com/wp-content/uploads/2026/02/freepik__priscilla-black-and-white-editorial-lifestyle-phot__98082.png",
+      "jobTitle": "Online Business Manager & Marketing Partner",
+      "description": "Iowa-based partner offering Meta ads management, podcast production, and business operations support for small business owners.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "IA",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://www.instagram.com/priscillazaehringer/",
+        "https://www.facebook.com/priscillazaehringer",
+        "https://www.pinterest.com/priscillazaehringer/"
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://priscillazaehringer.com/services/podcast/#service",
+      "serviceType": "Podcast Production",
+      "name": "Podcast Production",
+      "description": "Full-service podcast production — editing, show notes, publishing, and strategy from an Iowa-based partner who handles the details.",
+      "provider": { "@id": "https://priscillazaehringer.com/#person" },
+      "areaServed": "US",
+      "url": "https://priscillazaehringer.com/services/podcast/",
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Small business owners"
+      }
+    }
+  ]
+}
+</script>

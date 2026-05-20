@@ -2389,3 +2389,44 @@
   }
 })();
 </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://priscillazaehringer.com/#person",
+      "name": "Priscilla Zaehringer",
+      "url": "https://priscillazaehringer.com/",
+      "image": "https://priscillazaehringer.com/wp-content/uploads/2026/02/freepik__priscilla-black-and-white-editorial-lifestyle-phot__98082.png",
+      "jobTitle": "Online Business Manager & Marketing Partner",
+      "description": "Iowa-based partner offering Meta ads management, podcast production, and business operations support for small business owners.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "IA",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://www.instagram.com/priscillazaehringer/",
+        "https://www.facebook.com/priscillazaehringer",
+        "https://www.pinterest.com/priscillazaehringer/"
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://priscillazaehringer.com/ads/#service",
+      "serviceType": "Meta Ads Management",
+      "name": "Meta Ads Management",
+      "description": "Done-with-you Meta ads management — strategy, setup, and ongoing optimization from an Iowa-based partner who keeps you in the loop.",
+      "provider": { "@id": "https://priscillazaehringer.com/#person" },
+      "areaServed": "US",
+      "url": "https://priscillazaehringer.com/ads/",
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Small business owners"
+      }
+    }
+  ]
+}
+</script>
