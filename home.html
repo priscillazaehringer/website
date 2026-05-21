@@ -204,9 +204,11 @@
    ============================================ */
 .pz-home .pz-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 .pz-home .pz-container-narrow { max-width: 800px; margin: 0 auto; padding: 0 24px; }
-.pz-home .pz-section { padding: 56px 0; }
+.pz-home .pz-section { padding: 80px 0; }
 
-@media (max-width: 768px) { .pz-home .pz-section { padding: 40px 0; } }
+@media (max-width: 768px) { .pz-home .pz-section { padding: 48px 0; } }
+
+html { scroll-behavior: smooth; }
 
 /* ============================================
    DECORATIVE
@@ -1003,6 +1005,60 @@
   .pzh-pick__emoji { font-size: 2rem; margin-bottom: 8px; }
   .pzh-pick__prompt { font-size: 1.1rem; }
 }
+
+/* ============================================
+   PROCESS
+   ============================================ */
+.pz-home .pzh-process { background: var(--white); }
+.pz-home .pzh-process__header { text-align: center; margin-bottom: 48px; }
+.pz-home .pzh-process__header .heading-sm { color: var(--blush); margin-bottom: 8px; }
+.pz-home .pzh-process__header h2 { margin-bottom: 16px; }
+.pz-home .pzh-process__intro { font-family: 'Karla', sans-serif; font-size: 1.05rem; color: var(--gray); line-height: 1.75; max-width: 560px; margin: 14px auto 0; }
+.pz-home .pzh-process__steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.pz-home .pzh-process__step {
+  padding: 32px 24px;
+  background: var(--soft-cream);
+  border-radius: 14px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.pz-home .pzh-process__step:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(61,53,53,0.06);
+}
+.pz-home .pzh-process__num {
+  font-family: 'Libre Caslon Text', serif;
+  font-weight: 400;
+  font-size: 2.4rem;
+  color: var(--blush);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+.pz-home .pzh-process__step h3 {
+  font-family: 'Libre Caslon Text', serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: var(--dark);
+}
+.pz-home .pzh-process__step p {
+  font-family: 'Karla', sans-serif;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--gray);
+}
+@media (max-width: 768px) {
+  .pz-home .pzh-process__steps { grid-template-columns: 1fr; gap: 16px; }
+  .pz-home .pzh-process__step { padding: 24px 20px; }
+  .pz-home .pzh-process__num { font-size: 2rem; margin-bottom: 12px; }
+  .pz-home .pzh-process__header { margin-bottom: 32px; }
+}
 </style>
 
 <!-- ============================================
@@ -1017,14 +1073,14 @@
     <div class="pzh-hero__content">
       <div class="pzh-hero__eyebrow fade-up">Priscilla Zaehringer</div>
       <h1 class="heading-xl fade-up stagger-1">
-        <span class="pzh-hero__line-top">You've outgrown doing it all alone.</span>
-        <span class="pzh-hero__line-pop">Let's build something</span>
-        <span class="pzh-hero__line-script">together.</span>
+        <span class="pzh-hero__line-top">Grow your business.</span>
+        <span class="pzh-hero__line-pop">Not your</span>
+        <span class="pzh-hero__line-script">headcount.</span>
       </h1>
       <p class="body-text pzh-hero__subtitle fade-up stagger-2">
-        I'm the operations and marketing partner for entrepreneurs who are done juggling everything themselves. You run the vision. I'll run the rest.
+        The marketing and operations partner for small business owners ready to grow without building a team. You run the vision. I run the rest.
       </p>
-      <a href="#pzh-services" class="btn-primary fade-up stagger-3"><span class="heart">♥</span> Explore My Services</a>
+      <a href="#pzh-services" class="btn-primary fade-up stagger-3"><span class="heart">♥</span> Find your path</a>
     </div>
   </section>
 
@@ -1071,7 +1127,7 @@
               <div class="pzh-flip__hint">tap to flip ↻</div>
             </div>
             <div class="pzh-flip__back">
-              <p>You hired help to get time back. Instead you got a new job — briefing, following up, and connecting dots between people who don't talk to each other.</p>
+              <p>You hired help to get time back. Instead you got a new job: briefing, following up, and connecting dots between people who don't talk to each other.</p>
             </div>
           </div>
         </div>
@@ -1085,7 +1141,7 @@
               <div class="pzh-flip__hint">tap to flip ↻</div>
             </div>
             <div class="pzh-flip__back">
-              <p>At $150+/hr, spending 20 hours a week on backend ops isn't just exhausting — it's quietly costing you everything.</p>
+              <p>At $150+/hr, spending 20 hours a week on backend ops isn't just exhausting. It's quietly costing you everything.</p>
             </div>
           </div>
         </div>
@@ -1099,14 +1155,14 @@
               <div class="pzh-flip__hint">tap to flip ↻</div>
             </div>
             <div class="pzh-flip__back">
-              <p>Next month never comes. Not because you don't want it to — because you're too busy keeping the lights on to ever get ahead.</p>
+              <p>Next month never comes. Not because you don't want it to. Because you're too busy keeping the lights on to ever get ahead.</p>
             </div>
           </div>
         </div>
       </div>
 
       <div class="pzh-problem__bottom fade-up">
-        <p>You don't need five hires. You need one person who <em style="font-style:italic;color:var(--blush);">thinks AND does</em> — so you can stop managing and start leading.</p>
+        <p>You don't need five hires. You need one person who <em style="font-style:italic;color:var(--blush);">thinks AND does</em>, so you can stop managing and start leading.</p>
       </div>
     </div>
   </section>
@@ -1156,30 +1212,6 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section class="pzh-about pz-section" style="position: relative;">
-    <span class="float-deco float-heart float-heart--mauve float-heart--sm" style="bottom: 15%; right: 8%; transform: rotate(15deg);">♥</span>
-    <div class="pz-container">
-      <div class="pzh-about__grid">
-        <div class="pzh-about__content fade-up">
-          <div class="heading-sm">Hi! Nice to Meet You!</div>
-          <span class="accent-line"></span>
-          <h2 class="heading-lg"><span class="text-small">I'm Priscilla.</span> I'm the person your business has been <span class="cursive" style="color: var(--blush); font-size: 1.1em;">missing.</span></h2>
-          <p class="body-text">I'm an online business manager and marketing partner for entrepreneurs who are past the startup phase and ready to grow, but don't want to build an entire team to do it.</p>
-          <p class="body-text">I don't wait for direction. I find the gaps, bring ideas to the table, and execute. Whether it's launching your podcast, running your ad campaigns, managing your backend operations, or creating content that actually sounds like you... I treat your business like it's my own.</p>
-          <a href="https://priscillazaehringer.com/about/" class="btn-ghost">More About Me</a>
-        </div>
-        <div class="pzh-about__img-col fade-up stagger-2">
-          <img class="pzh-about__img-main" src="http://priscillazaehringer.com/wp-content/uploads/2026/02/freepik__id-like-an-outdoor-photo-candid-get-some-vibes-fro__98081.png" alt="Priscilla working">
-          <div class="pzh-about__quote-card">
-            <p>I don't just pick up the tasks you hand me. I pick up the slack, and I wear as many hats as you do.</p>
-            <div class="quote-attr">Priscilla</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- TESTIMONIAL -->
   <section class="pzh-testimonial pz-section">
     <div class="pz-container">
@@ -1194,6 +1226,35 @@
             <span class="pzh-testimonial__name">Kaye Putnam</span>
             <span class="pzh-testimonial__role">Brand Strategist</span>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="pzh-process pz-section">
+    <div class="pz-container">
+      <div class="pzh-process__header fade-up">
+        <div class="heading-sm">How We Work Together</div>
+        <span class="accent-line accent-line--center"></span>
+        <h2 class="heading-lg">No long onboarding. No surprises.</h2>
+        <p class="pzh-process__intro">Three steps from "I'm curious" to "we're working." That's it.</p>
+      </div>
+      <div class="pzh-process__steps">
+        <div class="pzh-process__step fade-up stagger-1">
+          <div class="pzh-process__num">01</div>
+          <h3>You reach out.</h3>
+          <p>Book a clarity call. We'll talk about what's on your plate, what's working, and what kind of support would actually move the needle. No pressure. No hard sell.</p>
+        </div>
+        <div class="pzh-process__step fade-up stagger-2">
+          <div class="pzh-process__num">02</div>
+          <h3>We figure out the fit.</h3>
+          <p>If we're a match, I send you a clear proposal with scope, timeline, and price. If we're not, I'll point you toward someone who is.</p>
+        </div>
+        <div class="pzh-process__step fade-up stagger-3">
+          <div class="pzh-process__num">03</div>
+          <h3>We get to work.</h3>
+          <p>No locked retainers. No kickoff overhead. No surprises. Clear scope, clear timeline, and a partner who treats your business like her own.</p>
         </div>
       </div>
     </div>
@@ -1235,6 +1296,30 @@
       <div class="pzh-why__bottom fade-up">
         <span class="accent-line accent-line--center"></span>
         <p>You don't need to hire a copywriter, a designer, a web developer, a podcast editor, an ads manager, and a VA. You might just need one person who can do all of it, and actually cares about the outcome.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="pzh-about pz-section" style="position: relative;">
+    <span class="float-deco float-heart float-heart--mauve float-heart--sm" style="bottom: 15%; right: 8%; transform: rotate(15deg);">♥</span>
+    <div class="pz-container">
+      <div class="pzh-about__grid">
+        <div class="pzh-about__content fade-up">
+          <div class="heading-sm">Hi! Nice to Meet You!</div>
+          <span class="accent-line"></span>
+          <h2 class="heading-lg"><span class="text-small">I'm Priscilla.</span> I'm the person your business has been <span class="cursive" style="color: var(--blush); font-size: 1.1em;">missing.</span></h2>
+          <p class="body-text">I'm an online business manager and marketing partner for entrepreneurs who are past the startup phase and ready to grow, but don't want to build an entire team to do it.</p>
+          <p class="body-text">I don't wait for direction. I find the gaps, bring ideas to the table, and execute. Whether it's launching your podcast, running your ad campaigns, managing your backend operations, or creating content that actually sounds like you, I treat your business like it's my own.</p>
+          <a href="https://priscillazaehringer.com/about/" class="btn-ghost">More About Me</a>
+        </div>
+        <div class="pzh-about__img-col fade-up stagger-2">
+          <img class="pzh-about__img-main" src="http://priscillazaehringer.com/wp-content/uploads/2026/02/freepik__id-like-an-outdoor-photo-candid-get-some-vibes-fro__98081.png" alt="Priscilla working">
+          <div class="pzh-about__quote-card">
+            <p>I don't just pick up the tasks you hand me. I pick up the slack, and I wear as many hats as you do.</p>
+            <div class="quote-attr">Priscilla</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
