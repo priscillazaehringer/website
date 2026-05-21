@@ -379,11 +379,11 @@ html { scroll-behavior: smooth; }
 .pzh-problem__context p { color: var(--gray); margin-bottom: 4px !important; text-align: center; }
 
 .pzh-problem__wall {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 12px; align-items: stretch;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 48px; align-items: start;
 }
 
 .pzh-problem__card {
-  background: var(--white); padding: 18px 16px;
+  background: var(--white); padding: 22px 18px 18px;
   text-align: center; border-radius: 12px;
   transition: all 0.4s ease; position: relative; overflow: hidden;
 }
@@ -582,53 +582,63 @@ html { scroll-behavior: smooth; }
 
 .pzh-why__statement {
   font-family: 'Libre Caslon Text', serif;
-  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
   font-style: italic;
   font-weight: 400;
   color: var(--dark);
   text-align: center;
   line-height: 1.35;
-  max-width: 820px;
+  max-width: 720px;
   margin: 0 auto 40px;
 }
 
 .pzh-why__timeline {
-  max-width: 700px; margin: 0 auto 28px; position: relative;
-}
-
-.pzh-why__timeline::before {
-  content: ''; position: absolute; top: 0; bottom: 0;
-  left: 28px; width: 1px; background: var(--silver);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .pzh-why__point {
-  display: grid; grid-template-columns: 58px 1fr;
-  gap: 18px; align-items: start; margin-bottom: 4px; position: relative;
+  display: flex; flex-direction: column;
+  align-items: center; text-align: center;
+  gap: 12px;
 }
 
-.pzh-why__point:last-child { margin-bottom: 0; }
-
 .pzh-why__point-marker {
-  width: 58px; height: 58px; border-radius: 50%;
+  width: 48px; height: 48px; border-radius: 50%;
   background: var(--white); border: 1px solid var(--silver);
   display: flex; align-items: center; justify-content: center;
-  position: relative; z-index: 1; transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
 .pzh-why__point:hover .pzh-why__point-marker {
   border-color: var(--blush); box-shadow: 0 4px 20px rgba(201,160,155,0.12);
 }
 
-.pzh-why__point-marker svg { width: 22px; height: 22px; }
+.pzh-why__point-marker svg { width: 20px; height: 20px; }
 
-/* WHY POINT TITLE — was 1.25rem, now 1.35rem */
 .pzh-why__point-content h3 {
   font-family: 'Libre Caslon Text', serif; font-weight: 700;
-  font-size: 1.6rem; color: var(--dark); margin-bottom: 4px; margin-top: 4px;
+  font-size: 1.1rem; color: var(--dark); margin-bottom: 6px;
+  line-height: 1.3;
 }
 
-/* WHY POINT BODY — was 0.95rem, now 1.1rem */
-.pzh-why__point-content p { font-size: 1.05rem; color: var(--gray); line-height: 1.75; }
+.pzh-why__point-content p {
+  font-family: 'Karla', sans-serif;
+  font-size: 0.95rem; color: var(--gray); line-height: 1.65;
+}
+
+@media (max-width: 900px) {
+  .pzh-why__timeline { grid-template-columns: repeat(2, 1fr); gap: 24px 20px; }
+}
+@media (max-width: 500px) {
+  .pzh-why__timeline { grid-template-columns: 1fr; gap: 20px; }
+}
 
 .pzh-why__bottom {
   text-align: center; max-width: 640px; margin: 0 auto;
@@ -641,8 +651,6 @@ html { scroll-behavior: smooth; }
 }
 
 @media (max-width: 600px) {
-  .pzh-why__timeline::before { left: 20px; }
-  .pzh-why__point { grid-template-columns: 42px 1fr; gap: 12px; }
   .pzh-why__point-marker { width: 42px; height: 42px; }
   .pzh-why__point-marker svg { width: 18px; height: 18px; }
 }
@@ -722,31 +730,11 @@ html { scroll-behavior: smooth; }
   box-shadow: 0 12px 36px rgba(0,0,0,0.28);
 }
 
-.pz-home .pzh-cta__scroll {
-  display: inline-flex;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: rgba(248,243,239,0.06);
-  border: 1px solid rgba(248,243,239,0.12);
-  color: var(--soft-cream);
-  align-items: center;
-  justify-content: center;
-  margin-top: 56px;
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.pz-home .pzh-cta__scroll:hover {
-  background: rgba(248,243,239,0.12);
-  transform: translateY(2px);
-}
-
 @media (max-width: 768px) {
   .pz-home .pzh-cta { padding: 72px 20px 56px; }
   .pz-home .pzh-cta__title { font-size: clamp(1.9rem, 7vw, 2.4rem); }
   .pz-home .pzh-cta__btn { padding: 18px 36px; font-size: 0.82rem; letter-spacing: 0.14em; }
   .pz-home .pzh-cta__body { font-size: 0.96rem; margin-bottom: 32px; }
-  .pz-home .pzh-cta__scroll { margin-top: 40px; }
 }
 
 /* ============================================
@@ -778,7 +766,7 @@ html { scroll-behavior: smooth; }
 /* ============================================
    PROCESS
    ============================================ */
-.pz-home .pzh-process { background: var(--white); }
+.pz-home .pzh-process { background: var(--cream); }
 .pz-home .pzh-process__header { text-align: center; margin-bottom: 48px; }
 .pz-home .pzh-process__header .heading-sm { color: var(--blush); margin-bottom: 8px; }
 .pz-home .pzh-process__header h2 { margin-bottom: 16px; }
@@ -792,7 +780,7 @@ html { scroll-behavior: smooth; }
 }
 .pz-home .pzh-process__step {
   padding: 32px 24px;
-  background: var(--soft-cream);
+  background: var(--white);
   border-radius: 14px;
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -896,7 +884,7 @@ html { scroll-behavior: smooth; }
 
 .pz-home .pzh-obm__intro {
   max-width: 680px;
-  margin: 0 auto 40px;
+  margin: 0 auto 24px;
   text-align: center;
 }
 
@@ -1266,9 +1254,8 @@ html { scroll-behavior: smooth; }
       <div class="pzh-testimonial__header fade-up">
         <div class="heading-sm pzh-testimonial__eyebrow">What clients say</div>
       </div>
-      <div class="pzh-testimonial__grid">
-
-        <div class="pzh-testimonial__card fade-up stagger-1">
+      <div class="pzh-testimonial__inner">
+        <div class="fade-up">
           <div class="pzh-testimonial__quote-mark">&ldquo;</div>
           <p class="pzh-testimonial__text">
             She's the type of person you can give a goal to, and she figures out the process. She's highly detail-oriented, very process-driven, and more than that... she genuinely cares about the work she does. <strong>She goes above and beyond.</strong>
@@ -1279,31 +1266,6 @@ html { scroll-behavior: smooth; }
             <span class="pzh-testimonial__role">Brand Strategist</span>
           </div>
         </div>
-
-        <!-- TODO: Drop second testimonial here.
-             Format: 2-3 sentence quote + Name + Role/Company.
-             Specific outcomes ("within 90 days...", "we doubled...") are gold. -->
-        <div class="pzh-testimonial__card pzh-testimonial__card--placeholder fade-up stagger-2" aria-hidden="true">
-          <div class="pzh-testimonial__quote-mark">&ldquo;</div>
-          <p class="pzh-testimonial__text">Your second testimonial lives here. A few specific sentences about what working with Priscilla was like.</p>
-          <div class="pzh-testimonial__divider"></div>
-          <div class="pzh-testimonial__attr">
-            <span class="pzh-testimonial__name">Client name</span>
-            <span class="pzh-testimonial__role">Title, Company</span>
-          </div>
-        </div>
-
-        <!-- TODO: Drop third testimonial here. -->
-        <div class="pzh-testimonial__card pzh-testimonial__card--placeholder fade-up stagger-3" aria-hidden="true">
-          <div class="pzh-testimonial__quote-mark">&ldquo;</div>
-          <p class="pzh-testimonial__text">Your third testimonial lives here. Specific outcomes work best.</p>
-          <div class="pzh-testimonial__divider"></div>
-          <div class="pzh-testimonial__attr">
-            <span class="pzh-testimonial__name">Client name</span>
-            <span class="pzh-testimonial__role">Title, Company</span>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
@@ -1398,11 +1360,6 @@ html { scroll-behavior: smooth; }
       <h2 class="pzh-cta__title">Ready to stop managing and <em>start leading?</em></h2>
       <p class="pzh-cta__body">Book a clarity call. Thirty minutes, no pitch. We'll talk through what's on your plate, what's working, and what one person could actually take off it.</p>
       <a href="https://scheduler.zoom.us/priscilla-zaehringer/clarity-call" class="pzh-cta__btn">Book Your Clarity Call</a>
-      <div class="pzh-cta__scroll" aria-hidden="true">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-          <path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </div>
     </div>
   </section>
 
