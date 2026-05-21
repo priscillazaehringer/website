@@ -352,6 +352,21 @@
 .pz-pod-foot { background: var(--dark); color: rgba(248,243,239,0.3); text-align: center; padding: 28px 0; font-size: 0.85rem; }
 .pz-pod-foot a { color: rgba(248,243,239,0.5); transition: color 0.2s; }
 .pz-pod-foot a:hover { color: var(--soft-cream); }
+
+/* FOCUS STATES — keyboard accessibility */
+.pz-pod a:focus-visible,
+.pz-pod button:focus-visible,
+.pz-pod input:focus-visible,
+.pz-pod textarea:focus-visible,
+.pz-pod [role="button"]:focus-visible {
+  outline: 2px solid var(--blush);
+  outline-offset: 3px;
+}
+.pz-pod input:focus-visible,
+.pz-pod textarea:focus-visible,
+.pz-pod .formkit-input:focus-visible {
+  outline-offset: 0;
+}
 </style>
 <div class="pz-pod">
 
