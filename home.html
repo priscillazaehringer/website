@@ -379,12 +379,13 @@ html { scroll-behavior: smooth; }
 .pzh-problem__context p { color: var(--gray); margin-bottom: 4px !important; text-align: center; }
 
 .pzh-problem__wall {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 48px; align-items: start;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 48px; align-items: stretch;
 }
 
 .pzh-problem__card {
-  background: var(--white); padding: 22px 18px 18px;
+  background: var(--white); padding: 28px 22px;
   text-align: center; border-radius: 12px;
+  display: flex; flex-direction: column; justify-content: center;
   transition: all 0.4s ease; position: relative; overflow: hidden;
 }
 
@@ -783,6 +784,7 @@ html { scroll-behavior: smooth; }
   background: var(--white);
   border-radius: 14px;
   text-align: left;
+  display: flex; flex-direction: column; justify-content: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .pz-home .pzh-process__step:hover {
@@ -897,10 +899,10 @@ html { scroll-behavior: smooth; }
 
 .pz-home .pzh-obm__scope {
   max-width: 720px;
-  margin: 0 auto 48px;
+  margin: 0 auto 24px;
   background: var(--white);
   border-radius: 16px;
-  padding: 36px 40px;
+  padding: 36px 40px 24px;
   box-shadow: 0 6px 30px rgba(61,53,53,0.04);
 }
 
@@ -947,7 +949,7 @@ html { scroll-behavior: smooth; }
   font-style: italic;
   font-size: 1.02rem;
   color: var(--mauve);
-  margin-top: 8px;
+  margin-top: 16px;
 }
 
 .pz-home .pzh-obm__close {
@@ -962,7 +964,7 @@ html { scroll-behavior: smooth; }
   font-size: 1.3rem;
   color: var(--dark);
   line-height: 1.5;
-  margin-bottom: 22px;
+  margin-bottom: 16px;
 }
 
 @media (max-width: 768px) {
