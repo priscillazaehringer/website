@@ -3,7 +3,8 @@
     { "source": "/home", "destination": "/home.html" },
     { "source": "/about", "destination": "/about.html" },
     { "source": "/podcast", "destination": "/podcast.html" },
-    { "source": "/ads", "destination": "/ads.html" }
+    { "source": "/ads", "destination": "/ads.html" },
+    { "source": "/home-full", "destination": "/home-full.html" }
   ],
   "headers": [
     {
@@ -11,7 +12,7 @@
       "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }]
     },
     {
-      "source": "/(home|about|ads|podcast)",
+      "source": "/(home|about|ads|podcast|home-full)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
       ]
