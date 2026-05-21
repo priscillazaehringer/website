@@ -342,38 +342,6 @@ html { scroll-behavior: smooth; }
 }
 
 /* ============================================
-   MARQUEE
-   ============================================ */
-.pzh-marquee {
-  background: var(--dark); overflow: hidden; padding: 16px 0;
-}
-
-.pzh-marquee__track {
-  display: flex; width: max-content; animation: pzhMarquee 35s linear infinite;
-}
-
-.pzh-marquee__track:hover { animation-play-state: paused; }
-.pzh-marquee__group { display: flex; align-items: center; flex-shrink: 0; }
-
-/* MARQUEE — was 0.75rem, now 0.88rem */
-.pzh-marquee__item {
-  font-family: 'Karla', sans-serif; font-weight: 500;
-  font-size: 0.88rem; letter-spacing: 0.22em;
-  text-transform: uppercase; color: var(--soft-cream);
-  white-space: nowrap; padding: 0 28px; opacity: 0.3;
-  transition: opacity 0.3s;
-}
-
-.pzh-marquee__item:hover { opacity: 0.6; }
-
-.pzh-marquee__sep {
-  width: 5px; height: 5px; border-radius: 50%;
-  background: var(--blush); flex-shrink: 0; opacity: 0.25;
-}
-
-@keyframes pzhMarquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-
-/* ============================================
    PROBLEM
    ============================================ */
 .pzh-problem { background: var(--cream); }
@@ -440,101 +408,10 @@ html { scroll-behavior: smooth; }
 .pzh-problem__card p { font-size: 1.05rem; color: var(--gray); line-height: 1.7; }
 
 /* Flip cards */
-.pzh-flip {
-  perspective: 800px;
-  cursor: pointer;
-  display: flex;
-}
-
-.pzh-flip__inner {
-  position: relative;
-  width: 100%;
-  flex: 1;
-  transition: transform 0.6s cubic-bezier(.4,.2,.2,1);
-  transform-style: preserve-3d;
-}
-
-.pzh-flip.flipped .pzh-flip__inner {
-  transform: rotateY(180deg);
-}
-
-.pzh-flip__front, .pzh-flip__back {
-  backface-visibility: hidden;
-  border-radius: 12px;
-  padding: 40px 36px;
-  text-align: center;
-}
-
-.pzh-flip__front {
-  background: var(--white);
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  box-shadow: 0 8px 32px rgba(61,53,53,0.08);
-  border-top: 3px solid rgba(201,160,155,0.4);
-}
-
-.pzh-flip__back {
-  background: var(--soft-blush);
-  transform: rotateY(180deg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 36px;
-  height: 100%;
-  box-shadow: 0 8px 32px rgba(61,53,53,0.08);
-}
-
-.pzh-flip__front, .pzh-flip__back { position: relative; }
-.pzh-flip.flipped .pzh-flip__front { visibility: hidden; position: absolute; top: 0; left: 0; width: 100%; }
-.pzh-flip.flipped .pzh-flip__back { position: relative; visibility: visible; }
-.pzh-flip:not(.flipped) .pzh-flip__back { visibility: hidden; position: absolute; top: 0; left: 0; width: 100%; }
-
-.pzh-flip__emoji {
-  font-size: 1.6rem;
-  margin-bottom: 4px;
-}
-
-.pzh-flip__front h3 {
-  font-family: 'Libre Caslon Text', serif;
-  font-weight: 700;
-  font-size: 1.4rem;
-  color: var(--dark);
-  margin-bottom: 8px;
-}
-
-.pzh-flip__stat {
-  font-family: 'Karla', sans-serif;
-  font-weight: 400;
-  font-size: 1.1rem;
-  color: #4A4A4A;
-  line-height: 1.85;
-}
-
 /* FLIP HINT — was 0.68rem, now 0.8rem */
-.pzh-flip__hint {
-  margin-top: 6px;
-  font-family: 'Karla', sans-serif;
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
-  color: var(--blush);
-  opacity: 0.7;
-}
-
-.pzh-flip.flipped .pzh-flip__hint { display: none; }
-
 /* FLIP BACK — was 0.9rem, now 1.05rem */
-.pzh-flip__back p {
-  font-size: 1.05rem;
-  color: var(--dark);
-  line-height: 1.7;
-}
-
 @media (max-width: 768px) {
-  .pzh-flip { display: flex; }
-}
+  }
 
 .pzh-problem__bottom {
   text-align: center; max-width: 680px; margin: 0 auto;
@@ -865,34 +742,6 @@ html { scroll-behavior: smooth; }
 }
 
 /* ============================================
-   FREEBIE
-   ============================================ */
-.pzh-freebie { background: var(--white); padding: 56px 0; }
-
-.pzh-freebie__inner {
-  display: grid; grid-template-columns: 1.2fr 1fr;
-  gap: 10px; align-items: center; max-width: 900px; margin: 0 auto;
-  padding: 24px 28px; background: var(--cream); border-radius: 14px;
-}
-
-.pzh-freebie__content .heading-sm { color: var(--gray); margin-bottom: 6px !important; }
-.pzh-freebie__content .heading-md { margin-bottom: 6px !important; }
-
-/* FREEBIE BODY — was 0.95rem, now 1.1rem */
-.pzh-freebie__content p { color: var(--gray); font-size: 1.1rem; line-height: 1.75; margin-bottom: 0 !important; }
-.pzh-freebie__content { margin-bottom: 0 !important; padding-bottom: 0 !important; }
-
-.pzh-freebie__form {
-  background: var(--white); padding: 18px 18px; border-radius: 10px; text-align: center;
-}
-
-.pzh-freebie__form .heading-sm { color: var(--blush); margin-bottom: 12px; }
-
-@media (max-width: 768px) {
-  .pzh-freebie__inner { grid-template-columns: 1fr; padding: 22px 18px; gap: 10px; }
-}
-
-/* ============================================
    FINAL CTA
    ============================================ */
 .pz-home .pzh-cta {
@@ -1123,6 +972,56 @@ html { scroll-behavior: smooth; }
   .pz-home .pzh-process__num { font-size: 2rem; margin-bottom: 12px; }
   .pz-home .pzh-process__header { margin-bottom: 32px; }
 }
+
+/* ============================================
+   SERVICE CARD INLINE CTAs
+   ============================================ */
+.pz-home .pzh-pick__ctas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.pz-home .pzh-pick__cta-secondary {
+  display: inline-block;
+  font-family: 'Karla', sans-serif;
+  font-weight: 500;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blush);
+  background: transparent;
+  border: none;
+  padding: 6px 4px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: rgba(201,160,155,0.4);
+}
+
+.pz-home .pzh-pick__cta-secondary:hover {
+  color: var(--dark);
+  text-decoration-color: var(--dark);
+}
+
+/* ============================================
+   TESTIMONIAL HEADER
+   ============================================ */
+.pz-home .pzh-testimonial__header {
+  text-align: center;
+  margin-bottom: 32px;
+  position: relative;
+  z-index: 2;
+}
+
+.pz-home .pzh-testimonial__eyebrow {
+  color: var(--soft-cream);
+  opacity: 0.8;
+}
+
 </style>
 
 <!-- ============================================
@@ -1148,80 +1047,30 @@ html { scroll-behavior: smooth; }
     </div>
   </section>
 
-  <!-- MARQUEE -->
-  <div class="pzh-marquee">
-    <div class="pzh-marquee__track">
-      <div class="pzh-marquee__group">
-        <span class="pzh-marquee__item">Ads Management</span><span class="pzh-marquee__sep"></span>
-        <span class="pzh-marquee__item">Podcast Production</span><span class="pzh-marquee__sep"></span>
-        <span class="pzh-marquee__item">OBM Support</span><span class="pzh-marquee__sep"></span>
-        <span class="pzh-marquee__item">Strategy & Execution</span><span class="pzh-marquee__sep"></span>
-        <span class="pzh-marquee__item">Marketing Systems</span><span class="pzh-marquee__sep"></span>
-        <span class="pzh-marquee__item">Tech & Automations</span><span class="pzh-marquee__sep"></span>
-        <span class="pzh-marquee__item">Content Creation</span><span class="pzh-marquee__sep"></span>
-      </div>
-      <div class="pzh-marquee__group" aria-hidden="true">
-        <span class="pzh-marquee__item">Ads Management</span><span class="pzh-marquee__sep"></span>
-        <span class="pzh-marquee__item">Podcast Production</span><span class="pzh-marquee__sep"></span>
-        <span class="pzh-marquee__item">OBM Support</span><span class="pzh-marquee__sep"></span>
-        <span class="pzh-marquee__item">Strategy & Execution</span><span class="pzh-marquee__sep"></span>
-        <span class="pzh-marquee__item">Marketing Systems</span><span class="pzh-marquee__sep"></span>
-        <span class="pzh-marquee__item">Tech & Automations</span><span class="pzh-marquee__sep"></span>
-        <span class="pzh-marquee__item">Content Creation</span><span class="pzh-marquee__sep"></span>
-      </div>
-    </div>
-  </div>
-
   <!-- PROBLEM -->
   <section class="pzh-problem pz-section" style="position: relative;">
     <span class="float-deco float-heart" style="top: 8%; right: 10%; transform: rotate(-12deg);">♥</span>
     <div class="pz-container">
       <div class="pzh-problem__intro fade-up">
-        <h2>Growing your business shouldn't mean growing your headcount!</h2>
-        <p>Most support options leave you choosing between too much overhead or too little help. There's a better way.</p>
+        <div class="heading-sm">Three signs we should talk</div>
+        <h2>Sound familiar?</h2>
       </div>
 
       <div class="pzh-problem__wall">
-        <div class="pzh-flip fade-up stagger-1" onclick="this.classList.toggle('flipped')">
-          <div class="pzh-flip__inner">
-            <div class="pzh-flip__front">
-              <div class="pzh-flip__emoji">🔁</div>
-              <h3>The Revolving Door</h3>
-              <p class="pzh-flip__stat">A new hire for every gap. A VA, a copywriter, an ads manager... suddenly you're managing a team instead of building a business.</p>
-              <div class="pzh-flip__hint">tap to flip ↻</div>
-            </div>
-            <div class="pzh-flip__back">
-              <p>You hired help to get time back. Instead you got a new job: briefing, following up, and connecting dots between people who don't talk to each other.</p>
-            </div>
-          </div>
+        <div class="pzh-problem__card fade-up stagger-1">
+          <div class="pzh-problem__card-illus">🔁</div>
+          <h3>You're managing instead of building.</h3>
+          <p>You hired a VA, a copywriter, an ads manager. Now you spend your week briefing, following up, and connecting dots between people who don't talk to each other.</p>
         </div>
-
-        <div class="pzh-flip fade-up stagger-2" onclick="this.classList.toggle('flipped')">
-          <div class="pzh-flip__inner">
-            <div class="pzh-flip__front">
-              <div class="pzh-flip__emoji">😮‍💨</div>
-              <h3>The Operator Trap</h3>
-              <p class="pzh-flip__stat">Every hour you spend on systems and content is an hour not spent on the work that only you can do.</p>
-              <div class="pzh-flip__hint">tap to flip ↻</div>
-            </div>
-            <div class="pzh-flip__back">
-              <p>At $150+/hr, spending 20 hours a week on backend ops isn't just exhausting. It's quietly costing you everything.</p>
-            </div>
-          </div>
+        <div class="pzh-problem__card fade-up stagger-2">
+          <div class="pzh-problem__card-illus">😮‍💨</div>
+          <h3>Your high-value hours are getting eaten by low-value work.</h3>
+          <p>You're spending twenty hours a week on backend ops at $150 an hour or more. It's exhausting, and quietly, it's costing you everything.</p>
         </div>
-
-        <div class="pzh-flip fade-up stagger-3" onclick="this.classList.toggle('flipped')">
-          <div class="pzh-flip__inner">
-            <div class="pzh-flip__front">
-              <div class="pzh-flip__emoji">📉</div>
-              <h3>The Indefinite Backlog</h3>
-              <p class="pzh-flip__stat">The podcast. The strategy. The thing that would actually move the needle. Still sitting on next month's list.</p>
-              <div class="pzh-flip__hint">tap to flip ↻</div>
-            </div>
-            <div class="pzh-flip__back">
-              <p>Next month never comes. Not because you don't want it to. Because you're too busy keeping the lights on to ever get ahead.</p>
-            </div>
-          </div>
+        <div class="pzh-problem__card fade-up stagger-3">
+          <div class="pzh-problem__card-illus">📉</div>
+          <h3>The thing that would actually move the needle is still on next month's list.</h3>
+          <p>The podcast. The strategy. The launch. Not because you don't want it to happen, but because you're too busy keeping the lights on to ever get ahead.</p>
         </div>
       </div>
 
@@ -1236,42 +1085,82 @@ html { scroll-behavior: smooth; }
     <span class="float-deco float-heart float-heart--lg" style="top: 6%; right: 6%; transform: rotate(10deg);">♥</span>
     <div class="pz-container">
       <div class="pzh-services__header fade-up">
-        <div class="heading-sm">Ways We Can Work Together</div>
+        <div class="heading-sm">Three ways we can work together</div>
         <span class="accent-line accent-line--center"></span>
-        <h2 class="heading-lg">What brings you here?</h2>
+        <h2 class="heading-lg">Pick the one that sounds like you.</h2>
       </div>
-      <p class="pzh-services__sub body-text fade-up" style="text-align:center;max-width:480px;margin:0 auto 24px;font-family:'Dancing Script',cursive;font-size:1.3rem;color:#C9A09B;">which one sounds like you? ♥</p>
 
       <div class="pzh-pick__grid">
         <div class="pzh-pick__card fade-up stagger-1">
           <div class="pzh-pick__emoji">🎙️</div>
-          <div class="pzh-pick__prompt">I want to start or grow a podcast</div>
+          <div class="pzh-pick__prompt">I want to start or grow a podcast.</div>
           <div class="pzh-pick__reveal">
-            <p>You've been thinking about this for a while. You know a podcast could be powerful for your business, but you need someone who handles everything so you can just show up and talk.</p>
-            <p style="font-family:'Dancing Script',cursive;color:#C9A09B;font-size:1.2rem;margin:10px 0;">that's exactly what I do. ♥</p>
-            <a href="https://priscillazaehringer.com/services/podcast/" class="btn-primary" style="display:inline-flex;align-items:center;gap:6px;background:#C9A09B;color:#fff;padding:17px 38px;border-radius:50px;font-family:'Karla',sans-serif;font-weight:500;font-size:0.88rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;margin-top:6px;">♥ Learn About Podcast Production</a>
+            <p>You've been thinking about this for a while. You know a podcast could be powerful for your business, but you need someone who handles the whole thing so you can just show up and talk. That's what I do.</p>
+            <div class="pzh-pick__ctas">
+              <a href="https://priscillazaehringer.com/services-podcast/" class="btn-primary" style="display:inline-flex;align-items:center;gap:6px;background:#C9A09B;color:#fff;padding:17px 38px;border-radius:50px;font-family:'Karla',sans-serif;font-weight:500;font-size:0.88rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;margin-top:6px;">♥ Learn About Podcast Production</a>
+              <a href="https://scheduler.zoom.us/priscilla-zaehringer/clarity-call" class="pzh-pick__cta-secondary">Book a Clarity Call</a>
+            </div>
           </div>
         </div>
 
         <div class="pzh-pick__card fade-up stagger-2">
           <div class="pzh-pick__emoji">📣</div>
-          <div class="pzh-pick__prompt">I'm ready to run ads that actually work</div>
+          <div class="pzh-pick__prompt">I'm ready to run ads that actually work.</div>
           <div class="pzh-pick__reveal">
-            <p>You've outgrown organic, maybe you've tried ads before and it didn't go well. You need someone who builds a real strategy around your business, not a recycled template.</p>
-            <p style="font-family:'Dancing Script',cursive;color:#C9A09B;font-size:1.2rem;margin:10px 0;">let's make your ad spend count. ♥</p>
-            <a href="https://priscillazaehringer.com/ads/" class="btn-primary" style="display:inline-flex;align-items:center;gap:6px;background:#C9A09B;color:#fff;padding:17px 38px;border-radius:50px;font-family:'Karla',sans-serif;font-weight:500;font-size:0.88rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;margin-top:6px;">♥ Learn About Ad Management</a>
+            <p>You've outgrown organic. Maybe you've tried ads before and it didn't go well. You need someone who builds a real strategy around your business, not a recycled template. That's what I do.</p>
+            <div class="pzh-pick__ctas">
+              <a href="https://priscillazaehringer.com/ads/" class="btn-primary" style="display:inline-flex;align-items:center;gap:6px;background:#C9A09B;color:#fff;padding:17px 38px;border-radius:50px;font-family:'Karla',sans-serif;font-weight:500;font-size:0.88rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;margin-top:6px;">♥ Learn About Ad Management</a>
+              <a href="https://scheduler.zoom.us/priscilla-zaehringer/clarity-call" class="pzh-pick__cta-secondary">Book a Clarity Call</a>
+            </div>
           </div>
         </div>
 
         <div class="pzh-pick__card fade-up stagger-3">
           <div class="pzh-pick__emoji">⚙️</div>
-          <div class="pzh-pick__prompt">I need someone to run the backend of my business</div>
+          <div class="pzh-pick__prompt">I need a second brain for my business.</div>
           <div class="pzh-pick__reveal">
-            <p>You're doing everything yourself and it's not sustainable. You need an operations partner who keeps the wheels turning so you can focus on the work that actually moves the needle.</p>
-            <p style="font-family:'Dancing Script',cursive;color:#C9A09B;font-size:1.2rem;margin:10px 0;">this is coming soon, but let's talk. ♥</p>
-            <a href="https://scheduler.zoom.us/priscilla-zaehringer/clarity-call" class="btn-primary" style="display:inline-flex;align-items:center;gap:6px;background:#C9A09B;color:#fff;padding:17px 38px;border-radius:50px;font-family:'Karla',sans-serif;font-weight:500;font-size:0.88rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;margin-top:6px;">♥ Book a Clarity Call</a>
+            <p>You're holding too much in your head. The systems, the team, the moving pieces. It all lives in your brain and it's not sustainable. You need someone who keeps the wheels turning so you can focus on the work that actually moves the needle. That's what I do.</p>
+            <div class="pzh-pick__ctas">
+              <a href="https://scheduler.zoom.us/priscilla-zaehringer/clarity-call" class="btn-primary" style="display:inline-flex;align-items:center;gap:6px;background:#C9A09B;color:#fff;padding:17px 38px;border-radius:50px;font-family:'Karla',sans-serif;font-weight:500;font-size:0.88rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;margin-top:6px;">♥ Book a Clarity Call</a>
+            </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY ME -->
+  <section class="pzh-why pz-section" style="position: relative;">
+    <span class="pzh-why__sparkle"></span>
+    <span class="pzh-why__sparkle"></span>
+    <span class="pzh-why__sparkle"></span>
+    <span class="pzh-why__sparkle"></span>
+    <span class="pzh-why__sparkle"></span>
+    <span class="pzh-why__sparkle"></span>
+    <span class="pzh-why__sparkle"></span>
+    <span class="pzh-why__sparkle"></span>
+    <span class="float-deco float-heart float-heart--sm" style="top: 10%; left: 8%; transform: rotate(-18deg);">♥</span>
+    <div class="pz-container">
+      <p class="pzh-why__statement fade-up">You get me. Not a team. Not an account manager. Me.</p>
+
+      <div class="pzh-why__timeline">
+        <div class="pzh-why__point fade-up stagger-1">
+          <div class="pzh-why__point-marker"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v18M5 10l7-7 7 7" stroke="#C9A09B" stroke-width="1.5"/></svg></div>
+          <div class="pzh-why__point-content"><h3>I strategize AND execute.</h3><p>I don't just make the plan. I do the work.</p></div>
+        </div>
+        <div class="pzh-why__point fade-up stagger-2">
+          <div class="pzh-why__point-marker"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="#C9A09B" stroke-width="1.5"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4" stroke="#C9A09B" stroke-width="1"/></svg></div>
+          <div class="pzh-why__point-content"><h3>I find the gaps.</h3><p>I don't wait for you to tell me what needs doing. I see it, and I bring it to you.</p></div>
+        </div>
+        <div class="pzh-why__point fade-up stagger-3">
+          <div class="pzh-why__point-marker"><svg viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z" stroke="#C9A09B" stroke-width="1.2"/></svg></div>
+          <div class="pzh-why__point-content"><h3>I treat your business like my own.</h3><p>Your wins are my wins. I'm invested.</p></div>
+        </div>
+        <div class="pzh-why__point fade-up stagger-4">
+          <div class="pzh-why__point-marker"><svg viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="#C9A09B" stroke-width="1.2"/><circle cx="9" cy="7" r="4" stroke="#C9A09B" stroke-width="1.2"/></svg></div>
+          <div class="pzh-why__point-content"><h3>I keep things personal.</h3><p>Small roster, fair prices, real attention. That's by design.</p></div>
+        </div>
+      </div>
       </div>
     </div>
   </section>
@@ -1279,6 +1168,9 @@ html { scroll-behavior: smooth; }
   <!-- TESTIMONIAL -->
   <section class="pzh-testimonial pz-section">
     <div class="pz-container">
+      <div class="pzh-testimonial__header fade-up">
+        <div class="heading-sm pzh-testimonial__eyebrow">What clients say</div>
+      </div>
       <div class="pzh-testimonial__inner">
         <div class="fade-up">
           <div class="pzh-testimonial__quote-mark">&ldquo;</div>
@@ -1324,46 +1216,6 @@ html { scroll-behavior: smooth; }
     </div>
   </section>
 
-  <!-- WHY ME -->
-  <section class="pzh-why pz-section" style="position: relative;">
-    <span class="pzh-why__sparkle"></span>
-    <span class="pzh-why__sparkle"></span>
-    <span class="pzh-why__sparkle"></span>
-    <span class="pzh-why__sparkle"></span>
-    <span class="pzh-why__sparkle"></span>
-    <span class="pzh-why__sparkle"></span>
-    <span class="pzh-why__sparkle"></span>
-    <span class="pzh-why__sparkle"></span>
-    <span class="float-deco float-heart float-heart--sm" style="top: 10%; left: 8%; transform: rotate(-18deg);">♥</span>
-    <div class="pz-container">
-      <p class="pzh-why__statement fade-up">You get me. Not a team. Not an account manager. Me.</p>
-
-      <div class="pzh-why__timeline">
-        <div class="pzh-why__point fade-up stagger-1">
-          <div class="pzh-why__point-marker"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v18M5 10l7-7 7 7" stroke="#C9A09B" stroke-width="1.5"/></svg></div>
-          <div class="pzh-why__point-content"><h3>I strategize AND execute.</h3><p>I don't just make the plan. I do the work.</p></div>
-        </div>
-        <div class="pzh-why__point fade-up stagger-2">
-          <div class="pzh-why__point-marker"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="#C9A09B" stroke-width="1.5"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4" stroke="#C9A09B" stroke-width="1"/></svg></div>
-          <div class="pzh-why__point-content"><h3>I find the gaps.</h3><p>I don't wait for you to tell me what needs doing. I see it, and I bring it to you.</p></div>
-        </div>
-        <div class="pzh-why__point fade-up stagger-3">
-          <div class="pzh-why__point-marker"><svg viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z" stroke="#C9A09B" stroke-width="1.2"/></svg></div>
-          <div class="pzh-why__point-content"><h3>I treat your business like my own.</h3><p>Your wins are my wins. I'm invested.</p></div>
-        </div>
-        <div class="pzh-why__point fade-up stagger-4">
-          <div class="pzh-why__point-marker"><svg viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="#C9A09B" stroke-width="1.2"/><circle cx="9" cy="7" r="4" stroke="#C9A09B" stroke-width="1.2"/></svg></div>
-          <div class="pzh-why__point-content"><h3>I keep things personal.</h3><p>Small roster, fair prices, real attention. That's by design.</p></div>
-        </div>
-      </div>
-
-      <div class="pzh-why__bottom fade-up">
-        <span class="accent-line accent-line--center"></span>
-        <p>You don't need to hire a copywriter, a designer, a web developer, a podcast editor, an ads manager, and a VA. You might just need one person who can do all of it, and actually cares about the outcome.</p>
-      </div>
-    </div>
-  </section>
-
   <!-- ABOUT -->
   <section class="pzh-about pz-section" style="position: relative;">
     <span class="float-deco float-heart float-heart--mauve float-heart--sm" style="bottom: 15%; right: 8%; transform: rotate(15deg);">♥</span>
@@ -1383,29 +1235,6 @@ html { scroll-behavior: smooth; }
             <p>I don't just pick up the tasks you hand me. I pick up the slack, and I wear as many hats as you do.</p>
             <div class="quote-attr">Priscilla</div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FREEBIE -->
-  <section class="pzh-freebie" style="position:relative;">
-    <div class="pz-container">
-      <div class="pzh-freebie__inner fade-up">
-        <div class="pzh-freebie__content">
-          <div class="heading-sm">Free Resource</div>
-          <span class="accent-line"></span>
-          <h3 class="heading-md" style="margin-bottom:6px!important;">Pitch Yourself Confidently</h3>
-          <p style="margin-bottom:0!important;">A free resource to help you put yourself out there with clarity and confidence.</p>
-          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;">
-            <span style="display:inline-flex;align-items:center;gap:4px;font-family:'Karla',sans-serif;font-weight:500;font-size:0.78rem;padding:5px 12px;border-radius:50px;background:#fff;color:#C9A09B;box-shadow:0 2px 8px rgba(61,53,53,0.08);">🎙️ great for podcast pitches</span>
-            <span style="display:inline-flex;align-items:center;gap:4px;font-family:'Karla',sans-serif;font-weight:500;font-size:0.78rem;padding:5px 12px;border-radius:50px;background:#C9A09B;color:#fff;">🎨 Canva template included</span>
-            <span style="display:inline-flex;align-items:center;gap:4px;font-family:'Karla',sans-serif;font-weight:500;font-size:0.78rem;padding:5px 12px;border-radius:50px;background:#fff;color:#4A4A4A;box-shadow:0 2px 8px rgba(61,53,53,0.06);">📋 guided experience</span>
-          </div>
-        </div>
-        <div class="pzh-freebie__form">
-          <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
-          <form action="https://app.kit.com/forms/9140164/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9140164" data-uid="3bc23ec727" data-format="inline" data-version="5" data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;message&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;&quot;},&quot;analytics&quot;:{&quot;google&quot;:null,&quot;fathom&quot;:null,&quot;facebook&quot;:null,&quot;segment&quot;:null,&quot;pinterest&quot;:null,&quot;sparkloop&quot;:null,&quot;googletagmanager&quot;:null},&quot;modal&quot;:{&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;powered_by&quot;:{&quot;show&quot;:false,&quot;url&quot;:&quot;https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic&quot;},&quot;recaptcha&quot;:{&quot;enabled&quot;:false},&quot;return_visitor&quot;:{&quot;action&quot;:&quot;show&quot;,&quot;custom_content&quot;:&quot;&quot;},&quot;slide_in&quot;:{&quot;display_in&quot;:&quot;bottom_right&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;sticky_bar&quot;:{&quot;display_in&quot;:&quot;top&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15}},&quot;version&quot;:&quot;5&quot;}" min-width="400 500 600 700 800"><div data-style="clean"><ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul><div data-element="fields" data-stacked="false" class="seva-fields formkit-fields"><div class="formkit-field"><input class="formkit-input" aria-label="First Name" name="fields[first_name]" placeholder="First Name" type="text" style="color: rgb(0, 0, 0); border-color: rgb(227, 227, 227); border-radius: 50px; font-weight: 400;"></div><div class="formkit-field"><input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="Email Address" required="" type="email" style="color: rgb(0, 0, 0); border-color: rgb(227, 227, 227); border-radius: 50px; font-weight: 400;"></div><button data-element="submit" class="formkit-submit formkit-submit" style="color: rgb(255, 255, 255); background-color: #C9A09B; border-radius: 50px; font-weight: 700;"><div class="formkit-spinner"><div></div><div></div><div></div></div><span class="">Send It To Me!</span></button></div></div></form>
         </div>
       </div>
     </div>
