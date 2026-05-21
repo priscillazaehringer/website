@@ -895,40 +895,127 @@ html { scroll-behavior: smooth; }
 /* ============================================
    FINAL CTA
    ============================================ */
-.pzh-cta {
-  background: url('http://priscillazaehringer.com/wp-content/uploads/2026/03/freepik__id-like-an-outdoor-photo-candid-get-some-vibes-fro__68187-1.png') center/cover no-repeat;
-  position: relative; overflow: hidden;
+.pz-home .pzh-cta {
+  background: var(--dark);
+  color: var(--soft-cream);
+  padding: 100px 24px 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.pzh-cta::before {
-  content: '';
-  position: absolute; inset: 0;
-  background: rgba(201,160,155,0.75);
-}
-
-.pzh-cta__inner {
+.pz-home .pzh-cta__inner {
   position: relative; z-index: 1;
-  text-align: center; max-width: 640px; margin: 0 auto;
+  max-width: 640px; margin: 0 auto;
 }
 
-.pzh-cta__inner .heading-sm { color: var(--white); margin-bottom: 10px; }
-.pzh-cta__inner .heading-lg { color: var(--white); margin-bottom: 10px; }
-
-/* CTA BODY — was 0.98rem, now 1.15rem */
-.pzh-cta__inner > p {
-  color: rgba(255,255,255,0.8);
-  font-size: 1.15rem; line-height: 1.85; margin-bottom: 10px;
+.pz-home .pzh-cta__eyebrow {
+  font-family: 'Karla', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--blush);
+  margin-bottom: 24px;
 }
 
-.pzh-cta__inner > p:last-of-type { margin-bottom: 30px; }
-
-.pzh-cta .btn-primary {
-  background: var(--white);
-  color: var(--dark);
+.pz-home .pzh-cta__title {
+  font-family: 'Libre Caslon Text', serif;
+  font-weight: 400;
+  font-size: clamp(2.2rem, 4.8vw, 3.6rem);
+  line-height: 1.15;
+  color: var(--soft-cream);
+  margin-bottom: 24px;
 }
 
-.pzh-cta .btn-primary:hover { background: var(--dark); color: var(--white); opacity: 1; }
-.pzh-cta .accent-line { background: var(--white); opacity: 0.4; }
+.pz-home .pzh-cta__title em {
+  font-style: italic;
+  color: var(--blush);
+  font-weight: 400;
+}
+
+.pz-home .pzh-cta__body {
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
+  font-size: 1.02rem;
+  line-height: 1.8;
+  color: rgba(248,243,239,0.72);
+  max-width: 520px;
+  margin: 0 auto 40px;
+}
+
+.pz-home .pzh-cta__btn {
+  display: inline-block;
+  background: var(--soft-cream);
+  color: var(--blush);
+  font-family: 'Karla', sans-serif;
+  font-weight: 600;
+  font-size: 0.88rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 20px 48px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+}
+
+.pz-home .pzh-cta__btn:hover {
+  background: var(--blush);
+  color: var(--soft-cream);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.28);
+}
+
+.pz-home .pzh-cta__spots {
+  margin-top: 22px;
+  font-family: 'Libre Caslon Text', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--blush);
+}
+
+.pz-home .pzh-cta__divider {
+  width: 240px;
+  height: 1px;
+  background: rgba(248,243,239,0.18);
+  margin: 44px auto 28px;
+  border: none;
+}
+
+.pz-home .pzh-cta__sig {
+  font-family: 'Libre Caslon Text', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--blush);
+  margin-bottom: 36px;
+}
+
+.pz-home .pzh-cta__scroll {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(248,243,239,0.06);
+  border: 1px solid rgba(248,243,239,0.12);
+  color: var(--soft-cream);
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.pz-home .pzh-cta__scroll:hover {
+  background: rgba(248,243,239,0.12);
+  transform: translateY(2px);
+}
+
+@media (max-width: 768px) {
+  .pz-home .pzh-cta { padding: 72px 20px 56px; }
+  .pz-home .pzh-cta__title { font-size: clamp(1.9rem, 7vw, 2.4rem); }
+  .pz-home .pzh-cta__btn { padding: 18px 36px; font-size: 0.82rem; letter-spacing: 0.14em; }
+  .pz-home .pzh-cta__body { font-size: 0.96rem; margin-bottom: 32px; }
+  .pz-home .pzh-cta__divider { margin: 36px auto 24px; width: 180px; }
+}
 
 /* ============================================
    FOOTER
@@ -1348,16 +1435,19 @@ html { scroll-behavior: smooth; }
   </section>
 
   <!-- FINAL CTA -->
-  <section class="pzh-cta pz-section" style="position: relative;">
-    <span class="float-deco float-heart float-heart--light" style="top: 15%; right: 10%; transform: rotate(12deg);">♥</span>
-    <div class="pz-container">
-      <div class="pzh-cta__inner fade-up">
-        <div class="heading-sm">Not Sure Where to Start?</div>
-        <span class="accent-line accent-line--center"></span>
-        <h2 class="heading-lg">If you know something needs to change, let's figure out what that looks like.</h2>
-        <p>You don't need to have it all figured out before reaching out. Schedule a clarity call and we'll look at what's on your plate, what's working, and what kind of support would actually make a difference.</p>
-        <p>No pressure. No hard sell. Just an honest conversation.</p>
-        <a href="https://scheduler.zoom.us/priscilla-zaehringer/clarity-call" class="btn-primary"><span class="heart">♥</span> Schedule a Clarity Call</a>
+  <section class="pzh-cta">
+    <div class="pzh-cta__inner fade-up">
+      <div class="pzh-cta__eyebrow">One Last Thing</div>
+      <h2 class="pzh-cta__title">Ready to stop managing and <em>start leading?</em></h2>
+      <p class="pzh-cta__body">Book a clarity call. Thirty minutes, no pitch. We'll talk through what's on your plate, what's working, and what one person could actually take off it.</p>
+      <a href="https://scheduler.zoom.us/priscilla-zaehringer/clarity-call" class="pzh-cta__btn">Book Your Clarity Call</a>
+      <p class="pzh-cta__spots">only 2 spots left for Q2</p>
+      <hr class="pzh-cta__divider" />
+      <div class="pzh-cta__sig">&mdash; Priscilla</div>
+      <div class="pzh-cta__scroll" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
       </div>
     </div>
   </section>
