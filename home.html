@@ -1003,6 +1003,21 @@
   .pzh-pick__emoji { font-size: 2rem; margin-bottom: 8px; }
   .pzh-pick__prompt { font-size: 1.1rem; }
 }
+
+/* FOCUS STATES — keyboard accessibility */
+.pz-home a:focus-visible,
+.pz-home button:focus-visible,
+.pz-home input:focus-visible,
+.pz-home textarea:focus-visible,
+.pz-home [role="button"]:focus-visible {
+  outline: 2px solid var(--blush);
+  outline-offset: 3px;
+}
+.pz-home input:focus-visible,
+.pz-home textarea:focus-visible,
+.pz-home .formkit-input:focus-visible {
+  outline-offset: 0;
+}
 </style>
 
 <!-- ============================================

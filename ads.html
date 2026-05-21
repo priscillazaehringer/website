@@ -1888,6 +1888,21 @@
 @media (max-width: 600px) {
   .pz-footer { flex-direction: column; gap: 12px; text-align: center; }
 }
+
+/* FOCUS STATES — keyboard accessibility */
+.pz a:focus-visible,
+.pz button:focus-visible,
+.pz input:focus-visible,
+.pz textarea:focus-visible,
+.pz [role="button"]:focus-visible {
+  outline: 2px solid var(--blush);
+  outline-offset: 3px;
+}
+.pz input:focus-visible,
+.pz textarea:focus-visible,
+.pz .formkit-input:focus-visible {
+  outline-offset: 0;
+}
 </style>
 
 <!-- ============================================
