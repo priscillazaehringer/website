@@ -765,7 +765,7 @@ html { scroll-behavior: smooth; }
 .pz-home .pzh-obm__header {
   text-align: center;
   max-width: 760px;
-  margin: 0 auto 20px;
+  margin: 0 auto 14px;
 }
 
 .pz-home .pzh-obm__header .heading-sm {
@@ -787,13 +787,13 @@ html { scroll-behavior: smooth; }
   font-style: italic;
   font-size: 1.15rem;
   color: var(--gray);
-  margin: 14px 0 0;
+  margin: 10px 0 0;
   line-height: 1.5;
 }
 
 .pz-home .pzh-obm__intro {
   max-width: 680px;
-  margin: 0 auto 20px;
+  margin: 0 auto 18px;
   text-align: center;
 }
 
@@ -805,11 +805,11 @@ html { scroll-behavior: smooth; }
 }
 
 .pz-home .pzh-obm__scope {
-  max-width: 720px;
-  margin: 0 auto 22px;
+  max-width: 760px;
+  margin: 0 auto 18px;
   background: var(--white);
   border-radius: 16px;
-  padding: 28px 36px 22px;
+  padding: 24px 32px 22px;
   box-shadow: 0 6px 30px rgba(61,53,53,0.04);
 }
 
@@ -821,36 +821,36 @@ html { scroll-behavior: smooth; }
   text-transform: uppercase;
   color: var(--blush);
   text-align: center;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .pz-home .pzh-obm__scope-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6px 28px;
-  margin-bottom: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 14px;
 }
 
 .pz-home .pzh-obm__scope-item {
-  font-family: 'Libre Caslon Text', serif;
-  font-weight: 400;
-  font-size: 0.98rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Karla', sans-serif;
+  font-weight: 500;
+  font-size: 0.92rem;
   color: var(--dark);
-  padding: 6px 0 6px 22px;
-  position: relative;
-  line-height: 1.4;
+  background: var(--soft-cream);
+  border: 1px solid rgba(201,160,155,0.25);
+  border-radius: 999px;
+  padding: 8px 16px;
+  line-height: 1.3;
 }
 
-.pz-home .pzh-obm__scope-item::before {
-  content: "♥";
-  position: absolute;
-  left: 0;
-  color: var(--blush);
-  font-size: 0.8rem;
-  top: 9px;
+.pz-home .pzh-obm__scope-item-emoji {
+  font-size: 1rem;
+  line-height: 1;
 }
-
-.pz-home .pzh-obm__scope-item--wide { grid-column: 1 / -1; }
 
 .pz-home .pzh-obm__intro p + p { margin-top: 10px; }
 
@@ -860,7 +860,7 @@ html { scroll-behavior: smooth; }
   font-style: italic;
   font-size: 1rem;
   color: var(--mauve);
-  margin-top: 10px;
+  margin-top: 14px;
 }
 
 .pz-home .pzh-obm__close {
@@ -879,10 +879,10 @@ html { scroll-behavior: smooth; }
 }
 
 @media (max-width: 768px) {
-  .pz-home .pzh-obm__scope { padding: 24px 22px; }
-  .pz-home .pzh-obm__scope-grid { grid-template-columns: 1fr; gap: 8px; }
+  .pz-home .pzh-obm__scope { padding: 22px 18px; }
   .pz-home .pzh-obm__intro p { font-size: 1.02rem; }
   .pz-home .pzh-obm__close p { font-size: 1.12rem; }
+  .pz-home .pzh-obm__scope-item { font-size: 0.88rem; padding: 7px 14px; }
 }
 
 /* ============================================
@@ -1126,11 +1126,11 @@ html { scroll-behavior: smooth; }
       <div class="pzh-obm__scope fade-up stagger-2">
         <div class="pzh-obm__scope-label">What I might be running for you in any given month</div>
         <div class="pzh-obm__scope-grid">
-          <div class="pzh-obm__scope-item">Ads strategy and management</div>
-          <div class="pzh-obm__scope-item">Funnels, landing pages, and lead magnets</div>
-          <div class="pzh-obm__scope-item">Email marketing, sequences, and launches</div>
-          <div class="pzh-obm__scope-item">Podcast production and content systems</div>
-          <div class="pzh-obm__scope-item pzh-obm__scope-item--wide">The operations behind all of it: tools, automations, SOPs, and team coordination</div>
+          <div class="pzh-obm__scope-item"><span class="pzh-obm__scope-item-emoji">📣</span>Ads strategy and management</div>
+          <div class="pzh-obm__scope-item"><span class="pzh-obm__scope-item-emoji">🧲</span>Funnels, landing pages, and lead magnets</div>
+          <div class="pzh-obm__scope-item"><span class="pzh-obm__scope-item-emoji">✉️</span>Email marketing, sequences, and launches</div>
+          <div class="pzh-obm__scope-item"><span class="pzh-obm__scope-item-emoji">🎙️</span>Podcast production and content systems</div>
+          <div class="pzh-obm__scope-item"><span class="pzh-obm__scope-item-emoji">⚙️</span>Operations: tools, automations, SOPs, and team coordination</div>
         </div>
         <p class="pzh-obm__scope-more">The specific mix depends on your business. What stays consistent is that I'm in it with you.</p>
       </div>
