@@ -266,7 +266,7 @@ html { scroll-behavior: smooth; }
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   position: relative;
   overflow: hidden;
   background: url('http://priscillazaehringer.com/wp-content/uploads/2026/02/freepik__priscilla-black-and-white-editorial-lifestyle-phot__98082.png') center/cover no-repeat;
@@ -275,23 +275,22 @@ html { scroll-behavior: smooth; }
 .pzh-hero::before {
   content: '';
   position: absolute; inset: 0;
-  background: linear-gradient(95deg,
-    rgba(61,53,53,0.88) 0%,
-    rgba(61,53,53,0.82) 35%,
-    rgba(61,53,53,0.55) 65%,
-    rgba(61,53,53,0.32) 100%);
+  background: rgba(61,53,53,0.62);
 }
 
 .pzh-hero__wrap {
   position: relative;
   z-index: 2;
   width: 100%;
-  padding: 80px clamp(24px, 5vw, 72px);
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 80px 24px;
 }
 
 .pzh-hero__content {
-  max-width: 720px;
-  text-align: left;
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .pzh-hero__eyebrow {
@@ -304,17 +303,22 @@ html { scroll-behavior: smooth; }
 .pzh-hero__h1 {
   font-family: 'Libre Caslon Text', serif;
   font-weight: 400;
-  font-size: clamp(3rem, 9vw, 6.5rem);
-  line-height: 0.95;
-  letter-spacing: -0.015em;
+  font-size: clamp(2.6rem, 7vw, 5.4rem);
+  line-height: 1;
+  letter-spacing: -0.01em;
   color: var(--soft-cream);
   margin: 0;
 }
 
-.pzh-hero__h1 em {
-  font-style: italic;
-  font-weight: 400;
+.pzh-hero__h1 .pzh-hero__script {
+  display: block;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 500;
+  font-style: normal;
   color: var(--blush);
+  font-size: 1.15em;
+  line-height: 1.05;
+  margin-top: 6px;
 }
 
 .pzh-hero__lead {
@@ -323,26 +327,21 @@ html { scroll-behavior: smooth; }
   font-size: clamp(1rem, 1.5vw, 1.15rem);
   letter-spacing: 0.02em;
   color: var(--blush);
-  margin: 28px 0 14px;
-  max-width: 540px;
+  margin: 28px auto 14px;
+  max-width: 560px;
   line-height: 1.5;
 }
 
 .pzh-hero__subtitle {
   font-size: 1rem;
   color: rgba(248,243,239,0.82);
-  margin: 14px 0 32px; line-height: 1.7;
-  max-width: 520px;
+  margin: 14px auto 32px;
+  line-height: 1.7;
+  max-width: 560px;
 }
 
 @media (max-width: 900px) {
   .pzh-hero { min-height: 70vh; }
-  .pzh-hero::before {
-    background: linear-gradient(180deg,
-      rgba(61,53,53,0.7) 0%,
-      rgba(61,53,53,0.8) 60%,
-      rgba(61,53,53,0.85) 100%);
-  }
   .pzh-hero__wrap { padding: 64px 24px; }
 }
 
@@ -1047,7 +1046,7 @@ html { scroll-behavior: smooth; }
     <div class="pzh-hero__wrap">
       <div class="pzh-hero__content">
         <div class="pzh-hero__eyebrow fade-up">Priscilla Zaehringer</div>
-        <h1 class="pzh-hero__h1 fade-up stagger-1">Your marketing,<br><em>finally handled.</em></h1>
+        <h1 class="pzh-hero__h1 fade-up stagger-1">Your marketing,<span class="pzh-hero__script">finally handled.</span></h1>
         <p class="pzh-hero__lead fade-up stagger-2">One person. Strategy, systems, and the actual work.</p>
         <p class="pzh-hero__subtitle fade-up stagger-2">
           You're past the startup phase and ready to grow, but you don't want to build a team to do it. I'm the second brain who runs your marketing end to end: the strategy, the launches, the ads, and the systems behind them. You run the vision. I run the rest.
