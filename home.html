@@ -707,94 +707,62 @@ html { scroll-behavior: smooth; }
   margin: 0 auto;
 }
 
-.pz-home .pzh-process__columns {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  max-width: 1120px;
+.pz-home .pzh-process__stack {
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 24px;
-  position: relative;
 }
 
-.pz-home .pzh-process__col {
-  padding: 0 36px;
-  position: relative;
+.pz-home .pzh-process__step {
+  text-align: center;
+  padding: 64px 0;
 }
 
-.pz-home .pzh-process__col:first-child { padding-left: 0; }
-.pz-home .pzh-process__col:last-child { padding-right: 0; }
+.pz-home .pzh-process__step:first-child { padding-top: 0; }
+.pz-home .pzh-process__step:last-child { padding-bottom: 0; }
 
-.pz-home .pzh-process__col + .pzh-process__col {
-  border-left: 1px solid rgba(61,53,53,0.13);
+.pz-home .pzh-process__step + .pzh-process__step {
+  border-top: 1px solid rgba(61,53,53,0.15);
 }
 
 .pz-home .pzh-process__num {
   font-family: 'Libre Caslon Text', serif;
   font-style: italic;
   font-weight: 400;
-  font-size: 5rem;
+  font-size: clamp(3.6rem, 6vw, 5rem);
   line-height: 0.9;
   color: var(--blush);
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
-.pz-home .pzh-process__label {
-  font-family: 'Karla', sans-serif;
-  font-weight: 600;
-  font-size: 0.72rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
+.pz-home .pzh-process__step h3 {
+  font-family: 'Libre Caslon Text', serif;
+  font-weight: 400;
+  font-size: clamp(1.7rem, 3.2vw, 2.4rem);
+  line-height: 1.2;
   color: var(--dark);
-  margin-bottom: 24px;
+  max-width: 720px;
+  margin: 0 auto 22px;
 }
 
 .pz-home .pzh-process__body {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: 'Karla', sans-serif;
   font-weight: 400;
   font-size: 1.02rem;
-  line-height: 1.65;
-  color: var(--dark);
+  line-height: 1.75;
+  color: var(--gray);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .pz-home .pzh-process__body p { margin: 0 0 14px; }
 .pz-home .pzh-process__body p:last-child { margin-bottom: 0; }
 
-.pz-home .pzh-process__body p:first-of-type::first-letter {
-  font-family: 'Libre Caslon Text', serif;
-  font-style: italic;
-  font-weight: 400;
-  color: var(--blush);
-  font-size: 5rem;
-  line-height: 0.85;
-  float: left;
-  padding: 6px 10px 0 0;
-}
-
-.pz-home .pzh-process__pullquote {
-  font-family: 'Libre Caslon Text', serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 1.3rem;
-  line-height: 1.4;
-  color: var(--dark);
-  margin: 28px 0 0;
-  padding: 20px 0 0;
-  border-top: 1px solid rgba(61,53,53,0.18);
-}
-
 @media (max-width: 900px) {
   .pz-home .pzh-process { padding: 64px 0 72px; }
   .pz-home .pzh-process__masthead { margin-bottom: 48px; }
   .pz-home .pzh-process__title { font-size: clamp(2.4rem, 10vw, 4rem); }
-  .pz-home .pzh-process__columns { grid-template-columns: 1fr; gap: 40px; }
-  .pz-home .pzh-process__col { padding: 0; }
-  .pz-home .pzh-process__col + .pzh-process__col {
-    border-left: none;
-    border-top: 1px solid rgba(61,53,53,0.15);
-    padding-top: 40px;
-  }
-  .pz-home .pzh-process__num { font-size: 4rem; }
-  .pz-home .pzh-process__body p:first-of-type::first-letter { font-size: 4rem; }
+  .pz-home .pzh-process__step { padding: 44px 0; }
 }
 
 /* ============================================
@@ -1268,33 +1236,31 @@ html { scroll-behavior: smooth; }
       <p class="pzh-process__lede">Three steps between you and finally having your marketing handled.</p>
     </header>
 
-    <div class="pzh-process__columns">
-      <article class="pzh-process__col fade-up stagger-1">
+    <div class="pzh-process__stack">
+      <article class="pzh-process__step fade-up">
         <div class="pzh-process__num">01.</div>
-        <div class="pzh-process__label">The Conversation</div>
+        <h3>Start with a conversation.</h3>
         <div class="pzh-process__body">
           <p>Some people show up knowing exactly what they need: ads managed, funnel built, launch run. Great, we can move fast.</p>
           <p>Others know something isn't working but can't quite name it. The revenue's stuck. The launch felt scrappier than it should have. You're stitching together five contractors and a half-finished plan, and you're tired. That's what this call is for. We'll walk through your business, your offers, and what's actually going on behind the scenes, and figure out where the real gaps are.</p>
+          <p>You'll leave with a clearer picture either way.</p>
         </div>
-        <p class="pzh-process__pullquote">"You'll leave with a clearer picture either way."</p>
       </article>
 
-      <article class="pzh-process__col fade-up stagger-2">
+      <article class="pzh-process__step fade-up">
         <div class="pzh-process__num">02.</div>
-        <div class="pzh-process__label">The Plan</div>
+        <h3>Get a plan, not a pitch.</h3>
         <div class="pzh-process__body">
           <p>If it's a fit, you'll get a proposal with real scope, a real timeline, and a real price. If it's not, I'll tell you who to call instead.</p>
         </div>
-        <p class="pzh-process__pullquote">"Real scope. Real timeline. Real price."</p>
       </article>
 
-      <article class="pzh-process__col fade-up stagger-3">
+      <article class="pzh-process__step fade-up">
         <div class="pzh-process__num">03.</div>
-        <div class="pzh-process__label">The Work</div>
+        <h3>One person running your marketing.</h3>
         <div class="pzh-process__body">
-          <p>Most marketers hand you a plan and leave. Most implementers do the tasks but don't think about why. I do both: the strategy, the systems behind it, and the actual work. Ads, funnels, launches, email, podcast, whatever your business needs to grow. You stop juggling pieces, and finally have someone running marketing like it's their whole job.</p>
+          <p>Most marketers hand you a plan and leave. Most implementers do the tasks but don't think about why. I do both: the strategy, the systems behind it, and the actual work. Ads, funnels, launches, email, podcast, whatever your business needs to grow. You stop juggling pieces, and finally have someone running marketing like it's their whole job. Because it is.</p>
         </div>
-        <p class="pzh-process__pullquote">"Like it's their whole job. Because it is."</p>
       </article>
     </div>
   </section>
