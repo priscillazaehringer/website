@@ -658,111 +658,60 @@ html { scroll-behavior: smooth; }
   }
 
 /* ============================================
-   PROCESS (editorial spread)
+   PROCESS
    ============================================ */
-.pz-home .pzh-process {
-  background: var(--cream);
-  padding: 100px 0 120px;
-}
-
-.pz-home .pzh-process__masthead {
-  text-align: center;
-  max-width: 900px;
-  margin: 0 auto 80px;
-  padding: 0 24px;
-}
-
-.pz-home .pzh-process__masthead-label {
-  display: inline-block;
-  font-family: 'Karla', sans-serif;
-  font-weight: 600;
-  font-size: 0.72rem;
-  letter-spacing: 0.4em;
-  text-transform: uppercase;
-  color: var(--dark);
-  padding: 12px 18px;
-  border-top: 1px solid rgba(61,53,53,0.3);
-  border-bottom: 1px solid rgba(61,53,53,0.3);
-  margin-bottom: 32px;
-}
-
-.pz-home .pzh-process__title {
-  font-family: 'Libre Caslon Text', serif;
-  font-weight: 400;
-  font-size: clamp(2.8rem, 8.5vw, 7rem);
-  line-height: 0.95;
-  letter-spacing: -0.02em;
-  color: var(--dark);
-  margin: 0 0 28px;
-}
-
-.pz-home .pzh-process__lede {
-  font-family: 'Libre Caslon Text', serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: clamp(1.1rem, 1.6vw, 1.4rem);
-  line-height: 1.5;
-  color: var(--gray);
-  max-width: 600px;
+.pz-home .pzh-process { background: var(--cream); }
+.pz-home .pzh-process__header { text-align: center; margin-bottom: 48px; }
+.pz-home .pzh-process__header .heading-sm { color: var(--blush); margin-bottom: 8px; }
+.pz-home .pzh-process__header h2 { margin-bottom: 16px; }
+.pz-home .pzh-process__intro { font-family: 'Karla', sans-serif; font-size: 1.05rem; color: var(--gray); line-height: 1.75; max-width: 560px; margin: 14px auto 0; }
+.pz-home .pzh-process__steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1000px;
   margin: 0 auto;
 }
-
-.pz-home .pzh-process__stack {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
 .pz-home .pzh-process__step {
-  text-align: center;
-  padding: 64px 0;
+  padding: 32px 24px;
+  background: var(--white);
+  border-radius: 14px;
+  text-align: left;
+  display: flex; flex-direction: column; justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-.pz-home .pzh-process__step:first-child { padding-top: 0; }
-.pz-home .pzh-process__step:last-child { padding-bottom: 0; }
-
-.pz-home .pzh-process__step + .pzh-process__step {
-  border-top: 1px solid rgba(61,53,53,0.15);
+.pz-home .pzh-process__step:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(61,53,53,0.06);
 }
-
 .pz-home .pzh-process__num {
   font-family: 'Libre Caslon Text', serif;
-  font-style: italic;
   font-weight: 400;
-  font-size: clamp(3.6rem, 6vw, 5rem);
-  line-height: 0.9;
+  font-size: 2.4rem;
   color: var(--blush);
-  margin-bottom: 18px;
+  line-height: 1;
+  margin-bottom: 16px;
 }
-
 .pz-home .pzh-process__step h3 {
   font-family: 'Libre Caslon Text', serif;
-  font-weight: 400;
-  font-size: clamp(1.7rem, 3.2vw, 2.4rem);
-  line-height: 1.2;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
   color: var(--dark);
-  max-width: 720px;
-  margin: 0 auto 22px;
 }
-
-.pz-home .pzh-process__body {
+.pz-home .pzh-process__step p {
   font-family: 'Karla', sans-serif;
-  font-weight: 400;
-  font-size: 1.02rem;
+  font-size: 1rem;
   line-height: 1.75;
   color: var(--gray);
-  max-width: 600px;
-  margin: 0 auto;
 }
-
-.pz-home .pzh-process__body p { margin: 0 0 14px; }
-.pz-home .pzh-process__body p:last-child { margin-bottom: 0; }
-
-@media (max-width: 900px) {
-  .pz-home .pzh-process { padding: 64px 0 72px; }
-  .pz-home .pzh-process__masthead { margin-bottom: 48px; }
-  .pz-home .pzh-process__title { font-size: clamp(2.4rem, 10vw, 4rem); }
-  .pz-home .pzh-process__step { padding: 44px 0; }
+.pz-home .pzh-process__step p + p { margin-top: 12px; }
+.pz-home .pzh-process__step { justify-content: flex-start; }
+@media (max-width: 768px) {
+  .pz-home .pzh-process__steps { grid-template-columns: 1fr; gap: 16px; }
+  .pz-home .pzh-process__step { padding: 24px 20px; }
+  .pz-home .pzh-process__num { font-size: 2rem; margin-bottom: 12px; }
+  .pz-home .pzh-process__header { margin-bottom: 32px; }
 }
 
 /* ============================================
@@ -1232,40 +1181,33 @@ html { scroll-behavior: smooth; }
     </div>
   </section>
 
-  <!-- PROCESS (editorial spread) -->
-  <section class="pzh-process">
-    <header class="pzh-process__masthead fade-up">
-      <div class="pzh-process__masthead-label">The Process</div>
-      <h2 class="pzh-process__title">How we work<br>together.</h2>
-      <p class="pzh-process__lede">Three steps between you and finally having your marketing handled.</p>
-    </header>
-
-    <div class="pzh-process__stack">
-      <article class="pzh-process__step fade-up">
-        <div class="pzh-process__num">01.</div>
-        <h3>Start with a conversation.</h3>
-        <div class="pzh-process__body">
+  <!-- PROCESS -->
+  <section class="pzh-process pz-section">
+    <div class="pz-container">
+      <div class="pzh-process__header fade-up">
+        <div class="heading-sm">How We Work Together</div>
+        <span class="accent-line accent-line--center"></span>
+        <h2 class="heading-lg">Three steps between you and finally having your marketing handled.</h2>
+      </div>
+      <div class="pzh-process__steps">
+        <div class="pzh-process__step fade-up stagger-1">
+          <div class="pzh-process__num">01</div>
+          <h3>Start with a conversation.</h3>
           <p>Some people show up knowing exactly what they need: ads managed, funnel built, launch run. Great, we can move fast.</p>
           <p>Others know something isn't working but can't quite name it. The revenue's stuck. The launch felt scrappier than it should have. You're stitching together five contractors and a half-finished plan, and you're tired. That's what this call is for. We'll walk through your business, your offers, and what's actually going on behind the scenes, and figure out where the real gaps are.</p>
           <p>You'll leave with a clearer picture either way.</p>
         </div>
-      </article>
-
-      <article class="pzh-process__step fade-up">
-        <div class="pzh-process__num">02.</div>
-        <h3>Get a plan, not a pitch.</h3>
-        <div class="pzh-process__body">
+        <div class="pzh-process__step fade-up stagger-2">
+          <div class="pzh-process__num">02</div>
+          <h3>Get a plan, not a pitch.</h3>
           <p>If it's a fit, you'll get a proposal with real scope, a real timeline, and a real price. If it's not, I'll tell you who to call instead.</p>
         </div>
-      </article>
-
-      <article class="pzh-process__step fade-up">
-        <div class="pzh-process__num">03.</div>
-        <h3>One person running your marketing.</h3>
-        <div class="pzh-process__body">
+        <div class="pzh-process__step fade-up stagger-3">
+          <div class="pzh-process__num">03</div>
+          <h3>One person running your marketing, strategy through execution.</h3>
           <p>Most marketers hand you a plan and leave. Most implementers do the tasks but don't think about why. I do both: the strategy, the systems behind it, and the actual work. Ads, funnels, launches, email, podcast, whatever your business needs to grow. You stop juggling pieces, and finally have someone running marketing like it's their whole job. Because it is.</p>
         </div>
-      </article>
+      </div>
     </div>
   </section>
 
