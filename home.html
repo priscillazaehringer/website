@@ -335,7 +335,7 @@ html { scroll-behavior: smooth; }
 .pz-home .pzh-hero__subtitle {
   font-size: 1rem;
   color: rgba(248,243,239,0.82);
-  margin: 6px auto 20px;
+  margin: 24px auto 28px;
   line-height: 1.6;
   max-width: 560px;
 }
@@ -661,66 +661,55 @@ html { scroll-behavior: smooth; }
    PROCESS
    ============================================ */
 .pz-home .pzh-process { background: var(--cream); }
-.pz-home .pzh-process__header { text-align: center; margin-bottom: 48px; }
+.pz-home .pzh-process__header { text-align: center; margin-bottom: 24px; }
 .pz-home .pzh-process__header .heading-sm { color: var(--blush); margin-bottom: 8px; }
 .pz-home .pzh-process__header h2 { margin-bottom: 16px; }
-.pz-home .pzh-process__intro { font-family: 'Karla', sans-serif; font-size: 1.05rem; color: var(--gray); line-height: 1.75; max-width: 560px; margin: 14px auto 0; }
 .pz-home .pzh-process__steps {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  max-width: 900px;
+  max-width: 760px;
   margin: 0 auto;
+  border-top: 1px solid rgba(61,53,53,0.12);
 }
 .pz-home .pzh-process__step {
-  padding: 40px 44px;
-  background: var(--white);
-  border-radius: 14px;
-  text-align: left;
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 32px;
-  align-items: start;
-  box-shadow: 0 6px 28px rgba(61,53,53,0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.pz-home .pzh-process__step:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 36px rgba(61,53,53,0.08);
+  padding: 80px 0;
+  text-align: center;
+  border-bottom: 1px solid rgba(61,53,53,0.12);
 }
 .pz-home .pzh-process__num {
   font-family: 'Libre Caslon Text', serif;
   font-style: italic;
   font-weight: 400;
-  font-size: 4.2rem;
-  line-height: 0.9;
+  font-size: 5rem;
+  line-height: 1;
   color: var(--blush);
+  margin-bottom: 20px;
 }
 .pz-home .pzh-process__step h3 {
   font-family: 'Libre Caslon Text', serif;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 1.25;
-  margin: 0 0 16px;
+  margin: 0 0 24px;
   color: var(--dark);
 }
+.pz-home .pzh-process__body {
+  max-width: 600px;
+  margin: 0 auto;
+}
 .pz-home .pzh-process__step p {
-  font-family: 'Karla', sans-serif;
-  font-size: 0.96rem;
-  line-height: 1.7;
+  font-family: 'Libre Caslon Text', serif;
+  font-size: 1.05rem;
+  line-height: 1.75;
   color: var(--gray);
   margin: 0;
 }
-.pz-home .pzh-process__step p + p { margin-top: 12px; }
+.pz-home .pzh-process__step p + p { margin-top: 16px; }
 @media (max-width: 700px) {
-  .pz-home .pzh-process__steps { gap: 16px; max-width: 600px; padding: 0 20px; }
-  .pz-home .pzh-process__step {
-    grid-template-columns: 1fr;
-    gap: 8px;
-    padding: 28px 24px;
-  }
-  .pz-home .pzh-process__num { font-size: 2.8rem; }
-  .pz-home .pzh-process__header { margin-bottom: 32px; }
+  .pz-home .pzh-process__steps { max-width: 100%; padding: 0 20px; }
+  .pz-home .pzh-process__step { padding: 56px 0; }
+  .pz-home .pzh-process__num { font-size: 3.6rem; margin-bottom: 14px; }
+  .pz-home .pzh-process__step h3 { font-size: 1.5rem; margin-bottom: 18px; }
+  .pz-home .pzh-process__step p { font-size: 1rem; }
+  .pz-home .pzh-process__header { margin-bottom: 16px; }
 }
 
 /* ============================================
@@ -791,6 +780,15 @@ html { scroll-behavior: smooth; }
 .pz-home .pzh-obm__header h2 em {
   font-style: italic;
   color: var(--blush);
+}
+
+.pz-home .pzh-obm__subhead {
+  font-family: 'Libre Caslon Text', serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--gray);
+  margin: 14px 0 0;
+  line-height: 1.5;
 }
 
 .pz-home .pzh-obm__intro {
@@ -975,10 +973,10 @@ html { scroll-behavior: smooth; }
 
 .pz-home .pzh-also__grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 24px;
-  max-width: 1000px;
-  margin: 0 auto 40px;
+  max-width: 900px;
+  margin: 0 auto;
   align-items: stretch;
 }
 
@@ -1005,8 +1003,17 @@ html { scroll-behavior: smooth; }
   font-weight: 700;
   font-size: 1.4rem;
   color: var(--dark);
-  margin-bottom: 12px;
+  margin-bottom: 4px;
   line-height: 1.3;
+}
+
+.pz-home .pzh-also__meta {
+  font-family: 'Karla', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blush);
+  margin-bottom: 14px;
 }
 
 .pz-home .pzh-also__block p {
@@ -1056,12 +1063,12 @@ html { scroll-behavior: smooth; }
     <div class="pzh-hero__wrap">
       <div class="pzh-hero__content">
         <div class="pzh-hero__eyebrow fade-up">Priscilla Zaehringer</div>
-        <h1 class="pzh-hero__h1 fade-up stagger-1">Your marketing,<span class="pzh-hero__script">finally handled.</span></h1>
-        <p class="pzh-hero__lead fade-up stagger-2">One person. Strategy, systems, and the actual work.</p>
+        <h1 class="pzh-hero__h1 fade-up stagger-1">Grow your business.<span class="pzh-hero__script">Not your headcount.</span></h1>
         <p class="pzh-hero__subtitle fade-up stagger-2">
-          You're past the startup phase and ready to grow, but you don't want to build a team to do it. I'm the second brain who runs your marketing end to end: the strategy, the launches, the ads, and the systems behind them. You run the vision. I run the rest.
+          I'm the marketing partner for small business owners ready to grow without building a team. You run the vision. I run the rest.
         </p>
         <a href="https://scheduler.zoom.us/priscilla-zaehringer/clarity-call" class="btn-primary fade-up stagger-3"><span class="heart">♥</span> Book a Clarity Call</a>
+        <a href="#pzh-isthisyou" class="pzh-hero__secondary fade-up stagger-3">See if this is you ↓</a>
       </div>
     </div>
   </section>
@@ -1099,35 +1106,36 @@ html { scroll-behavior: smooth; }
     </div>
   </section>
 
-  <!-- OBM -->
+  <!-- OBM / MAIN OFFER -->
   <section class="pzh-obm pz-section" id="pzh-obm" style="position: relative;">
     <span class="float-deco float-heart float-heart--lg" style="top: 6%; right: 6%; transform: rotate(10deg);">♥</span>
     <div class="pz-container">
       <div class="pzh-obm__header fade-up">
         <div class="heading-sm">♥ The main offer</div>
         <span class="accent-line accent-line--center"></span>
-        <h2 class="heading-lg">One person running your <em>marketing.</em></h2>
+        <h2 class="heading-lg">A marketing partner on your <em>team.</em></h2>
+        <p class="pzh-obm__subhead">Not a project. Not a deliverable. A partnership.</p>
       </div>
 
       <div class="pzh-obm__intro fade-up stagger-1">
-        <p>This is what I do. I run marketing for online business owners who are ready to grow but don't want to hire a team to do it. Strategy, execution, and the operational rigor to make sure nothing falls through the cracks.</p>
-        <p>I hold the marketing vision of your business in my head, so you don't have to. I see the gaps before you do. I bring solutions instead of more decisions. And I do the work, not just plan it.</p>
+        <p>This is what most clients hire me for. I become part of your team, the person who holds the marketing function of your business. We figure out what needs to happen together, and then I handle it. Strategy, execution, and the systems behind all of it.</p>
+        <p>You buy a monthly block of my hours, and we use them however the business needs that month. Some weeks that's running ad campaigns. Some weeks it's building a launch. Some weeks it's cleaning up your backend so the marketing actually has somewhere to land. The scope flexes; the partnership stays steady.</p>
       </div>
 
       <div class="pzh-obm__scope fade-up stagger-2">
-        <div class="pzh-obm__scope-label">What this actually looks like</div>
+        <div class="pzh-obm__scope-label">What I might be running for you in any given month</div>
         <div class="pzh-obm__scope-grid">
-          <div class="pzh-obm__scope-item">Ads strategy and management (Meta, mostly)</div>
+          <div class="pzh-obm__scope-item">Ads strategy and management</div>
           <div class="pzh-obm__scope-item">Funnels, landing pages, and lead magnets</div>
           <div class="pzh-obm__scope-item">Email marketing, sequences, and launches</div>
           <div class="pzh-obm__scope-item">Podcast production and content systems</div>
-          <div class="pzh-obm__scope-item pzh-obm__scope-item--wide">The operations behind all of it: tools, automations, SOPs, and the team coordination to keep it running</div>
+          <div class="pzh-obm__scope-item pzh-obm__scope-item--wide">The operations behind all of it: tools, automations, SOPs, and team coordination</div>
         </div>
-        <p class="pzh-obm__scope-more">...and whatever else your business needs me to hold.</p>
+        <p class="pzh-obm__scope-more">The specific mix depends on your business. What stays consistent is that I'm in it with you.</p>
       </div>
 
       <div class="pzh-obm__close fade-up stagger-3">
-        <p>If you're tired of being the bottleneck in your own marketing, let's talk.</p>
+        <p>If you've been wishing you had a marketing hire who actually gets your business, that's what this is.</p>
         <a href="https://scheduler.zoom.us/priscilla-zaehringer/clarity-call" class="btn-primary"><span class="heart">♥</span> Book a Clarity Call</a>
       </div>
     </div>
@@ -1156,33 +1164,31 @@ html { scroll-behavior: smooth; }
     </div>
   </section>
 
-  <!-- ALSO AVAILABLE -->
+  <!-- PROJECT-BASED ALTERNATIVES -->
   <section class="pzh-also pz-section">
     <div class="pz-container">
       <div class="pzh-also__header fade-up">
-        <div class="heading-sm">Need just one piece?</div>
+        <div class="heading-sm">Need just one piece instead?</div>
         <span class="accent-line accent-line--center"></span>
-        <h2 class="heading-lg">Other ways we can work together.</h2>
-        <p class="pzh-also__intro">If you don't need full marketing support and just want one specific thing handled, these are the ways we can work together on a focused engagement.</p>
+        <h2 class="heading-lg">Project-based options.</h2>
+        <p class="pzh-also__intro">Sometimes you don't need a full partnership. You just need one specific thing handled really well. For those situations:</p>
       </div>
 
       <div class="pzh-also__grid">
-        <div class="pzh-also__block pzh-also__block--lg fade-up stagger-1">
+        <div class="pzh-also__block fade-up stagger-1">
           <div class="pzh-also__emoji">📣</div>
           <h3>Meta Ads Management</h3>
+          <div class="pzh-also__meta">Project-based or short-term retainer</div>
           <p>You've outgrown organic, or maybe you've tried ads before and they didn't deliver. I build real Meta ads strategy around your business, not a recycled template. Honest reporting, no agency markup, no smoke.</p>
           <a href="https://priscillazaehringer.com/ads/" class="pzh-also__link">See the ads service →</a>
         </div>
         <div class="pzh-also__block fade-up stagger-2">
           <div class="pzh-also__emoji">🎙️</div>
           <h3>Podcast Production</h3>
+          <div class="pzh-also__meta">Monthly retainer</div>
           <p>You want a podcast but don't want to become a producer. I handle the editing, show notes, publishing, and strategy. You show up and hit record. The rest gets done.</p>
           <a href="https://priscillazaehringer.com/services-podcast/" class="pzh-also__link">See the podcast service →</a>
         </div>
-      </div>
-
-      <div class="pzh-also__cta fade-up">
-        <a href="https://scheduler.zoom.us/priscilla-zaehringer/clarity-call" class="btn-primary"><span class="heart">♥</span> Book a Clarity Call</a>
       </div>
     </div>
   </section>
@@ -1198,8 +1204,8 @@ html { scroll-behavior: smooth; }
       <div class="pzh-process__steps">
         <div class="pzh-process__step fade-up stagger-1">
           <div class="pzh-process__num">01</div>
+          <h3>Start with a conversation.</h3>
           <div class="pzh-process__body">
-            <h3>Start with a conversation.</h3>
             <p>Some people show up knowing exactly what they need: ads managed, funnel built, launch run. Great, we can move fast.</p>
             <p>Others know something isn't working but can't quite name it. The revenue's stuck. The launch felt scrappier than it should have. You're stitching together five contractors and a half-finished plan, and you're tired. That's what this call is for. We'll walk through your business, your offers, and what's actually going on behind the scenes, and figure out where the real gaps are.</p>
             <p>You'll leave with a clearer picture either way.</p>
@@ -1207,15 +1213,15 @@ html { scroll-behavior: smooth; }
         </div>
         <div class="pzh-process__step fade-up stagger-2">
           <div class="pzh-process__num">02</div>
+          <h3>Get a plan, not a pitch.</h3>
           <div class="pzh-process__body">
-            <h3>Get a plan, not a pitch.</h3>
             <p>If it's a fit, you'll get a proposal with real scope, a real timeline, and a real price. If it's not, I'll tell you who to call instead.</p>
           </div>
         </div>
         <div class="pzh-process__step fade-up stagger-3">
           <div class="pzh-process__num">03</div>
+          <h3>One person running your marketing, strategy through execution.</h3>
           <div class="pzh-process__body">
-            <h3>One person running your marketing, strategy through execution.</h3>
             <p>Most marketers hand you a plan and leave. Most implementers do the tasks but don't think about why. I do both: the strategy, the systems behind it, and the actual work. Ads, funnels, launches, email, podcast, whatever your business needs to grow. You stop juggling pieces, and finally have someone running marketing like it's their whole job. Because it is.</p>
           </div>
         </div>
@@ -1231,8 +1237,8 @@ html { scroll-behavior: smooth; }
         <div class="pzh-about__content fade-up">
           <div class="heading-sm">♥ Hi! Nice to meet you!</div>
           <span class="accent-line"></span>
-          <h2 class="heading-lg">I'm Priscilla. I'm the person your business has been <span class="cursive" style="color: var(--blush); font-size: 1.1em;">missing.</span></h2>
-          <p class="body-text">I run marketing for online business owners who are past the startup phase and ready to grow, but who don't want to build a team to get there.</p>
+          <h2 class="heading-lg">I'm Priscilla. I'm the marketing partner your business has been <span class="cursive" style="color: var(--blush); font-size: 1.1em;">missing.</span></h2>
+          <p class="body-text">I'm a marketing partner for online business owners who are past the startup phase and ready to grow, but who don't want to build a team to get there.</p>
           <p class="body-text">I don't wait for direction. I find the gaps, bring ideas to the table, and execute. Whether it's launching your podcast, running your ad campaigns, building the funnel, or holding the operational pieces that keep all of it moving, I treat your business like it's my own.</p>
           <a href="https://priscillazaehringer.com/about/" class="btn-ghost">More About Me</a>
         </div>
@@ -1251,7 +1257,7 @@ html { scroll-behavior: smooth; }
   <section class="pzh-cta">
     <div class="pzh-cta__inner fade-up">
       <div class="pzh-cta__eyebrow">One Last Thing</div>
-      <h2 class="pzh-cta__title">Ready to hand off your marketing <em>for good?</em></h2>
+      <h2 class="pzh-cta__title">Ready for a <em>marketing partner?</em></h2>
       <p class="pzh-cta__body">Book a clarity call. Thirty minutes, no pitch. We'll talk through what's on your plate, what's working, and what one person could actually take off it.</p>
       <a href="https://scheduler.zoom.us/priscilla-zaehringer/clarity-call" class="pzh-cta__btn">Book Your Clarity Call</a>
     </div>
