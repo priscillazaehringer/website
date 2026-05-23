@@ -75,10 +75,18 @@
 .pz .eyebrow {
   font-family: 'Karla', sans-serif;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.75rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
+
+.pz .accent-line {
+  width: 50px; height: 1.5px;
+  background: var(--blush);
+  display: block; margin: 12px 0;
+}
+
+.pz .accent-line--center { margin: 16px auto; }
 
 .pz .cursive {
   font-family: 'Dancing Script', cursive;
@@ -598,7 +606,7 @@
    ============================================ */
 .pz-reality {
   background: var(--white);
-  padding: 56px 0 0;
+  padding: 80px 0 0;
 }
 
 .pz-reality__opener {
@@ -779,7 +787,7 @@
    ============================================ */
 .pz-about {
   background: var(--soft-cream);
-  padding: 56px 0;
+  padding: 80px 0;
 }
 
 .pz-about__layout {
@@ -922,7 +930,7 @@
    ============================================ */
 .pz-process {
   background: var(--white);
-  padding: 56px 0;
+  padding: 80px 0;
 }
 
 .pz-process__header {
@@ -1052,7 +1060,7 @@
 .pz-caro__arrow svg { width: 16px; height: 16px; }
 
 @media (max-width: 768px) {
-  .pz-reality, .pz-about, .pz-pullquote, .pz-process, .pz-included, .pz-proof, .pz-budget, .pz-honesty, .pz-fit, .pz-faq, .pz-final { padding: 40px 0 !important; }
+  .pz-reality, .pz-about, .pz-pullquote, .pz-process, .pz-included, .pz-proof, .pz-budget, .pz-honesty, .pz-fit, .pz-faq, .pz-final { padding: 48px 0 !important; }
   .pz-reality__opener p, .pz-honesty__intro p { margin-bottom: 8px; }
 }
 
@@ -1115,7 +1123,7 @@
     #F5F0EB 70%,     /* cream */
     #F2E8E6 100%     /* soft blush */
   );
-  padding: 56px 0;
+  padding: 80px 0;
 }
 
 .pz-included__header {
@@ -1199,7 +1207,7 @@
    ============================================ */
 .pz-proof {
   background: var(--white);
-  padding: 56px 0;
+  padding: 80px 0;
 }
 
 .pz-proof__study {
@@ -1363,7 +1371,7 @@
 }
 
 @media (max-width: 768px) {
-  .pz-proof { padding: 40px 0; }
+  .pz-proof { padding: 48px 0; }
   .pz-proof__study { grid-template-columns: 1fr; margin-bottom: 20px; }
   .pz-proof__stats { padding: 24px 20px 16px; }
   .pz-proof__stats h3 { font-size: 1.25rem; margin-bottom: 16px; }
@@ -1387,7 +1395,7 @@
    ============================================ */
 .pz-budget {
   background: var(--soft-cream);
-  padding: 56px 0;
+  padding: 80px 0;
 }
 
 .pz-budget__layout {
@@ -1464,7 +1472,7 @@
 .pz-honesty {
   background: var(--white);
   color: var(--dark);
-  padding: 56px 0;
+  padding: 80px 0;
   position: relative;
 }
 
@@ -1560,7 +1568,7 @@
    ============================================ */
 .pz-fit {
   background: var(--soft-cream);
-  padding: 56px 0;
+  padding: 80px 0;
 }
 
 .pz-fit__layout {
@@ -1626,7 +1634,7 @@
    ============================================ */
 .pz-faq {
   background: var(--white);
-  padding: 56px 0;
+  padding: 80px 0;
 }
 
 .pz-faq__layout {
@@ -1704,7 +1712,7 @@
    ============================================ */
 .pz-final {
   background: var(--soft-cream);
-  padding: 56px 0;
+  padding: 80px 0;
 }
 
 .pz-final__intro {
@@ -1835,7 +1843,7 @@
    ============================================ */
 .pz-waitlist {
   background: var(--cream);
-  padding: 56px 0;
+  padding: 80px 0;
   text-align: center;
 }
 
@@ -1881,7 +1889,7 @@
 .pz-footer a:hover { color: var(--soft-cream); }
 
 @media (max-width: 768px) {
-  .pz-reality, .pz-about, .pz-pullquote, .pz-process, .pz-included, .pz-proof, .pz-budget, .pz-honesty, .pz-fit, .pz-faq, .pz-final { padding: 40px 0 !important; }
+  .pz-reality, .pz-about, .pz-pullquote, .pz-process, .pz-included, .pz-proof, .pz-budget, .pz-honesty, .pz-fit, .pz-faq, .pz-final { padding: 48px 0 !important; }
   .pz-reality__opener p, .pz-honesty__intro p { margin-bottom: 8px; }
 }
 
@@ -1972,7 +1980,7 @@
   <!-- 3. REALITY — strikethrough options -->
   <section class="pz-reality">
     <div class="pz-reality__opener anim" style="text-align: center;">
-      <h2 class="h-lg">You've <span class="text-small">outgrown organic</span> <span class="text-small">but the alternatives</span> aren't built for you.</h2>
+      <h2 class="h-lg">You've outgrown organic, but the alternatives aren't <span class="cursive" style="color: var(--blush); font-size: 1.1em;">built for you.</span></h2>
       <p>You've proven your offer. You have clients who love you. But growth has flatlined, and when you look into ads, your options are… not great.</p>
     </div>
 
@@ -2029,8 +2037,8 @@
       </div>
       <div class="pz-about__text anim--slide-l d2">
         <div class="eyebrow">About Priscilla</div>
-        <h2 class="h-lg"><span class="text-small">I built this practice because</span><br>small businesses <span class="cursive">deserve better.</span></h2>
-        <span class="aside-cursive">honestly, it's that simple</span>
+        <span class="accent-line"></span>
+        <h2 class="h-lg">I built this practice because small businesses <span class="cursive" style="color: var(--blush); font-size: 1.1em;">deserve better.</span></h2>
         <p class="body">When I first started running ads for a client, something clicked. I saw firsthand how powerful paid traffic could be. Not just for sales, but for awareness, email lists, and real momentum.</p>
         <p class="body">But I also saw business owners burned by agencies that charged a fortune for a templated strategy. The businesses that would benefit most from ads are often the ones that get exploited or priced out.</p>
         <div class="pz-about__quote">
@@ -2051,7 +2059,8 @@
     <span class="float-deco float-heart float-heart--bronze float-heart--lg" style="top: 8%; right: 8%; transform: rotate(12deg);">♥</span>
     <div class="pz-process__header anim">
       <div class="eyebrow">The Process</div>
-      <h2 class="h-lg"><span class="text-small">Here's exactly</span> what happens <span class="text-small">when we</span> work together.</h2>
+      <span class="accent-line accent-line--center"></span>
+      <h2 class="h-lg">Here's exactly what happens when we <span class="cursive" style="color: var(--blush); font-size: 1.1em;">work together.</span></h2>
       <p class="body">This isn't set-it-and-forget-it. It's a hands-on partnership where I treat your ad budget like it's my own money.</p>
     </div>
 
@@ -2109,8 +2118,8 @@
     <span class="float-deco float-heart float-heart--sm float-heart--moss" style="top: 45%; right: 4%; transform: rotate(15deg);">♥</span>
     <div class="pz-included__header anim">
       <div class="eyebrow">What You Get</div>
-      <h2 class="h-lg"><span class="text-pop">Everything</span> <span class="text-small">that's</span> included.</h2>
-      <span class="aside-cursive">no surprises, no hidden fees</span>
+      <span class="accent-line accent-line--center"></span>
+      <h2 class="h-lg">Everything that's <span class="cursive" style="color: var(--blush); font-size: 1.1em;">included.</span></h2>
     </div>
 
     <div class="pz-included__grid">
@@ -2206,7 +2215,8 @@
     <div class="pz-budget__layout">
       <div class="pz-budget__text anim--slide-r">
         <div class="eyebrow">Investment</div>
-        <h2 class="h-lg">Let's be real about budget.</h2>
+        <span class="accent-line"></span>
+        <h2 class="h-lg">Let's be real about <span class="cursive" style="color: var(--blush); font-size: 1.1em;">budget.</span></h2>
         <p class="body">You don't need a $10,000/month ad budget to see results. What you do need is enough room to test strategically and gather meaningful data.</p>
       </div>
       <div class="pz-budget__items anim--slide-l d2">
@@ -2231,8 +2241,8 @@
     <div class="pz-honesty__layout">
       <div class="pz-honesty__intro anim--slide-r">
         <div class="eyebrow">Full Transparency</div>
-        <h2 class="h-lg">What ads can and can't do.</h2>
-        <span class="aside-cursive">the honest version</span>
+        <span class="accent-line"></span>
+        <h2 class="h-lg">What ads can and <span class="cursive" style="color: var(--blush); font-size: 1.1em;">can't do.</span></h2>
         <p>I want you to walk into this with clear eyes.</p>
       </div>
       <div class="pz-honesty__col pz-honesty__col--can anim d1">
@@ -2263,7 +2273,7 @@
   <!-- 11. FIT CHECK — minimal, no ornaments -->
   <section class="pz-fit">
     <div class="pz-fit__layout">
-      <h2 class="h-lg anim"><span class="text-small">Is this the</span> right fit <span class="text-small">for you?</span></h2>
+      <h2 class="h-lg anim">Is this the right fit for <span class="cursive" style="color: var(--blush); font-size: 1.1em;">you?</span></h2>
       <div class="pz-fit__cols">
         <div class="pz-fit__col pz-fit__col--yes anim d1">
           <h3>This works best when…</h3>
@@ -2308,7 +2318,8 @@
     <span class="float-deco float-heart float-heart--sm" style="top: 40%; left: 15%; transform: rotate(25deg);">♥</span>
     <div class="pz-final__intro anim" style="text-align: center;">
       <div class="eyebrow">Next Steps</div>
-      <h2 class="h-lg"><span class="text-small">Ready to</span> stop guessing <span class="text-small">and</span> <span class="cursive" style="font-size:1.1em;">start growing?</span></h2>
+      <span class="accent-line accent-line--center"></span>
+      <h2 class="h-lg">Ready to stop guessing and <span class="cursive" style="color: var(--blush); font-size: 1.1em;">start growing?</span></h2>
     </div>
 
     <div class="pz-final__steps">
@@ -2337,6 +2348,7 @@
   <section class="pz-waitlist">
     <div class="pz-waitlist__inner anim">
       <div class="eyebrow">Not Quite Ready?</div>
+      <span class="accent-line accent-line--center"></span>
       <h2 class="h-md">Not quite ready for done-for-you management?</h2>
       <p class="body">I'm building a Facebook ads training for business owners who want to learn the foundations and run ads themselves. Join the waitlist and be the first to know when it launches.</p>
       <div style="margin-top: 20px;">
