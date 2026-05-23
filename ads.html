@@ -2116,6 +2116,467 @@
   font-weight: 700;
 }
 
+/* ============================================
+   WHAT YOU GET — flat-lay mockup
+   ============================================ */
+.pz-flatlay {
+  background: var(--warm-cream);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.pz-flatlay__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.pz-flatlay__header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 56px;
+}
+
+.pz-flatlay__header .eyebrow { color: var(--blush); margin-bottom: 8px; }
+.pz-flatlay__header h2 { margin-bottom: 14px; }
+.pz-flatlay__header p { color: var(--gray); }
+
+.pz-flatlay__stage {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.pz-flatlay__footer {
+  text-align: center;
+  margin: 56px auto 0;
+  max-width: 600px;
+  font-family: 'Libre Caslon Text', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--mauve);
+}
+
+.flat-item {
+  position: absolute;
+  background: var(--white);
+  box-shadow: 0 14px 36px rgba(61,53,53,0.14), 0 2px 8px rgba(61,53,53,0.08);
+  transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: default;
+}
+
+.flat-item:hover {
+  transform: rotate(0deg) scale(1.04) !important;
+  z-index: 100;
+}
+
+/* 1. Strategy Doc */
+.flat-item--doc {
+  top: 3%; left: 3%;
+  width: 200px; height: 270px;
+  background: var(--soft-blush);
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: rotate(-6deg);
+  border-radius: 4px;
+  z-index: 2;
+}
+.flat-doc__label {
+  font-family: 'Karla', sans-serif;
+  font-weight: 600;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--blush);
+}
+.flat-doc__title {
+  font-family: 'Libre Caslon Text', serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.7rem;
+  line-height: 1.05;
+  color: var(--dark);
+  margin-top: 10px;
+}
+.flat-doc__sub {
+  font-family: 'Karla', sans-serif;
+  font-size: 0.72rem;
+  color: var(--gray);
+  margin-top: 8px;
+  line-height: 1.4;
+}
+.flat-doc__year {
+  font-family: 'Libre Caslon Text', serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--mauve);
+  text-align: right;
+}
+
+/* 2. Phone with ad */
+.flat-item--phone {
+  top: 7%; left: 60%;
+  width: 150px; height: 290px;
+  background: var(--dark);
+  border-radius: 22px;
+  padding: 7px;
+  transform: rotate(8deg);
+  z-index: 3;
+}
+.flat-phone__screen {
+  width: 100%; height: 100%;
+  background: var(--white);
+  border-radius: 16px;
+  padding: 24px 10px 10px;
+  position: relative;
+  overflow: hidden;
+}
+.flat-phone__notch {
+  position: absolute;
+  top: 9px; left: 50%;
+  transform: translateX(-50%);
+  width: 50px; height: 14px;
+  background: var(--dark);
+  border-radius: 8px;
+}
+.flat-ad__header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-bottom: 8px;
+}
+.flat-ad__avatar {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blush) 0%, var(--mauve) 100%);
+  flex-shrink: 0;
+}
+.flat-ad__brand {
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+  font-size: 0.62rem;
+  color: var(--dark);
+  line-height: 1.1;
+}
+.flat-ad__sponsored {
+  font-size: 0.55rem;
+  color: var(--mauve);
+  margin-top: 1px;
+}
+.flat-ad__image {
+  height: 135px;
+  background: linear-gradient(135deg, var(--soft-blush) 0%, var(--warm-cream) 100%);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Libre Caslon Text', serif;
+  font-style: italic;
+  font-size: 0.78rem;
+  color: var(--blush);
+  text-align: center;
+  padding: 10px;
+}
+.flat-ad__cta {
+  margin-top: 8px;
+  padding: 7px 10px;
+  background: var(--blush);
+  color: var(--white);
+  text-align: center;
+  border-radius: 6px;
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* 3. Laptop with dashboard */
+.flat-item--laptop {
+  top: 60%; left: 5%;
+  width: 340px; height: 210px;
+  background: transparent;
+  box-shadow: none;
+  transform: rotate(-3deg);
+  z-index: 2;
+}
+.flat-laptop__screen {
+  width: 100%; height: 190px;
+  background: var(--dark);
+  border-radius: 8px 8px 2px 2px;
+  padding: 10px;
+  box-shadow: 0 14px 36px rgba(61,53,53,0.14);
+}
+.flat-laptop__inner {
+  width: 100%; height: 100%;
+  background: var(--white);
+  border-radius: 2px;
+  padding: 14px 18px;
+}
+.flat-laptop__base {
+  width: 108%;
+  height: 8px;
+  margin: 1px 0 0 -4%;
+  background: var(--silver);
+  border-radius: 0 0 12px 12px;
+}
+.flat-dashboard__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.flat-dashboard__title {
+  font-family: 'Karla', sans-serif;
+  font-weight: 600;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+.flat-dashboard__live {
+  font-family: 'Karla', sans-serif;
+  font-size: 0.55rem;
+  color: var(--blush);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+.flat-dashboard__live::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #62A87C;
+  box-shadow: 0 0 0 2px rgba(98,168,124,0.2);
+}
+.flat-dashboard__stats {
+  display: flex;
+  gap: 24px;
+  margin-top: 14px;
+}
+.flat-dashstat__num {
+  font-family: 'Libre Caslon Text', serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--blush);
+  line-height: 1;
+}
+.flat-dashstat__lbl {
+  font-family: 'Karla', sans-serif;
+  font-size: 0.55rem;
+  color: var(--mauve);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+.flat-dashboard__bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  margin-top: 16px;
+  height: 48px;
+}
+.flat-dashboard__bar {
+  flex: 1;
+  background: var(--blush);
+  border-radius: 1px;
+  opacity: 0.85;
+}
+
+/* 4. Welcome email */
+.flat-item--email {
+  top: 60%; left: 72%;
+  width: 230px; height: 175px;
+  background: var(--soft-cream);
+  padding: 18px 20px;
+  transform: rotate(5deg);
+  border-radius: 2px;
+  z-index: 2;
+}
+.flat-email__header {
+  border-bottom: 1px solid rgba(176,161,161,0.25);
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+}
+.flat-email__from {
+  font-family: 'Karla', sans-serif;
+  font-size: 0.6rem;
+  color: var(--mauve);
+}
+.flat-email__subject {
+  font-family: 'Libre Caslon Text', serif;
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--dark);
+  margin-top: 4px;
+}
+.flat-email__body {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.flat-email__line {
+  height: 4px;
+  background: var(--silver);
+  border-radius: 2px;
+  opacity: 0.55;
+}
+.flat-email__line:nth-child(1) { width: 95%; }
+.flat-email__line:nth-child(2) { width: 88%; }
+.flat-email__line:nth-child(3) { width: 70%; }
+.flat-email__sig {
+  margin-top: 14px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.05rem;
+  color: var(--blush);
+  text-align: right;
+}
+
+/* 5. SOP notebook */
+.flat-item--sop {
+  top: 42%; left: 77%;
+  width: 145px; height: 100px;
+  background: var(--cream);
+  padding: 14px 16px;
+  transform: rotate(-12deg);
+  border-radius: 2px;
+  border-left: 4px solid var(--blush);
+  z-index: 3;
+}
+.flat-sop__label {
+  font-family: 'Karla', sans-serif;
+  font-size: 0.55rem;
+  color: var(--mauve);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.flat-sop__title {
+  font-family: 'Libre Caslon Text', serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--dark);
+  margin-top: 4px;
+  line-height: 1.15;
+}
+.flat-sop__count {
+  font-family: 'Karla', sans-serif;
+  font-size: 0.6rem;
+  color: var(--gray);
+  margin-top: 8px;
+}
+
+/* 6. Polaroid with lead form */
+.flat-item--polaroid {
+  top: 2%; left: 79%;
+  width: 180px; height: 220px;
+  background: var(--white);
+  padding: 10px 10px 28px;
+  transform: rotate(7deg);
+  border-radius: 2px;
+  z-index: 4;
+}
+.flat-polaroid__image {
+  width: 100%; height: 150px;
+  background: var(--soft-blush);
+  padding: 14px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+.flat-form__title {
+  font-family: 'Libre Caslon Text', serif;
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: var(--dark);
+  text-align: center;
+  margin-bottom: 4px;
+}
+.flat-form__input {
+  height: 14px;
+  background: var(--white);
+  border-radius: 2px;
+}
+.flat-form__btn {
+  height: 18px;
+  background: var(--blush);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Karla', sans-serif;
+  font-size: 0.55rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.flat-polaroid__caption {
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 0.95rem;
+  color: var(--dark);
+  margin-top: 8px;
+}
+
+/* 7. Handwritten note */
+.flat-item--note {
+  top: 33%; left: 32%;
+  width: 170px; height: 130px;
+  background: #F8EFD8;
+  padding: 16px 18px;
+  transform: rotate(-4deg);
+  border-radius: 2px;
+  z-index: 5;
+}
+.flat-note__text {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  color: var(--dark);
+}
+.flat-note__sig {
+  display: block;
+  margin-top: 6px;
+  font-size: 1.4rem;
+  color: var(--blush);
+  text-align: right;
+}
+
+/* Mobile responsive */
+@media (max-width: 900px) {
+  .pz-flatlay__stage {
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 600px;
+  }
+  .flat-item {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+  }
+  .flat-item--laptop { grid-column: 1 / -1; height: auto; }
+  .flat-item--phone { margin: 0 auto; }
+  .flat-item--note { width: 100%; }
+}
+@media (max-width: 560px) {
+  .pz-flatlay__stage { grid-template-columns: 1fr; }
+  .flat-item { margin: 0 auto; max-width: 280px; }
+  .flat-item--laptop { max-width: 100%; }
+}
+
 /* FOCUS STATES — keyboard accessibility */
 .pz a:focus-visible,
 .pz button:focus-visible,
@@ -2248,6 +2709,116 @@
       </div>
     </div>
     <div class="pz-offer__note anim">Prefer to keep me on after handoff? Ongoing management is $397/mo. Beta clients lock in $297/mo for their first 6 months.</div>
+  </section>
+
+  <!-- 5b. WHAT YOU GET — flat-lay mockup -->
+  <section class="pz-flatlay">
+    <div class="pz-flatlay__inner">
+      <div class="pz-flatlay__header anim">
+        <div class="eyebrow">The Welcome Kit</div>
+        <span class="accent-line accent-line--center"></span>
+        <h2 class="h-lg">What lands on <span class="cursive" style="color: var(--blush); font-size: 1.1em;">your desk.</span></h2>
+        <p class="body">A complete system, all yours, delivered as real assets you can see, open, and run.</p>
+      </div>
+
+      <div class="pz-flatlay__stage anim">
+
+        <div class="flat-item flat-item--doc">
+          <div>
+            <div class="flat-doc__label">Strategy Doc</div>
+            <div class="flat-doc__title">The Lead Stream</div>
+            <div class="flat-doc__sub">Built for your business</div>
+          </div>
+          <div class="flat-doc__year">2026</div>
+        </div>
+
+        <div class="flat-item flat-item--phone">
+          <div class="flat-phone__screen">
+            <div class="flat-phone__notch"></div>
+            <div class="flat-ad__header">
+              <div class="flat-ad__avatar"></div>
+              <div>
+                <div class="flat-ad__brand">your_brand</div>
+                <div class="flat-ad__sponsored">Sponsored</div>
+              </div>
+            </div>
+            <div class="flat-ad__image">your ad creative</div>
+            <div class="flat-ad__cta">Sign Up</div>
+          </div>
+        </div>
+
+        <div class="flat-item flat-item--laptop">
+          <div class="flat-laptop__screen">
+            <div class="flat-laptop__inner">
+              <div class="flat-dashboard__top">
+                <div class="flat-dashboard__title">Campaign Dashboard</div>
+                <div class="flat-dashboard__live">Live</div>
+              </div>
+              <div class="flat-dashboard__stats">
+                <div>
+                  <div class="flat-dashstat__num">247</div>
+                  <div class="flat-dashstat__lbl">Leads</div>
+                </div>
+                <div>
+                  <div class="flat-dashstat__num">$0.84</div>
+                  <div class="flat-dashstat__lbl">CPL</div>
+                </div>
+                <div>
+                  <div class="flat-dashstat__num">42%</div>
+                  <div class="flat-dashstat__lbl">Open Rate</div>
+                </div>
+              </div>
+              <div class="flat-dashboard__bars">
+                <div class="flat-dashboard__bar" style="height: 30%"></div>
+                <div class="flat-dashboard__bar" style="height: 55%"></div>
+                <div class="flat-dashboard__bar" style="height: 45%"></div>
+                <div class="flat-dashboard__bar" style="height: 80%"></div>
+                <div class="flat-dashboard__bar" style="height: 65%"></div>
+                <div class="flat-dashboard__bar" style="height: 92%"></div>
+                <div class="flat-dashboard__bar" style="height: 75%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="flat-laptop__base"></div>
+        </div>
+
+        <div class="flat-item flat-item--email">
+          <div class="flat-email__header">
+            <div class="flat-email__from">From: hello@yourbiz.com</div>
+            <div class="flat-email__subject">Welcome to the family ♥</div>
+          </div>
+          <div class="flat-email__body">
+            <div class="flat-email__line"></div>
+            <div class="flat-email__line"></div>
+            <div class="flat-email__line"></div>
+          </div>
+          <div class="flat-email__sig">— You</div>
+        </div>
+
+        <div class="flat-item flat-item--sop">
+          <div class="flat-sop__label">SOP Library</div>
+          <div class="flat-sop__title">How everything runs.</div>
+          <div class="flat-sop__count">12 docs + 8 Loom videos</div>
+        </div>
+
+        <div class="flat-item flat-item--polaroid">
+          <div class="flat-polaroid__image">
+            <div class="flat-form__title">Grab the free guide</div>
+            <div class="flat-form__input"></div>
+            <div class="flat-form__input"></div>
+            <div class="flat-form__btn">Send it</div>
+          </div>
+          <div class="flat-polaroid__caption">the lead form ♥</div>
+        </div>
+
+        <div class="flat-item flat-item--note">
+          <p class="flat-note__text">welcome to your<br>new ad system,<br>let's grow!<span class="flat-note__sig">px ♥</span></p>
+        </div>
+
+      </div>
+
+      <div class="pz-flatlay__footer anim">All of this transfers to you on week 8. Yours to keep.</div>
+    </div>
   </section>
 
   <!-- 6. INCLUDED -->
