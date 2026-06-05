@@ -345,14 +345,14 @@
   align-items: center;
   position: relative;
   overflow: hidden;
-  background: url('http://priscillazaehringer.com/wp-content/uploads/2026/03/pexels-leticia-alvares-1805702-32922278-scaled.jpg') center/cover no-repeat;
+  background: url('http://priscillazaehringer.com/wp-content/uploads/2026/03/pexels-leticia-alvares-1805702-32922278-scaled.jpg') 32% center / cover no-repeat;
 }
 
 .pz-hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(61,53,53,0.74) 0%, rgba(61,53,53,0.62) 100%);
+  background: radial-gradient(ellipse 72% 82% at 50% 44%, rgba(61,53,53,0.86) 0%, rgba(61,53,53,0.68) 68%, rgba(61,53,53,0.6) 100%);
   pointer-events: none;
 }
 
@@ -387,6 +387,7 @@
   color: var(--soft-cream);
   margin-bottom: 12px;
   letter-spacing: -0.005em;
+  text-shadow: 0 2px 24px rgba(40,34,34,0.5);
 }
 
 .pz-hero__title .cursive {
@@ -716,11 +717,13 @@
 .pz-reality__callout {
   max-width: 640px;
   margin: 32px auto 0;
-  padding: 26px 34px;
+  padding: 22px 32px;
   text-align: center;
   background: var(--soft-blush);
   border: 1.5px solid var(--blush);
   border-radius: 8px;
+  min-height: 0 !important;
+  height: auto !important;
 }
 
 .pz-reality__callout p {
@@ -1169,13 +1172,12 @@
 }
 
 .pz-included__grid {
-  max-width: 1000px;
+  max-width: 860px;
   margin: 0 auto;
   padding: 0 24px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .pz-included__card {
@@ -1183,6 +1185,9 @@
   padding: 28px 30px;
   border-radius: 14px;
   transition: transform 0.3s ease;
+  display: block !important;
+  min-height: 0 !important;
+  height: auto !important;
 }
 
 .pz-included__card:hover { transform: translateY(-2px); }
@@ -1228,6 +1233,8 @@
   margin-top: 16px;
   padding-top: 14px;
   border-top: 1px solid rgba(201,160,155,0.25);
+  column-count: 2;
+  column-gap: 32px;
 }
 
 .pz-included__card li {
@@ -1236,6 +1243,7 @@
   padding: 5px 0 5px 22px;
   position: relative;
   line-height: 1.6;
+  break-inside: avoid;
 }
 
 .pz-included__card li::before {
@@ -1257,8 +1265,8 @@
 }
 
 @media (max-width: 768px) {
-  .pz-included__grid { grid-template-columns: 1fr; }
   .pz-included__card { padding: 24px; }
+  .pz-included__card ul { column-count: 1; }
 }
 
 /* ============================================
@@ -2037,13 +2045,15 @@
 }
 .pz-offer__card {
   background: var(--white);
-  padding: 26px 32px;
+  padding: 24px 32px;
   border-radius: 12px;
   display: grid;
   grid-template-columns: 230px 1fr;
   gap: 30px;
   align-items: center;
   transition: transform 0.3s ease;
+  min-height: 0 !important;
+  height: auto !important;
 }
 .pz-offer__card:hover { transform: translateX(4px); }
 .pz-offer__card-head { display: flex; flex-direction: column; }
