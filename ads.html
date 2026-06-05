@@ -93,6 +93,14 @@
   font-weight: 400;
 }
 
+/* Italic serif emphasis — quieter alternative to the cursive split */
+.pz .h-em {
+  font-family: 'Libre Caslon Text', serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--blush);
+}
+
 .pz .body {
   font-family: 'Karla', sans-serif;
   font-weight: 400;
@@ -361,7 +369,7 @@
 }
 
 .pz-hero__text {
-  padding: 40px 0;
+  padding: 32px 0;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -390,7 +398,7 @@
 
 .pz-hero__body {
   color: var(--gray);
-  margin-bottom: 22px;
+  margin-bottom: 14px;
   max-width: 480px;
   line-height: 1.7;
   font-size: 1.02rem;
@@ -599,7 +607,7 @@
 
 .pz-reality__opener {
   max-width: 700px;
-  margin: 0 auto 36px;
+  margin: 0 auto 28px;
   padding: 0 24px;
 }
 
@@ -696,7 +704,7 @@
 
 .pz-reality__close {
   max-width: 700px;
-  margin: 36px auto 0;
+  margin: 28px auto 0;
   padding: 0 24px;
   text-align: center;
   font-family: 'Libre Caslon Text', serif;
@@ -836,7 +844,7 @@
 }
 
 .pz-about__text h2 {
-  margin-bottom: 28px;
+  margin-bottom: 20px;
 }
 
 .pz-about__text h2 .cursive {
@@ -850,7 +858,7 @@
 
 /* Quote — NOT bordered left like every AI page. Instead: oversized italic with big quotemark */
 .pz-about__quote {
-  margin: 48px 0 20px;
+  margin: 32px 0 16px;
   position: relative;
   padding: 24px 0 0 4px;
   border-top: 1px solid rgba(176,161,161,0.25);
@@ -1133,7 +1141,7 @@
 .pz-included__header {
   text-align: center;
   max-width: 700px;
-  margin: 0 auto 40px;
+  margin: 0 auto 28px;
   padding: 0 24px;
 }
 
@@ -1171,6 +1179,16 @@
   font-size: 2.4rem;
   color: var(--blush);
   line-height: 0.9;
+  margin-bottom: 8px;
+}
+
+.pz-included__card-timing {
+  font-family: 'Karla', sans-serif;
+  font-weight: 500;
+  font-size: 0.74rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--blush);
   margin-bottom: 10px;
 }
 
@@ -1601,7 +1619,7 @@
 .pz-honesty__bottom {
   text-align: center;
   max-width: 700px;
-  margin: 50px auto 0;
+  margin: 36px auto 0;
   padding: 0 24px;
 }
 
@@ -1773,7 +1791,7 @@
 
 .pz-final__intro {
   max-width: 1200px;
-  margin: 0 auto 40px;
+  margin: 0 auto 28px;
   padding: 0 24px;
 }
 
@@ -1784,7 +1802,7 @@
 
 .pz-final__steps {
   max-width: 1000px;
-  margin: 0 auto 40px;
+  margin: 0 auto 32px;
   padding: 0 24px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1976,7 +1994,7 @@
 .pz-offer__header {
   text-align: center;
   max-width: 760px;
-  margin: 0 auto 36px;
+  margin: 0 auto 28px;
   padding: 0 24px;
 }
 .pz-offer__header .eyebrow { color: var(--blush); margin-bottom: 8px; }
@@ -2004,13 +2022,13 @@
   font-size: 2.8rem;
   line-height: 0.9;
   color: var(--blush);
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 .pz-offer__card h3 {
   font-family: 'Libre Caslon Text', serif;
   font-weight: 700;
   font-size: 1.5rem;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   color: var(--dark);
 }
 .pz-offer__card p {
@@ -2164,7 +2182,7 @@
     <div class="pz-reality__opener anim" style="text-align: center;">
       <div class="eyebrow" style="color: var(--blush); margin-bottom: 8px;">The Gap I'm Filling</div>
       <span class="accent-line accent-line--center"></span>
-      <h2 class="h-lg">You're growing. <span class="cursive" style="color: var(--blush); font-size: 1.1em;">Your list isn't.</span></h2>
+      <h2 class="h-lg">You're growing. <span class="h-em">Your list isn't.</span></h2>
       <p>You've built something real. Clients love your work. Your offer converts when people actually see it. But growth is slow, and your email list has been stuck at the same number for months. You've thought about ads, and you've looked at what's out there:</p>
     </div>
 
@@ -2209,7 +2227,7 @@
       <div class="pz-about__text anim--slide-l d2">
         <div class="eyebrow">About Priscilla</div>
         <span class="accent-line"></span>
-        <h2 class="h-lg">I built this practice because real ad strategy shouldn't be reserved for <span class="cursive" style="color: var(--blush); font-size: 1.1em;">the biggest budgets.</span></h2>
+        <h2 class="h-lg">I built this practice because real ad strategy shouldn't be reserved for <span class="h-em">the biggest budgets.</span></h2>
         <p class="body">When I first started running ads for a client, something clicked. Paid traffic isn't just about sales. It's about awareness. Email list growth. Real momentum that doesn't depend on the algorithm liking you that week.</p>
         <p class="body">But I watched too many small business owners get burned by agencies charging a fortune for templated strategy. The businesses that would benefit most from ads are the ones priced out of getting real help.</p>
         <p class="body">So I kept my practice small. My prices fair. My work personal. No big team. No inflated retainers. Just me, doing work I care about, for businesses I believe in.</p>
@@ -2244,27 +2262,28 @@
       <div class="pz-offer__card anim d2">
         <div class="pz-offer__num">03</div>
         <h3>You Keep It</h3>
-        <p>Async handoff at week eight: SOP library, Loom training videos, and a written plan from me on what to do next. You own the system. It keeps generating leads whether I'm involved or not.</p>
+        <p>At week eight I hand off the SOP library, Loom training videos, and a written plan for what's next. You own the system, and it keeps generating leads with or without me.</p>
       </div>
     </div>
     <div class="pz-offer__note anim">Prefer to keep me on after handoff? Ongoing management is $397/mo. Beta clients lock in $297/mo for their first 6 months.</div>
   </section>
 
-  <!-- 6. INCLUDED -->
+  <!-- 6. WHAT YOU GET + PROCESS (combined) -->
   <section class="pz-included" style="position: relative;">
     <span class="float-deco float-heart" style="top: 6%; left: 6%; transform: rotate(-20deg);">♥</span>
     <span class="float-deco float-heart float-heart--sm float-heart--moss" style="top: 45%; right: 4%; transform: rotate(15deg);">♥</span>
     <div class="pz-included__header anim">
       <div class="eyebrow">What You Get</div>
       <span class="accent-line accent-line--center"></span>
-      <h2 class="h-lg">What I'm taking <span class="cursive" style="color: var(--blush); font-size: 1.1em;">off your plate.</span></h2>
-      <p class="body" style="margin-top: 12px; color: var(--gray);">No surprises. No hidden fees. No "but that's extra."</p>
+      <h2 class="h-lg">Exactly what we build, <span class="h-em">week by week.</span></h2>
+      <p class="body" style="margin-top: 12px; color: var(--gray);">Four phases over eight weeks, hands-on the whole way. No surprises, no hidden fees, no "but that's extra."</p>
     </div>
 
     <div class="pz-included__grid">
       <div class="pz-included__card anim">
         <div>
           <div class="pz-included__card-num">01</div>
+          <div class="pz-included__card-timing">Weeks 1 &amp; 2</div>
           <h3>🧱 The Foundation</h3>
           <p class="pz-included__card-outcome">You'll know your money has a real plan behind it, not a guess.</p>
         </div>
@@ -2279,24 +2298,40 @@
       <div class="pz-included__card anim d1">
         <div>
           <div class="pz-included__card-num">02</div>
-          <h3>🎯 The System</h3>
-          <p class="pz-included__card-outcome">New leads landing in your inbox every day while you do the work you actually love.</p>
+          <div class="pz-included__card-timing">Weeks 3 to 5</div>
+          <h3>🎯 The Build</h3>
+          <p class="pz-included__card-outcome">Everything built, connected, and tested before a dollar goes live.</p>
         </div>
         <ul>
           <li>Ad creative direction and design</li>
           <li>Ad copy (multiple variations for testing)</li>
           <li>Native Facebook lead form (lower cost per lead, no landing page friction)</li>
-          <li>Branded thank-you page (built and connected)</li>
-          <li>Email welcome sequence written and connected</li>
+          <li>Branded thank-you page, built and connected</li>
+          <li>Email welcome sequence, written and connected</li>
           <li>Zapier integration between Meta and your email platform</li>
           <li>Supporting awareness layer when your budget allows</li>
-          <li>One to two weeks of active campaign management once launched</li>
         </ul>
       </div>
 
       <div class="pz-included__card anim d2">
         <div>
           <div class="pz-included__card-num">03</div>
+          <div class="pz-included__card-timing">Weeks 6 &amp; 7</div>
+          <h3>🚀 Launch &amp; Optimize</h3>
+          <p class="pz-included__card-outcome">New leads landing in your inbox while I fine-tune the system in real time.</p>
+        </div>
+        <ul>
+          <li>We go live and the leads start coming in</li>
+          <li>I'm in your account daily for one to two weeks</li>
+          <li>Testing creative and refreshing what's working</li>
+          <li>Optimizing audiences and watching cost per lead</li>
+        </ul>
+      </div>
+
+      <div class="pz-included__card anim d3">
+        <div>
+          <div class="pz-included__card-num">04</div>
+          <div class="pz-included__card-timing">Week 8</div>
           <h3>🤝 The Handoff</h3>
           <p class="pz-included__card-outcome">A system you own and understand. Yours to run for years, not rented from anyone.</p>
         </div>
@@ -2310,71 +2345,15 @@
       </div>
     </div>
 
-    <div class="pz-included__footer anim">No long-term contracts. No retainers locking you in. The system is yours.</div>
-  </section>
-
-  <!-- 7. PROCESS — CAROUSEL -->
-  <section class="pz-process" style="position: relative;">
-    <span class="float-deco float-heart float-heart--bronze float-heart--lg" style="top: 8%; right: 8%; transform: rotate(12deg);">♥</span>
-    <div class="pz-process__header anim">
-      <div class="eyebrow">The Process</div>
-      <span class="accent-line accent-line--center"></span>
-      <h2 class="h-lg">Here's exactly how the <span class="cursive" style="color: var(--blush); font-size: 1.1em;">eight weeks go.</span></h2>
-      <p class="body">This isn't set-it-and-forget-it. It's a hands-on partnership where I treat your ad budget like it's my own money.</p>
-    </div>
-
-    <div class="pz-caro anim" id="pzCaro">
-      <div class="pz-caro__viewport">
-        <div class="pz-caro__track" id="pzCaroTrack">
-          <div class="pz-caro__slide">
-            <div class="pz-caro__num">01</div>
-            <h3>The Foundation</h3>
-            <div class="pz-caro__timing">Weeks 1 and 2</div>
-            <p>Before I touch a single ad, I look at everything. Your offer. Your freebie. Your audience. Your tech stack. I write your strategy, plan your creative, and gather everything we need to build.</p>
-          </div>
-          <div class="pz-caro__slide">
-            <div class="pz-caro__num">02</div>
-            <h3>The Build</h3>
-            <div class="pz-caro__timing">Weeks 3 to 5</div>
-            <p>I create the ad creative and copy, build your lead form and thank-you page, write and connect your welcome email sequence, and set up your Zapier integration. You approve everything before it goes live.</p>
-          </div>
-          <div class="pz-caro__slide">
-            <div class="pz-caro__num">03</div>
-            <h3>Launch and Optimize</h3>
-            <div class="pz-caro__timing">Weeks 6 and 7</div>
-            <p>We go live. I'm in your account every day for two weeks, testing creative, watching cost per lead, optimizing audiences, refining the system as real data comes in.</p>
-          </div>
-          <div class="pz-caro__slide">
-            <div class="pz-caro__num">04</div>
-            <h3>The Handoff</h3>
-            <div class="pz-caro__timing">Week 8</div>
-            <p>SOP library delivered. Training videos recorded. A written next-steps plan from me. Everything async, on your time. You leave knowing exactly how to keep this running.</p>
-          </div>
-        </div>
-      </div>
-      <div class="pz-caro__nav">
-        <span class="pz-caro__step active" data-slide="0">01 Foundation</span>
-        <span class="pz-caro__step" data-slide="1">02 Build</span>
-        <span class="pz-caro__step" data-slide="2">03 Launch</span>
-        <span class="pz-caro__step" data-slide="3">04 Handoff</span>
-        <div class="pz-caro__arrows">
-          <span class="pz-caro__arrow" id="pzPrev"><svg viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="#3D3535" stroke-width="1.5"/></svg></span>
-          <span class="pz-caro__arrow" id="pzNext"><svg viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="#3D3535" stroke-width="1.5"/></svg></span>
-        </div>
-      </div>
-    </div>
-
-    <div class="pz-process__result anim">
-      <p><span>You get:</span> A partner who thinks about your growth every week. Not just someone who sends you a report.</p>
-    </div>
+    <div class="pz-included__footer anim">No long-term contracts. No retainers locking you in. The system is yours. A partner who thinks about your growth every week, not just someone who sends you a report.</div>
   </section>
 
   <!-- 8. PROOF — case studies -->
   <section class="pz-proof">
-    <div class="pz-included__header anim" style="text-align: center; max-width: 700px; margin: 0 auto 40px; padding: 0 24px;">
+    <div class="pz-included__header anim" style="text-align: center; max-width: 700px; margin: 0 auto 28px; padding: 0 24px;">
       <div class="eyebrow" style="color: var(--blush);">Proof It Works</div>
       <span class="accent-line accent-line--center"></span>
-      <h2 class="h-lg">Real results from <span class="cursive" style="color: var(--blush); font-size: 1.1em;">real ad budgets.</span></h2>
+      <h2 class="h-lg">Real results from real ad budgets.</h2>
     </div>
     <div class="pz-proof__study anim--scale">
       <div class="pz-proof__label">Case Study</div>
@@ -2416,7 +2395,7 @@
       <div class="pz-budget__text anim--slide-r">
         <div class="eyebrow">Investment</div>
         <span class="accent-line"></span>
-        <h2 class="h-lg">Here's what <span class="cursive" style="color: var(--blush); font-size: 1.1em;">it costs.</span></h2>
+        <h2 class="h-lg">Here's what <span class="h-em">it costs.</span></h2>
         <p class="body">You don't need a five-figure ad budget to see results. You do need enough room to test and gather meaningful data.</p>
         <p class="body" style="font-size: 0.92rem; color: var(--mauve); margin-top: 18px; font-style: italic;">Plus a minimum $500/mo in ad spend (this goes to Meta, not me) and a 90-day commitment to testing. This is how we build real momentum and gather meaningful data.</p>
         <p class="body" style="font-size: 0.92rem; color: var(--mauve); margin-top: 10px; font-style: italic;">Want more data faster? Bumping daily spend during the active management phase, even from $5 to $10 a day, moves a lot more people through the system in the same window.</p>
@@ -2449,7 +2428,7 @@
       <div class="pz-honesty__intro anim--slide-r">
         <div class="eyebrow">No Sugarcoating</div>
         <span class="accent-line"></span>
-        <h2 class="h-lg">What ads can and <span class="cursive" style="color: var(--blush); font-size: 1.1em;">can't do.</span></h2>
+        <h2 class="h-lg">What ads can and can't do.</h2>
         <p style="font-family: 'Libre Caslon Text', serif; font-style: italic; font-size: 1.1rem; color: var(--mauve);">The honest version.</p>
       </div>
       <div class="pz-honesty__col pz-honesty__col--can anim d1">
@@ -2480,7 +2459,7 @@
   <!-- 11. FIT CHECK — minimal, no ornaments -->
   <section class="pz-fit">
     <div class="pz-fit__layout">
-      <h2 class="h-lg anim">Is The Lead Stream <span class="cursive" style="color: var(--blush); font-size: 1.1em;">right for you?</span></h2>
+      <h2 class="h-lg anim">Is The Lead Stream <span class="h-em">right for you?</span></h2>
       <div class="pz-fit__cols">
         <div class="pz-fit__col pz-fit__col--yes anim d1">
           <h3>This works best when…</h3>
@@ -2514,7 +2493,7 @@
     <div class="pz-final__intro anim" style="text-align: center;">
       <div class="eyebrow">Next Steps</div>
       <span class="accent-line accent-line--center"></span>
-      <h2 class="h-lg">Ready to stop guessing and <span class="cursive" style="color: var(--blush); font-size: 1.1em;">start growing?</span></h2>
+      <h2 class="h-lg">Ready to stop guessing and <span class="h-em">start growing?</span></h2>
     </div>
 
     <div class="pz-final__steps">
@@ -2543,37 +2522,6 @@
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
   document.querySelectorAll('.pz .anim, .pz .anim--slide-r, .pz .anim--slide-l, .pz .anim--scale, .pz .anim--fade').forEach(function(el) { obs.observe(el); });
-
-  // Carousel
-  var cur = 0, total = 4;
-  var track = document.getElementById('pzCaroTrack');
-  var dots = document.querySelectorAll('.pz-caro__step');
-
-  function goTo(n) {
-    cur = (n + total) % total;
-    track.style.transform = 'translateX(-' + (cur * 100) + '%)';
-    dots.forEach(function(d, i) { d.classList.toggle('active', i === cur); });
-  }
-
-  dots.forEach(function(d) {
-    d.addEventListener('click', function() { goTo(parseInt(d.getAttribute('data-slide'))); });
-  });
-
-  var prev = document.getElementById('pzPrev');
-  var next = document.getElementById('pzNext');
-  if (prev) prev.addEventListener('click', function() { goTo(cur - 1); });
-  if (next) next.addEventListener('click', function() { goTo(cur + 1); });
-
-  // Swipe support
-  var startX = 0;
-  var vp = document.querySelector('.pz-caro__viewport');
-  if (vp) {
-    vp.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, { passive: true });
-    vp.addEventListener('touchend', function(e) {
-      var diff = startX - e.changedTouches[0].clientX;
-      if (Math.abs(diff) > 50) goTo(diff > 0 ? cur + 1 : cur - 1);
-    });
-  }
 })();
 </script>
 
