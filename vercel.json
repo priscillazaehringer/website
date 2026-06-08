@@ -4,6 +4,7 @@
     { "source": "/about", "destination": "/about.html" },
     { "source": "/podcast", "destination": "/podcast.html" },
     { "source": "/ads", "destination": "/ads.html" },
+    { "source": "/lead-stream", "destination": "/lead-stream.html" },
     { "source": "/home-full", "destination": "/home-full.html" }
   ],
   "headers": [
@@ -12,7 +13,7 @@
       "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }]
     },
     {
-      "source": "/(home|about|ads|podcast|home-full)",
+      "source": "/(home|about|ads|podcast|home-full|lead-stream)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
       ]
