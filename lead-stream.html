@@ -269,11 +269,33 @@
 .pz-proof__head p { color: var(--ink-soft); margin-top: 14px; }
 .pz-proof__note { text-align: center; max-width: 620px; margin: 34px auto 0; font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.12rem; color: var(--ink); }
 
-.pz-proof__tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; max-width: 980px; margin: 0 auto 36px; }
-.pz-proof__tile { background: var(--white); border-radius: var(--radius); padding: 28px 16px; text-align: center; box-shadow: 0 10px 28px rgba(33,30,28,0.06); border-bottom: 4px solid var(--pink); }
-.pz-proof__tile-num { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 2.8rem; line-height: 1; }
-.pz-proof__tile-num span { color: var(--pink-deep); }
-.pz-proof__tile-lbl { font-family: 'Space Mono', monospace; font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); margin-top: 10px; line-height: 1.5; }
+/* compounding math callout */
+.pz-proof__math { max-width: 840px; margin: 44px auto 0; background: var(--pink-soft); border-radius: var(--radius); padding: 40px 34px; text-align: center; }
+.pz-proof__math-eq { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 12px 20px; margin-bottom: 22px; }
+.pz-proof__math-cell { display: flex; flex-direction: column; }
+.pz-proof__math-cell .num { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 2.7rem; line-height: 1; color: var(--ink); }
+.pz-proof__math-cell .lbl { font-family: 'Space Mono', monospace; font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); margin-top: 9px; }
+.pz-proof__math-cell--hl .num { color: var(--pink-deep); }
+.pz-proof__math-cell--hl .lbl { color: var(--pink-deep); }
+.pz-proof__math-op { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--pink-deep); padding-bottom: 18px; }
+.pz-proof__math p { max-width: 580px; margin: 0 auto; color: var(--ink); font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.1rem; line-height: 1.5; }
+
+/* typical vs. The Lead Stream comparison */
+.pz-vs { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 900px; margin: 0 auto 14px; align-items: stretch; }
+.pz-vs__col { border-radius: var(--radius); padding: 30px 32px; }
+.pz-vs__col--them { background: var(--cream); }
+.pz-vs__col--us { background: var(--white); border: 2px solid var(--pink); box-shadow: 0 16px 44px rgba(201,57,106,0.18); position: relative; }
+.pz-vs__badge { position: absolute; top: -13px; right: 18px; background: var(--pink); color: #fff; font-family: 'Space Mono', monospace; font-weight: 700; font-size: 0.64rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 6px 13px; border-radius: 999px; }
+.pz-vs__title { font-family: 'Space Mono', monospace; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.76rem; margin-bottom: 18px; }
+.pz-vs__col--them .pz-vs__title { color: var(--ink-soft); }
+.pz-vs__col--us .pz-vs__title { color: var(--pink-deep); }
+.pz-vs ul { list-style: none; }
+.pz-vs li { position: relative; padding-left: 30px; margin-bottom: 13px; line-height: 1.5; font-size: 0.98rem; }
+.pz-vs__col--them li { color: var(--ink-soft); }
+.pz-vs__col--them li::before { content: "\2715"; position: absolute; left: 2px; color: var(--ink-soft); font-weight: 800; }
+.pz-vs__col--us li { color: var(--ink); font-weight: 600; }
+.pz-vs__col--us li::before { content: "\2665"; position: absolute; left: 0; color: var(--pink); }
+.pz-proof__sublabel { text-align: center; font-family: 'Space Mono', monospace; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.72rem; color: var(--pink-deep); margin: 30px 0 16px; }
 
 .pz-proof__cases { max-width: 980px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px; }
 .pz-proof__case { background: var(--white); border-radius: var(--radius); box-shadow: 0 8px 24px rgba(33,30,28,0.06); padding: 28px 34px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 32px; align-items: center; }
@@ -410,7 +432,8 @@
   .pz-real__photo { order: -1; }
   .pz-reveal__steps { grid-template-columns: 1fr; }
   .pz-get__grid { grid-template-columns: 1fr; }
-  .pz-proof__tiles { grid-template-columns: 1fr 1fr; }
+  .pz-vs { grid-template-columns: 1fr; }
+  .pz-proof__math-cell .num { font-size: 2rem; }
   .pz-proof__case { grid-template-columns: 1fr; gap: 18px; padding: 26px 24px; }
   .pz-proof__pills { justify-content: flex-start; }
   .pz-testi__grid { grid-template-columns: 1fr; }
@@ -641,14 +664,32 @@
         <h2>What it looks like when it works.</h2>
         <p>In plain terms: more of the right people on your email list, for a fraction of what ads usually cost. Here's what that looked like for two real clients.</p>
       </div>
-      <!-- NUMBERS BAND — labels translate each figure into plain meaning.
-           TODO: confirm the ~70 / 6x math and the ~$28 industry cost-per-lead benchmark. -->
-      <div class="pz-proof__tiles">
-        <div class="pz-proof__tile anim"><div class="pz-proof__tile-num">425</div><div class="pz-proof__tile-lbl">New email subscribers<br>from one launch</div></div>
-        <div class="pz-proof__tile anim d1"><div class="pz-proof__tile-num">70<span>¢</span></div><div class="pz-proof__tile-lbl">Per new lead — the<br>usual rate is ~$28</div></div>
-        <div class="pz-proof__tile anim d2"><div class="pz-proof__tile-num">6<span>×</span></div><div class="pz-proof__tile-lbl">More people reached<br>for the same budget</div></div>
-        <div class="pz-proof__tile anim d3"><div class="pz-proof__tile-num">7</div><div class="pz-proof__tile-lbl">New leads in her<br>inbox, every day</div></div>
+      <!-- TYPICAL vs THE LEAD STREAM — TODO: confirm the ~$28 benchmark and the ~70/6x figures. -->
+      <div class="pz-vs">
+        <div class="pz-vs__col pz-vs__col--them anim">
+          <div class="pz-vs__title">The usual way</div>
+          <ul>
+            <li>About $28 to get a single new lead</li>
+            <li>An email list stuck at the same number</li>
+            <li>Templated strategy, the same for everyone</li>
+            <li>An agency that owns the system</li>
+            <li>The leads stop the day you stop paying</li>
+          </ul>
+        </div>
+        <div class="pz-vs__col pz-vs__col--us anim d1">
+          <span class="pz-vs__badge">This one ♥</span>
+          <div class="pz-vs__title">With The Lead Stream</div>
+          <ul>
+            <li>70¢ to $4.56 per lead in real campaigns</li>
+            <li>425 new subscribers from a single launch</li>
+            <li>Strategy built around your business</li>
+            <li>A system that's 100% yours to keep</li>
+            <li>Leads that keep coming, with or without me</li>
+          </ul>
+        </div>
       </div>
+
+      <div class="pz-proof__sublabel">Real client campaigns</div>
 
       <!-- SLIM CASE STRIPS -->
       <div class="pz-proof__cases">
@@ -680,7 +721,17 @@
         </article>
       </div>
 
-      <p class="pz-proof__note">Every lead is a real person on your email list. Someone you can welcome, build trust with, and sell to for years, not just a number on a dashboard.</p>
+      <!-- COMPOUNDING MATH — illustrative, based on the $5/day client's 7 leads/day pace. -->
+      <div class="pz-proof__math anim">
+        <div class="pz-proof__math-eq">
+          <div class="pz-proof__math-cell"><span class="num">7</span><span class="lbl">new leads a day</span></div>
+          <div class="pz-proof__math-op">×</div>
+          <div class="pz-proof__math-cell"><span class="num">365</span><span class="lbl">days a year</span></div>
+          <div class="pz-proof__math-op">=</div>
+          <div class="pz-proof__math-cell pz-proof__math-cell--hl"><span class="num">2,555</span><span class="lbl">new people a year</span></div>
+        </div>
+        <p>That's 2,555 new people on your list in a year, at that client's pace. People to welcome, build trust with, and pitch your offer to. Leads compound. The list you grow now is what you sell to for years.</p>
+      </div>
 
       <div class="pz-testi">
         <div class="pz-testi__grid">
