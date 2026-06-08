@@ -305,6 +305,8 @@
 .pz-proof__pills { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; }
 .pz-proof__pill { background: var(--cream); border-radius: 999px; padding: 8px 15px; font-size: 0.8rem; color: var(--ink-soft); white-space: nowrap; }
 .pz-proof__pill strong { font-family: 'Playfair Display', serif; color: var(--ink); font-weight: 700; }
+.pz-proof__pill--them { background: transparent; border: 1px dashed var(--line); color: var(--ink-soft); }
+.pz-proof__pill--them strong { color: var(--ink-soft); }
 
 .pz-testi { margin-top: 48px; }
 .pz-testi__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1060px; margin: 0 auto; }
@@ -669,7 +671,7 @@
         <div class="pz-vs__col pz-vs__col--them anim">
           <div class="pz-vs__title">The usual way</div>
           <ul>
-            <li>About $28 to get a single new lead</li>
+            <li>About $28 for a single lead (industry average)</li>
             <li>An email list stuck at the same number</li>
             <li>Templated strategy, the same for everyone</li>
             <li>An agency that owns the system</li>
@@ -698,11 +700,13 @@
           <div>
             <span class="tag pz-proof__case-tag">Wellness Coach</span>
             <h3>425 new subscribers from <span class="hl">one masterclass</span>.</h3>
-            <p>We put her offer in front of the right people for about $4.56 a signup. The same budget usually brings in around 70 sign ups. Hers brought in 425, six times more people on her list and ready to hear from her.</p>
+            <!-- TODO: confirm ~$28 is the right cost-per-lead average for the wellness/coaching niche. -->
+            <p>We put her offer in front of the right people for $4.56 a signup. The average cost per lead in her industry runs around $28, so that budget would usually bring in about 70 sign ups. Hers brought in 425. Six times more people on her list and ready to hear from her.</p>
           </div>
           <div class="pz-proof__pills">
-            <span class="pz-proof__pill"><strong>425</strong> new subscribers</span>
-            <span class="pz-proof__pill"><strong>$4.56</strong> each</span>
+            <span class="pz-proof__pill"><strong>$4.56</strong> per signup</span>
+            <span class="pz-proof__pill pz-proof__pill--them"><strong>~$28</strong> industry average</span>
+            <span class="pz-proof__pill"><strong>425</strong> subscribers</span>
             <span class="pz-proof__pill"><strong>$1,936</strong> total spend</span>
           </div>
         </article>
@@ -714,8 +718,10 @@
             <p>Just $5 a day in ad spend brought in about 7 new leads daily, at roughly 70 cents each. You don't need a big budget. You need the right setup and someone watching it for you.</p>
           </div>
           <div class="pz-proof__pills">
+            <span class="pz-proof__pill"><strong>70¢</strong> per lead</span>
+            <!-- TODO: add this client's niche cost-per-lead average so the comparison matches their industry. -->
+            <span class="pz-proof__pill pz-proof__pill--them"><strong>~$[XX]</strong> industry average</span>
             <span class="pz-proof__pill"><strong>7</strong> leads a day</span>
-            <span class="pz-proof__pill"><strong>70¢</strong> each</span>
             <span class="pz-proof__pill"><strong>$5</strong> a day</span>
           </div>
         </article>
