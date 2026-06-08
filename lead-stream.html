@@ -185,6 +185,13 @@
 .pz-stats__num span { color: var(--pink-deep); }
 .pz-stats__txt { font-size: 0.9rem; color: var(--ink-soft); }
 
+/* ---- who I've worked with ---- */
+.pz-clients { background: var(--cream-lt); padding: 50px 0; text-align: center; }
+.pz-clients__label { font-family: 'Space Mono', monospace; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.76rem; color: var(--pink-deep); margin-bottom: 20px; }
+.pz-clients__row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; max-width: 800px; margin: 0 auto; }
+.pz-clients__chip { background: var(--white); border: 1px solid var(--line); border-radius: 999px; padding: 9px 20px; font-weight: 700; font-size: 0.92rem; color: var(--ink); box-shadow: 0 4px 14px rgba(33,30,28,0.04); }
+.pz-clients__chip--more { background: transparent; border-style: dashed; color: var(--ink-soft); font-weight: 600; }
+
 /* ============================================
    STORY
    ============================================ */
@@ -257,8 +264,10 @@
    PROOF — numbers band + slim case strips
    ============================================ */
 .pz-proof { background: var(--cream-lt); }
-.pz-proof__head { text-align: center; max-width: 640px; margin: 0 auto 44px; }
+.pz-proof__head { text-align: center; max-width: 660px; margin: 0 auto 44px; }
 .pz-proof__head h2 { font-size: clamp(1.9rem, 3.6vw, 2.6rem); font-weight: 500; margin-top: 8px; }
+.pz-proof__head p { color: var(--ink-soft); margin-top: 14px; }
+.pz-proof__note { text-align: center; max-width: 620px; margin: 34px auto 0; font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.12rem; color: var(--ink); }
 
 .pz-proof__tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; max-width: 980px; margin: 0 auto 36px; }
 .pz-proof__tile { background: var(--white); border-radius: var(--radius); padding: 28px 16px; text-align: center; box-shadow: 0 10px 28px rgba(33,30,28,0.06); border-bottom: 4px solid var(--pink); }
@@ -454,6 +463,21 @@
     </div>
   </section>
 
+  <!-- WHO I'VE WORKED WITH -->
+  <section class="pz-clients">
+    <div class="wrap anim">
+      <div class="pz-clients__label">Who I've worked with</div>
+      <div class="pz-clients__row">
+        <span class="pz-clients__chip">Dietitians</span>
+        <span class="pz-clients__chip">Online coaches</span>
+        <span class="pz-clients__chip">Business strategists</span>
+        <span class="pz-clients__chip">Dentists</span>
+        <span class="pz-clients__chip">Artists</span>
+        <span class="pz-clients__chip pz-clients__chip--more">and more</span>
+      </div>
+    </div>
+  </section>
+
   <!-- STORY -->
   <section class="pz-story" id="story">
     <div class="wrap">
@@ -615,45 +639,48 @@
       <div class="pz-proof__head anim">
         <span class="tag tag--pink">Proof it works</span>
         <h2>What it looks like when it works.</h2>
+        <p>In plain terms: more of the right people on your email list, for a fraction of what ads usually cost. Here's what that looked like for two real clients.</p>
       </div>
-      <!-- NUMBERS BAND — TODO: confirm the ~70 / 6x math behind these figures. -->
+      <!-- NUMBERS BAND — labels translate each figure into plain meaning.
+           TODO: confirm the ~70 / 6x math and the ~$28 industry cost-per-lead benchmark. -->
       <div class="pz-proof__tiles">
-        <div class="pz-proof__tile anim"><div class="pz-proof__tile-num">6<span>×</span></div><div class="pz-proof__tile-lbl">More signups,<br>same spend</div></div>
-        <div class="pz-proof__tile anim d1"><div class="pz-proof__tile-num">425</div><div class="pz-proof__tile-lbl">Masterclass<br>signups</div></div>
-        <div class="pz-proof__tile anim d2"><div class="pz-proof__tile-num"><span>$</span>0.70</div><div class="pz-proof__tile-lbl">Cost<br>per lead</div></div>
-        <div class="pz-proof__tile anim d3"><div class="pz-proof__tile-num">7</div><div class="pz-proof__tile-lbl">New leads<br>a day</div></div>
+        <div class="pz-proof__tile anim"><div class="pz-proof__tile-num">425</div><div class="pz-proof__tile-lbl">New email subscribers<br>from one launch</div></div>
+        <div class="pz-proof__tile anim d1"><div class="pz-proof__tile-num">70<span>¢</span></div><div class="pz-proof__tile-lbl">Per new lead — the<br>usual rate is ~$28</div></div>
+        <div class="pz-proof__tile anim d2"><div class="pz-proof__tile-num">6<span>×</span></div><div class="pz-proof__tile-lbl">More people reached<br>for the same budget</div></div>
+        <div class="pz-proof__tile anim d3"><div class="pz-proof__tile-num">7</div><div class="pz-proof__tile-lbl">New leads in her<br>inbox, every day</div></div>
       </div>
 
       <!-- SLIM CASE STRIPS -->
       <div class="pz-proof__cases">
-        <!-- CASE 1 — TODO: confirm ~70/6x. TODO: replace "Wellness Coach" with a real, approved client descriptor. -->
+        <!-- CASE 1 — TODO: confirm ~70/6x and the ~$28 benchmark. TODO: replace "Wellness Coach" with a real, approved client descriptor. -->
         <article class="pz-proof__case anim">
           <div>
             <span class="tag pz-proof__case-tag">Wellness Coach</span>
-            <h3>A masterclass that <span class="hl">filled itself</span>.</h3>
-            <p>We put her offer in front of the right people and kept the cost per signup low. The budget that usually brings in around 70 leads brought in 425.</p>
+            <h3>425 new subscribers from <span class="hl">one masterclass</span>.</h3>
+            <p>We put her offer in front of the right people for about $4.56 a signup. The same budget usually brings in around 70 sign ups. Hers brought in 425, six times more people on her list and ready to hear from her.</p>
           </div>
           <div class="pz-proof__pills">
-            <span class="pz-proof__pill"><strong>425</strong> signups</span>
-            <span class="pz-proof__pill"><strong>$4.56</strong> per signup</span>
-            <span class="pz-proof__pill"><strong>$1,936</strong> spent</span>
-            <span class="pz-proof__pill"><strong>~70</strong> typical</span>
+            <span class="pz-proof__pill"><strong>425</strong> new subscribers</span>
+            <span class="pz-proof__pill"><strong>$4.56</strong> each</span>
+            <span class="pz-proof__pill"><strong>$1,936</strong> total spend</span>
           </div>
         </article>
         <!-- CASE 2 — TODO: replace "Solo Practitioner" with a real, approved client descriptor. -->
         <article class="pz-proof__case anim d1">
           <div>
             <span class="tag pz-proof__case-tag">Solo Practitioner</span>
-            <h3>Steady leads on a <span class="hl">coffee budget</span>.</h3>
-            <p>A small daily spend, set up with care, brought fresh leads in every morning. Strong strategy did the work a big budget usually gets credit for.</p>
+            <h3>A new lead every day, on a <span class="hl">$5 budget</span>.</h3>
+            <p>Just $5 a day in ad spend brought in about 7 new leads daily, at roughly 70 cents each. You don't need a big budget. You need the right setup and someone watching it for you.</p>
           </div>
           <div class="pz-proof__pills">
-            <span class="pz-proof__pill"><strong>7</strong> leads / day</span>
-            <span class="pz-proof__pill"><strong>$0.70</strong> per lead</span>
+            <span class="pz-proof__pill"><strong>7</strong> leads a day</span>
+            <span class="pz-proof__pill"><strong>70¢</strong> each</span>
             <span class="pz-proof__pill"><strong>$5</strong> a day</span>
           </div>
         </article>
       </div>
+
+      <p class="pz-proof__note">Every lead is a real person on your email list. Someone you can welcome, build trust with, and sell to for years, not just a number on a dashboard.</p>
 
       <div class="pz-testi">
         <div class="pz-testi__grid">
