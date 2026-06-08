@@ -76,10 +76,13 @@
 .pz .tag--pink { color: var(--pink-deep); }
 .pz .tag--box { border: 1.6px solid currentColor; padding: 8px 14px; display: inline-block; }
 
-/* yellow highlighter */
+/* yellow highlighter — hugs the text instead of filling the whole line box */
 .pz .hl {
-  background: var(--yellow);
-  padding: 0.04em 0.14em;
+  background-image: linear-gradient(var(--yellow), var(--yellow));
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  background-size: 100% 0.9em;
+  padding: 0 0.1em;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
