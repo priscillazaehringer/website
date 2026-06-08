@@ -254,34 +254,28 @@
 .pz-get__foot { text-align: center; max-width: 720px; margin: 44px auto 0; font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.2rem; }
 
 /* ============================================
-   PROOF
+   PROOF — numbers band + slim case strips
    ============================================ */
 .pz-proof { background: var(--cream-lt); }
-.pz-proof__head { text-align: center; max-width: 640px; margin: 0 auto 46px; }
+.pz-proof__head { text-align: center; max-width: 640px; margin: 0 auto 44px; }
 .pz-proof__head h2 { font-size: clamp(1.9rem, 3.6vw, 2.6rem); font-weight: 500; margin-top: 8px; }
-.pz-proof__cards { max-width: 920px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px; }
-.pz-proof__card { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); padding: 40px 44px; display: grid; grid-template-columns: minmax(180px, 0.8fr) 1.2fr; gap: 44px; align-items: center; }
-.pz-proof__card--flip { grid-template-columns: 1.2fr minmax(180px, 0.8fr); }
-.pz-proof__card--flip .pz-proof__figure { order: 2; }
-.pz-proof__big { font-family: 'Playfair Display', serif; font-weight: 700; font-size: clamp(4rem, 10vw, 7.5rem); line-height: 0.9; text-align: center; }
-.pz-proof__big-sym { color: var(--pink-deep); font-size: 0.5em; vertical-align: 0.12em; }
-.pz-proof__big-cap { text-align: center; font-family: 'Space Mono', monospace; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); margin-top: 12px; }
-.pz-proof__client { color: var(--pink-deep); margin-bottom: 8px; }
-.pz-proof__headline { font-size: 1.5rem; font-weight: 600; margin-bottom: 10px; }
-.pz-proof__body { color: var(--ink-soft); margin-bottom: 22px; font-size: 0.98rem; }
-.pz-proof__cbar { margin-bottom: 13px; }
-.pz-proof__cbar-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
-.pz-proof__cbar-key { font-family: 'Space Mono', monospace; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); }
-.pz-proof__cbar-val { font-family: 'Playfair Display', serif; font-size: 0.98rem; }
-.pz-proof__cbar-track { height: 10px; background: rgba(33,30,28,0.07); border-radius: 999px; overflow: hidden; }
-.pz-proof__cbar-fill { height: 100%; width: 0; border-radius: 999px; transition: width 1.3s cubic-bezier(0.2,0.7,0.2,1); }
-.pz-proof__cbar-fill--us { background: var(--pink); }
-.pz-proof__cbar-fill--them { background: rgba(33,30,28,0.16); }
-.pz .pz-proof__card.vis .pz-proof__cbar-fill { width: var(--w); }
-.pz-proof__receipt { display: flex; flex-wrap: wrap; gap: 8px 24px; padding-top: 16px; border-top: 1px solid var(--line); }
-.pz-proof__receipt span { font-size: 0.84rem; color: var(--ink-soft); }
-.pz-proof__receipt strong { font-family: 'Playfair Display', serif; color: var(--ink); }
-.pz-testi { margin-top: 52px; }
+
+.pz-proof__tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; max-width: 980px; margin: 0 auto 36px; }
+.pz-proof__tile { background: var(--white); border-radius: var(--radius); padding: 28px 16px; text-align: center; box-shadow: 0 10px 28px rgba(33,30,28,0.06); border-bottom: 4px solid var(--pink); }
+.pz-proof__tile-num { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 2.8rem; line-height: 1; }
+.pz-proof__tile-num span { color: var(--pink-deep); }
+.pz-proof__tile-lbl { font-family: 'Space Mono', monospace; font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); margin-top: 10px; line-height: 1.5; }
+
+.pz-proof__cases { max-width: 980px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px; }
+.pz-proof__case { background: var(--white); border-radius: var(--radius); box-shadow: 0 8px 24px rgba(33,30,28,0.06); padding: 28px 34px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 32px; align-items: center; }
+.pz-proof__case-tag { color: var(--pink-deep); display: block; margin-bottom: 8px; }
+.pz-proof__case h3 { font-size: 1.35rem; font-weight: 600; margin-bottom: 6px; }
+.pz-proof__case p { font-size: 0.95rem; color: var(--ink-soft); margin: 0; }
+.pz-proof__pills { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; }
+.pz-proof__pill { background: var(--cream); border-radius: 999px; padding: 8px 15px; font-size: 0.8rem; color: var(--ink-soft); white-space: nowrap; }
+.pz-proof__pill strong { font-family: 'Playfair Display', serif; color: var(--ink); font-weight: 700; }
+
+.pz-testi { margin-top: 48px; }
 .pz-testi__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1060px; margin: 0 auto; }
 .pz-testi .ph { min-height: 220px; }
 
@@ -407,8 +401,9 @@
   .pz-real__photo { order: -1; }
   .pz-reveal__steps { grid-template-columns: 1fr; }
   .pz-get__grid { grid-template-columns: 1fr; }
-  .pz-proof__card, .pz-proof__card--flip { grid-template-columns: 1fr; gap: 22px; padding: 28px 24px; }
-  .pz-proof__card--flip .pz-proof__figure { order: 0; }
+  .pz-proof__tiles { grid-template-columns: 1fr 1fr; }
+  .pz-proof__case { grid-template-columns: 1fr; gap: 18px; padding: 26px 24px; }
+  .pz-proof__pills { justify-content: flex-start; }
   .pz-testi__grid { grid-template-columns: 1fr; }
   .pz-about__grid { grid-template-columns: 1fr; gap: 30px; }
   .pz-about__photo { order: -1; }
@@ -621,51 +616,41 @@
         <span class="tag tag--pink">Proof it works</span>
         <h2>What it looks like when it works.</h2>
       </div>
-      <div class="pz-proof__cards">
-        <!-- CARD 1 — DATA: signups=425, $4.56/signup, $1,936 spend, ~70 typical, 6x.
-             TODO: confirm ~70 / 6x. TODO: real, approved client descriptor. -->
-        <article class="pz-proof__card anim">
-          <div class="pz-proof__figure">
-            <div class="pz-proof__big">6<span class="pz-proof__big-sym">×</span></div>
-            <div class="pz-proof__big-cap">more signups, same spend</div>
-          </div>
+      <!-- NUMBERS BAND — TODO: confirm the ~70 / 6x math behind these figures. -->
+      <div class="pz-proof__tiles">
+        <div class="pz-proof__tile anim"><div class="pz-proof__tile-num">6<span>×</span></div><div class="pz-proof__tile-lbl">More signups,<br>same spend</div></div>
+        <div class="pz-proof__tile anim d1"><div class="pz-proof__tile-num">425</div><div class="pz-proof__tile-lbl">Masterclass<br>signups</div></div>
+        <div class="pz-proof__tile anim d2"><div class="pz-proof__tile-num"><span>$</span>0.70</div><div class="pz-proof__tile-lbl">Cost<br>per lead</div></div>
+        <div class="pz-proof__tile anim d3"><div class="pz-proof__tile-num">7</div><div class="pz-proof__tile-lbl">New leads<br>a day</div></div>
+      </div>
+
+      <!-- SLIM CASE STRIPS -->
+      <div class="pz-proof__cases">
+        <!-- CASE 1 — TODO: confirm ~70/6x. TODO: replace "Wellness Coach" with a real, approved client descriptor. -->
+        <article class="pz-proof__case anim">
           <div>
-            <span class="tag pz-proof__client">Wellness Coach</span>
-            <h3 class="pz-proof__headline">A masterclass that <span class="hl">filled itself</span>.</h3>
-            <p class="pz-proof__body">We put her offer in front of the right people and kept the cost per signup low. The budget that usually brings in around 70 leads brought in 425.</p>
-            <div class="pz-proof__cbar">
-              <div class="pz-proof__cbar-head"><span class="pz-proof__cbar-key">The Lead Stream</span><span class="pz-proof__cbar-val">425 signups</span></div>
-              <div class="pz-proof__cbar-track"><div class="pz-proof__cbar-fill pz-proof__cbar-fill--us" style="--w: 100%;"></div></div>
-            </div>
-            <div class="pz-proof__cbar">
-              <div class="pz-proof__cbar-head"><span class="pz-proof__cbar-key">Typical rate</span><span class="pz-proof__cbar-val">~70 signups</span></div>
-              <div class="pz-proof__cbar-track"><div class="pz-proof__cbar-fill pz-proof__cbar-fill--them" style="--w: 16.5%;"></div></div>
-            </div>
-            <div class="pz-proof__receipt">
-              <span><strong>$4.56</strong> per signup</span>
-              <span><strong>$1,936</strong> spent</span>
-              <span><strong>$27.66</strong> typical CPL</span>
-            </div>
+            <span class="tag pz-proof__case-tag">Wellness Coach</span>
+            <h3>A masterclass that <span class="hl">filled itself</span>.</h3>
+            <p>We put her offer in front of the right people and kept the cost per signup low. The budget that usually brings in around 70 leads brought in 425.</p>
+          </div>
+          <div class="pz-proof__pills">
+            <span class="pz-proof__pill"><strong>425</strong> signups</span>
+            <span class="pz-proof__pill"><strong>$4.56</strong> per signup</span>
+            <span class="pz-proof__pill"><strong>$1,936</strong> spent</span>
+            <span class="pz-proof__pill"><strong>~70</strong> typical</span>
           </div>
         </article>
-        <!-- CARD 2 — DATA: 7 leads/day, $0.70/lead, $5/day. TODO: real client descriptor. -->
-        <article class="pz-proof__card pz-proof__card--flip anim">
-          <div class="pz-proof__figure">
-            <div class="pz-proof__big"><span class="pz-proof__big-sym">$</span>5</div>
-            <div class="pz-proof__big-cap">a day, seven new leads</div>
-          </div>
+        <!-- CASE 2 — TODO: replace "Solo Practitioner" with a real, approved client descriptor. -->
+        <article class="pz-proof__case anim d1">
           <div>
-            <span class="tag pz-proof__client">Solo Practitioner</span>
-            <h3 class="pz-proof__headline">Steady leads on a <span class="hl">coffee budget</span>.</h3>
-            <p class="pz-proof__body">A small daily spend, set up with care, brought fresh leads in every morning. Strong strategy did the work a big budget usually gets credit for.</p>
-            <div class="pz-proof__cbar">
-              <div class="pz-proof__cbar-head"><span class="pz-proof__cbar-key">The Lead Stream</span><span class="pz-proof__cbar-val">7 leads / day</span></div>
-              <div class="pz-proof__cbar-track"><div class="pz-proof__cbar-fill pz-proof__cbar-fill--us" style="--w: 100%;"></div></div>
-            </div>
-            <div class="pz-proof__receipt">
-              <span><strong>$0.70</strong> per lead</span>
-              <span><strong>$5</strong> a day</span>
-            </div>
+            <span class="tag pz-proof__case-tag">Solo Practitioner</span>
+            <h3>Steady leads on a <span class="hl">coffee budget</span>.</h3>
+            <p>A small daily spend, set up with care, brought fresh leads in every morning. Strong strategy did the work a big budget usually gets credit for.</p>
+          </div>
+          <div class="pz-proof__pills">
+            <span class="pz-proof__pill"><strong>7</strong> leads / day</span>
+            <span class="pz-proof__pill"><strong>$0.70</strong> per lead</span>
+            <span class="pz-proof__pill"><strong>$5</strong> a day</span>
           </div>
         </article>
       </div>
