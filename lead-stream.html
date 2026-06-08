@@ -377,6 +377,41 @@
 .pz-footer__small { font-family: 'Space Mono', monospace; font-size: 0.74rem; letter-spacing: 0.08em; margin-top: 14px; color: rgba(236,232,224,0.55); }
 
 /* ============================================
+   TESTIMONIAL (featured)
+   ============================================ */
+.pz-testimonial { background: var(--pink-soft); text-align: center; }
+.pz-testimonial__inner { max-width: 760px; margin: 0 auto; }
+.pz-testimonial__mark { font-family: 'Playfair Display', serif; font-size: 4rem; line-height: 0.5; color: var(--pink-deep); }
+.pz-testimonial__quote { font-family: 'Playfair Display', serif; font-weight: 500; font-style: italic; font-size: clamp(1.4rem, 2.8vw, 2rem); line-height: 1.4; color: var(--ink); margin: 16px 0 28px; }
+.pz-testimonial__who { display: inline-flex; align-items: center; gap: 14px; }
+.pz-testimonial__avatar { width: 52px; height: 52px; border-radius: 50%; background: var(--white); border: 1px dashed var(--pink-deep); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-weight: 700; color: var(--pink-deep); font-size: 1.1rem; }
+.pz-testimonial__name { font-family: 'Space Mono', monospace; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.84rem; color: var(--ink); text-align: left; }
+
+/* ROI callout in pricing */
+.pz-price__roi { max-width: 760px; margin: 36px auto 0; background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius); padding: 26px 30px; text-align: center; }
+.pz-price__roi h3 { color: var(--white); font-family: 'Playfair Display', serif; font-style: italic; font-weight: 500; font-size: 1.35rem; margin-bottom: 8px; }
+.pz-price__roi p { color: rgba(255,255,255,0.92); font-size: 0.98rem; max-width: 580px; margin: 0 auto; }
+
+/* soft CTA / free guide capture */
+.pz-soft { background: var(--cream); }
+.pz-soft__box { max-width: 720px; margin: 0 auto; text-align: center; }
+.pz-soft__box .tag { color: var(--pink-deep); display: block; margin-bottom: 12px; }
+.pz-soft__box h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 500; margin-bottom: 12px; }
+.pz-soft__box p { color: var(--ink-soft); margin-bottom: 24px; }
+.pz-soft__form { display: flex; gap: 12px; max-width: 480px; margin: 0 auto; }
+.pz-soft__form input { flex: 1; border: 1.6px solid var(--line); border-radius: 6px; padding: 14px 16px; font-family: 'Mulish', sans-serif; font-size: 1rem; background: var(--white); color: var(--ink); }
+.pz-soft__form input:focus { outline: none; border-color: var(--pink); }
+.pz-soft__form .btn { white-space: nowrap; }
+.pz-soft__fine { font-size: 0.8rem; color: var(--ink-soft); margin-top: 12px; }
+
+/* sticky CTA bar */
+.pz-sticky { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; background: var(--white); box-shadow: 0 -8px 30px rgba(33,30,28,0.14); display: flex; align-items: center; justify-content: center; gap: 20px; padding: 12px 20px; transform: translateY(120%); transition: transform 0.35s ease; }
+.pz-sticky.show { transform: translateY(0); }
+.pz-sticky__txt { font-family: 'Space Mono', monospace; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.78rem; color: var(--ink); }
+.pz-sticky__txt span { color: var(--pink-deep); }
+.pz-sticky .btn { padding: 12px 24px; font-size: 0.82rem; }
+
+/* ============================================
    RESPONSIVE
    ============================================ */
 @media (max-width: 920px) {
@@ -396,6 +431,10 @@
   .pz-about__photo { order: -1; }
   .pz-fit__cols, .pz-honest__cols, .pz-price__grid { grid-template-columns: 1fr; }
   .pz-final__steps { grid-template-columns: 1fr 1fr; gap: 24px 16px; }
+  .pz-soft__form { flex-direction: column; }
+  .pz-sticky { gap: 12px; padding: 10px 14px; }
+  .pz-sticky__txt { display: none; }
+  .pz-sticky .btn { width: 100%; justify-content: center; }
 }
 @media (max-width: 520px) { .pz-final__steps { grid-template-columns: 1fr; } }
 </style>
@@ -626,6 +665,21 @@
     </div>
   </section>
 
+  <!-- TESTIMONIAL — real quote from Kaye Putnam.
+       TODO: add Kaye's role/business and a headshot if you have permission, and add more testimonials over time. -->
+  <section class="pz-testimonial">
+    <div class="wrap">
+      <div class="pz-testimonial__inner anim">
+        <div class="pz-testimonial__mark">&ldquo;</div>
+        <p class="pz-testimonial__quote">She's the type of person you can give a goal to, and she figures out the process. She's highly detail-oriented, very process-driven, and more than that, she genuinely cares about the work she does. She goes above and beyond.</p>
+        <div class="pz-testimonial__who">
+          <span class="pz-testimonial__avatar">KP</span>
+          <span class="pz-testimonial__name">Kaye Putnam</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ABOUT -->
   <section class="pz-about">
     <div class="wrap">
@@ -752,6 +806,10 @@
           <a href="https://scheduler.zoom.us/priscilla-zaehringer/clarity-call" class="btn btn--fill">Book a clarity call →</a>
         </div>
       </div>
+      <div class="pz-price__roi anim">
+        <h3>Put it in perspective.</h3>
+        <p>One new client likely covers the entire investment. Everything after that is your email list growing month after month, an asset you keep and sell to for years.</p>
+      </div>
     </div>
   </section>
 
@@ -784,10 +842,48 @@
           <div class="pz-faq__a"><p>If you'd like to. Ongoing management is $397/mo, and beta clients lock in $297/mo for their first 6 months. There's no obligation. The whole point is that the system is yours either way.</p></div>
         </div>
         <div class="pz-faq__item">
+          <button class="pz-faq__q">How is this different from hiring an agency?</button>
+          <div class="pz-faq__a"><p>Two big ways. First, you own it. An agency rents you a system and keeps the keys, so the day you stop paying, it all stops. With The Lead Stream you keep everything: the system, the SOPs, the training. Second, it's me in your account, not a junior on a templated playbook, and there's no $2,000 to $5,000 a month retainer just to stay in the game.</p></div>
+        </div>
+        <div class="pz-faq__item">
+          <button class="pz-faq__q">What if my email list or audience is small?</button>
+          <div class="pz-faq__a"><p>That's kind of the point. Ads grow your list from wherever you are right now. You don't need a big following, you need a validated offer and a little room in the budget to test. We build the audience from scratch.</p></div>
+        </div>
+        <div class="pz-faq__item">
+          <button class="pz-faq__q">What if I don't have a freebie or lead magnet yet?</button>
+          <div class="pz-faq__a"><p>No problem. We build one together in the first two weeks, during the Foundation phase. A strong freebie is part of the system, so if you don't have one, that's something we create.</p></div>
+        </div>
+        <div class="pz-faq__item">
+          <button class="pz-faq__q">How much time will this take from me?</button>
+          <div class="pz-faq__a"><p>Very little. This is done-for-you. I handle the strategy, the build, the launch, and the daily management. Your only real job is to approve things along the way. Think an hour here and there, not another job on your plate.</p></div>
+        </div>
+        <div class="pz-faq__item">
+          <button class="pz-faq__q">What happens after I book the call?</button>
+          <div class="pz-faq__a"><p>We hop on for about 30 minutes. You tell me about your business, your goals, and what you've tried. It's honest and low-key, no hard sell. If we're a fit, you'll get an onboarding link, your contract, and a kickoff date. If we're not, I'll point you somewhere better.</p></div>
+        </div>
+        <div class="pz-faq__item">
           <button class="pz-faq__q">When can we start?</button>
           <!-- TODO: add real start dates / cohort timing. -->
           <div class="pz-faq__a"><p>[PLACEHOLDER: add your current availability or next start date here. For example, "I take on a small number of builds at a time. Book a clarity call and I'll share the next open kickoff date."]</p></div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOFT CTA / FREE GUIDE — lower-commitment option to capture the not-ready-yet visitors.
+       TODO: name the freebie, and connect this form to your email platform (ConvertKit / Flodesk / etc).
+       Right now the form is not wired up and won't deliver anything. -->
+  <section class="pz-soft">
+    <div class="wrap">
+      <div class="pz-soft__box anim">
+        <span class="tag">Not ready to book a call?</span>
+        <h2>Grab the free guide instead.</h2>
+        <p>[PLACEHOLDER: name your free guide here, e.g. "The $5-a-Day Lead Starter: the exact setup I use to turn a tiny ad budget into steady leads."] No pressure, no spam. Just the good stuff, and a way for us to stay in touch.</p>
+        <form class="pz-soft__form" onsubmit="return false;">
+          <input type="email" placeholder="Your email" aria-label="Your email">
+          <button type="submit" class="btn btn--fill">Send it to me →</button>
+        </form>
+        <div class="pz-soft__fine">TODO: connect this form to your email platform so subscribers actually receive the guide.</div>
       </div>
     </div>
   </section>
@@ -817,6 +913,12 @@
     <div class="pz-footer__small">The Lead Stream · Done-for-you Meta ads by Priscilla Zaehringer</div>
   </footer>
 
+  <!-- STICKY CTA — appears on scroll, hides near the bottom -->
+  <div class="pz-sticky" id="pzSticky">
+    <span class="pz-sticky__txt">The Lead Stream · Beta · <span>$997</span> · 5 spots</span>
+    <a href="https://scheduler.zoom.us/priscilla-zaehringer/clarity-call" class="btn btn--fill">Book a clarity call →</a>
+  </div>
+
 </div>
 
 <script>
@@ -834,5 +936,18 @@
       if (!open) { item.classList.add('open'); }
     });
   });
+
+  // sticky CTA: show after scrolling past the hero, hide near the bottom
+  var sticky = document.getElementById('pzSticky');
+  if (sticky) {
+    var onScroll = function () {
+      var y = window.pageYOffset || document.documentElement.scrollTop;
+      var nearBottom = (window.innerHeight + y) > (document.body.offsetHeight - 640);
+      if (y > 760 && !nearBottom) { sticky.classList.add('show'); }
+      else { sticky.classList.remove('show'); }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
 })();
 </script>
