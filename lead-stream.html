@@ -197,6 +197,10 @@
 
 /* pain options row */
 .pz-pain { background: var(--cream); padding-top: 0; }
+.pz-pain__head { text-align: center; max-width: 660px; margin: 0 auto 44px; }
+.pz-pain__head .tag { color: var(--pink-deep); display: block; margin-bottom: 12px; }
+.pz-pain__head h2 { font-size: clamp(1.7rem, 3.2vw, 2.3rem); font-weight: 500; margin-bottom: 12px; }
+.pz-pain__head p { color: var(--ink-soft); }
 .pz-pain__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .pz-pain__card { background: var(--white); border-radius: var(--radius); padding: 26px 24px; box-shadow: 0 8px 24px rgba(33,30,28,0.05); }
 .pz-pain__card .tag { color: var(--pink-deep); display: block; margin-bottom: 10px; }
@@ -476,6 +480,11 @@
   <!-- PAIN OPTIONS -->
   <section class="pz-pain">
     <div class="wrap">
+      <div class="pz-pain__head anim">
+        <span class="tag">So now what?</span>
+        <h2>You've got options. Honestly, <span class="hl">none of them feel great</span>.</h2>
+        <p>When your list is stuck, the usual paths all come with a catch. You've probably looked at all three.</p>
+      </div>
       <div class="pz-pain__grid">
         <div class="pz-pain__card anim">
           <span class="tag">Option 01</span>
