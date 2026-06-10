@@ -36,7 +36,7 @@
   --white: #FFFFFF;
   --line: rgba(33,30,28,0.12);
   --shadow: 0 20px 60px rgba(33,30,28,0.14);
-  --radius: 2px;
+  --radius: 8px;
 }
 
 .pz * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -102,7 +102,7 @@
   font-size: 0.92rem;
   padding: 16px 30px;
   border: none;
-  border-radius: 2px;
+  border-radius: 6px;
   cursor: pointer;
   text-decoration: none;
   transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
@@ -161,7 +161,7 @@
   background: var(--white);
   padding: 50px 56px;
   box-shadow: var(--shadow);
-  border-radius: 2px;
+  border-radius: 4px;
   text-align: center;
 }
 .pz-hero__card .tag { display: block; margin-bottom: 18px; color: var(--ink); }
@@ -188,10 +188,9 @@
 /* ---- who I've worked with ---- */
 .pz-clients { background: var(--cream-lt); padding: 50px 0; text-align: center; }
 .pz-clients__label { font-family: 'Space Mono', monospace; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.76rem; color: var(--pink-deep); margin-bottom: 20px; }
-.pz-clients__row { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 4px 0; max-width: 880px; margin: 0 auto; }
-.pz-clients__row span { font-family: 'Playfair Display', serif; font-size: clamp(1.05rem, 2vw, 1.5rem); color: var(--ink); padding: 0 20px; position: relative; }
-.pz-clients__row span + span::before { content: ""; position: absolute; left: -2px; top: 50%; width: 4px; height: 4px; margin-top: -2px; border-radius: 50%; background: var(--pink); }
-.pz-clients__row .pz-clients__more { font-style: italic; color: var(--ink-soft); }
+.pz-clients__row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; max-width: 800px; margin: 0 auto; }
+.pz-clients__chip { background: var(--white); border: 1px solid var(--line); border-radius: 999px; padding: 9px 20px; font-weight: 700; font-size: 0.92rem; color: var(--ink); box-shadow: 0 4px 14px rgba(33,30,28,0.04); }
+.pz-clients__chip--more { background: transparent; border-style: dashed; color: var(--ink-soft); font-weight: 600; }
 
 /* ============================================
    STORY
@@ -249,18 +248,17 @@
    WHAT YOU GET
    ============================================ */
 .pz-get { background: var(--pink-soft); }
-.pz-get__head { text-align: left; max-width: 680px; margin: 0 0 30px; }
+.pz-get__head { text-align: center; max-width: 680px; margin: 0 auto 50px; }
 .pz-get__head h2 { font-size: clamp(1.9rem, 3.6vw, 2.6rem); font-weight: 500; margin: 10px 0; }
-.pz-get__list { max-width: 960px; }
-.pz-get__row { display: grid; grid-template-columns: 96px 1fr; gap: 30px; padding: 36px 0; border-top: 1px solid rgba(33,30,28,0.18); align-items: start; }
-.pz-get__row:last-of-type { border-bottom: 1px solid rgba(33,30,28,0.18); }
-.pz-get__num { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 2.8rem; line-height: 0.9; color: var(--pink-deep); }
-.pz-get__timing { font-family: 'Space Mono', monospace; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.74rem; color: var(--ink-soft); margin-bottom: 8px; }
-.pz-get__outcome { font-family: 'Playfair Display', serif; font-weight: 500; font-style: italic; font-size: 1.3rem; line-height: 1.3; color: var(--ink); margin-bottom: 16px; }
-.pz-get__body ul { list-style: none; columns: 2; column-gap: 34px; }
-.pz-get__body li { position: relative; padding-left: 22px; margin-bottom: 9px; color: var(--ink-soft); font-size: 0.95rem; break-inside: avoid; }
-.pz-get__body li::before { content: "—"; position: absolute; left: 0; color: var(--pink-deep); }
-.pz-get__foot { max-width: 760px; margin: 40px 0 0; font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.2rem; }
+.pz-get__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.pz-get__card { background: var(--white); border-radius: var(--radius); padding: 32px 34px; box-shadow: 0 10px 28px rgba(33,30,28,0.07); }
+.pz-get__timing { color: var(--pink-deep); }
+.pz-get__card h3 { font-size: 1.45rem; font-weight: 600; margin: 8px 0 6px; }
+.pz-get__outcome { font-family: 'Playfair Display', serif; font-style: italic; color: var(--ink); font-size: 1.05rem; margin-bottom: 16px; }
+.pz-get__card ul { list-style: none; }
+.pz-get__card li { position: relative; padding-left: 26px; margin-bottom: 9px; color: var(--ink-soft); font-size: 0.96rem; }
+.pz-get__card li::before { content: "♥"; position: absolute; left: 0; color: var(--pink); }
+.pz-get__foot { text-align: center; max-width: 720px; margin: 44px auto 0; font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.2rem; }
 
 /* ============================================
    PROOF — two plain-language results, nothing else
@@ -340,7 +338,7 @@
 .pz-price__was { color: var(--ink-soft); text-decoration: line-through; font-size: 0.92rem; }
 .pz-price__split { margin-top: 14px; font-weight: 800; color: var(--pink-deep); }
 .pz-price__split span { font-weight: 400; color: var(--ink-soft); }
-.pz-price__trade { margin-top: 16px; font-size: 0.88rem; color: var(--ink-soft); background: var(--cream); border-radius: 2px; padding: 14px 16px; text-align: left; }
+.pz-price__trade { margin-top: 16px; font-size: 0.88rem; color: var(--ink-soft); background: var(--cream); border-radius: 6px; padding: 14px 16px; text-align: left; }
 .pz-price__spots { margin-top: 14px; font-family: 'Space Mono', monospace; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem; color: var(--pink-deep); }
 .pz-price__card .btn { margin-top: 16px; width: 100%; justify-content: center; }
 
@@ -401,7 +399,7 @@
 .pz-soft__box h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 500; margin-bottom: 12px; }
 .pz-soft__box p { color: var(--ink-soft); margin-bottom: 24px; }
 .pz-soft__form { display: flex; gap: 12px; max-width: 480px; margin: 0 auto; }
-.pz-soft__form input { flex: 1; border: 1.6px solid var(--line); border-radius: 2px; padding: 14px 16px; font-family: 'Mulish', sans-serif; font-size: 1rem; background: var(--white); color: var(--ink); }
+.pz-soft__form input { flex: 1; border: 1.6px solid var(--line); border-radius: 6px; padding: 14px 16px; font-family: 'Mulish', sans-serif; font-size: 1rem; background: var(--white); color: var(--ink); }
 .pz-soft__form input:focus { outline: none; border-color: var(--pink); }
 .pz-soft__form .btn { white-space: nowrap; }
 .pz-soft__fine { font-size: 0.8rem; color: var(--ink-soft); margin-top: 12px; }
@@ -428,9 +426,7 @@
   .pz-real__box { grid-template-columns: 1fr; padding: 36px 28px; gap: 26px; }
   .pz-real__photo { order: -1; }
   .pz-reveal__steps { grid-template-columns: 1fr; }
-  .pz-get__row { grid-template-columns: 54px 1fr; gap: 16px; padding: 26px 0; }
-  .pz-get__num { font-size: 2rem; }
-  .pz-get__body ul { columns: 1; }
+  .pz-get__grid { grid-template-columns: 1fr; }
   .pz-about__grid { grid-template-columns: 1fr; gap: 30px; }
   .pz-about__photo { order: -1; }
   .pz-fit__cols, .pz-honest__cols, .pz-price__grid { grid-template-columns: 1fr; }
@@ -478,9 +474,9 @@
   <section class="pz-stats" style="padding:60px 0;">
     <div class="pz-stats__grid">
       <!-- TODO: confirm a real "businesses served" number. -->
-      <div class="pz-stats__card anim"><div class="pz-stats__num"><span>[##]+</span></div><div class="pz-stats__txt">Businesses served by The Lead Stream</div></div>
-      <div class="pz-stats__card anim d1"><div class="pz-stats__num"><span>6×</span></div><div class="pz-stats__txt">More signups for the same spend on a real client build</div></div>
-      <div class="pz-stats__card anim d2"><div class="pz-stats__num"><span>Yours</span></div><div class="pz-stats__txt">Full handoff, no lock-in. The system is yours to keep</div></div>
+      <div class="pz-stats__card anim"><div class="pz-stats__num">🌱 <span>[##]+</span></div><div class="pz-stats__txt">Businesses served by The Lead Stream</div></div>
+      <div class="pz-stats__card anim d1"><div class="pz-stats__num">📈 <span>6×</span></div><div class="pz-stats__txt">More signups for the same spend on a real client build</div></div>
+      <div class="pz-stats__card anim d2"><div class="pz-stats__num">🤝 <span>Yours</span></div><div class="pz-stats__txt">Full handoff, no lock-in. The system is yours to keep</div></div>
     </div>
   </section>
 
@@ -489,12 +485,12 @@
     <div class="wrap anim">
       <div class="pz-clients__label">Who I've worked with</div>
       <div class="pz-clients__row">
-        <span>Dietitians</span>
-        <span>Online coaches</span>
-        <span>Business strategists</span>
-        <span>Dentists</span>
-        <span>Artists</span>
-        <span class="pz-clients__more">and more</span>
+        <span class="pz-clients__chip">Dietitians</span>
+        <span class="pz-clients__chip">Online coaches</span>
+        <span class="pz-clients__chip">Business strategists</span>
+        <span class="pz-clients__chip">Dentists</span>
+        <span class="pz-clients__chip">Artists</span>
+        <span class="pz-clients__chip pz-clients__chip--more">and more</span>
       </div>
     </div>
   </section>
@@ -601,61 +597,53 @@
         <h2>Exactly what we build, week by week.</h2>
         <p>Four phases over eight weeks, hands-on the whole way.</p>
       </div>
-      <div class="pz-get__list">
-        <div class="pz-get__row anim">
-          <div class="pz-get__num">01</div>
-          <div class="pz-get__body">
-            <div class="pz-get__timing">Weeks 1 &amp; 2 — The Foundation</div>
-            <div class="pz-get__outcome">You'll know exactly where your money is going and why.</div>
-            <ul>
-              <li>Full audit of your offer, audience, and current setup</li>
-              <li>Custom lead-gen strategy built for your business</li>
-              <li>Audience research and build-out</li>
-              <li>Realistic expectations and a clear timeline</li>
-            </ul>
-          </div>
+      <div class="pz-get__grid">
+        <div class="pz-get__card anim">
+          <span class="tag pz-get__timing">Weeks 1 &amp; 2</span>
+          <h3>🧱 The Foundation</h3>
+          <div class="pz-get__outcome">You'll know exactly where your money is going and why.</div>
+          <ul>
+            <li>Full audit of your offer, audience, and current setup</li>
+            <li>Custom lead-gen strategy built for your business</li>
+            <li>Audience research and build-out</li>
+            <li>Realistic expectations and a clear timeline</li>
+          </ul>
         </div>
-        <div class="pz-get__row anim">
-          <div class="pz-get__num">02</div>
-          <div class="pz-get__body">
-            <div class="pz-get__timing">Weeks 3 to 5 — The Build</div>
-            <div class="pz-get__outcome">Everything built, connected, and tested before a dollar goes live.</div>
-            <ul>
-              <li>Ad creative direction and design</li>
-              <li>Ad copy (multiple variations for testing)</li>
-              <li>Native Facebook lead form (lower cost per lead, no landing page friction)</li>
-              <li>Branded thank-you page, built and connected</li>
-              <li>Email welcome sequence, written and connected</li>
-              <li>Zapier integration between Meta and your email platform</li>
-            </ul>
-          </div>
+        <div class="pz-get__card anim d1">
+          <span class="tag pz-get__timing">Weeks 3 to 5</span>
+          <h3>🎯 The Build</h3>
+          <div class="pz-get__outcome">Everything built, connected, and tested before a dollar goes live.</div>
+          <ul>
+            <li>Ad creative direction and design</li>
+            <li>Ad copy (multiple variations for testing)</li>
+            <li>Native Facebook lead form (lower cost per lead, no landing page friction)</li>
+            <li>Branded thank-you page, built and connected</li>
+            <li>Email welcome sequence, written and connected</li>
+            <li>Zapier integration between Meta and your email platform</li>
+          </ul>
         </div>
-        <div class="pz-get__row anim">
-          <div class="pz-get__num">03</div>
-          <div class="pz-get__body">
-            <div class="pz-get__timing">Weeks 6 &amp; 7 — Launch &amp; Optimize</div>
-            <div class="pz-get__outcome">New leads landing in your inbox while I fine-tune the system live.</div>
-            <ul>
-              <li>We go live and the leads start coming in</li>
-              <li>I'm in your account daily for one to two weeks</li>
-              <li>Testing creative and refreshing what's working</li>
-              <li>Optimizing audiences and watching cost per lead</li>
-            </ul>
-          </div>
+        <div class="pz-get__card anim">
+          <span class="tag pz-get__timing">Weeks 6 &amp; 7</span>
+          <h3>🚀 Launch &amp; Optimize</h3>
+          <div class="pz-get__outcome">New leads landing in your inbox while I fine-tune the system live.</div>
+          <ul>
+            <li>We go live and the leads start coming in</li>
+            <li>I'm in your account daily for one to two weeks</li>
+            <li>Testing creative and refreshing what's working</li>
+            <li>Optimizing audiences and watching cost per lead</li>
+          </ul>
         </div>
-        <div class="pz-get__row anim">
-          <div class="pz-get__num">04</div>
-          <div class="pz-get__body">
-            <div class="pz-get__timing">Week 8 — The Handoff</div>
-            <div class="pz-get__outcome">A system you own and understand, yours to run for years to come.</div>
-            <ul>
-              <li>Complete SOP library for running your system long-term</li>
-              <li>Loom training videos walking through every part of your setup</li>
-              <li>Written next-steps plan from me on what to do from here</li>
-              <li>30 days of post-handoff email support</li>
-              <li>Optional ongoing management at $397/mo ($297/mo for beta clients, first 6 months)</li>
-            </ul>
-          </div>
+        <div class="pz-get__card anim d1">
+          <span class="tag pz-get__timing">Week 8</span>
+          <h3>🤝 The Handoff</h3>
+          <div class="pz-get__outcome">A system you own and understand, yours to run for years to come.</div>
+          <ul>
+            <li>Complete SOP library for running your system long-term</li>
+            <li>Loom training videos walking through every part of your setup</li>
+            <li>Written next-steps plan from me on what to do from here</li>
+            <li>30 days of post-handoff email support</li>
+            <li>Optional ongoing management at $397/mo ($297/mo for beta clients, first 6 months)</li>
+          </ul>
         </div>
       </div>
       <p class="pz-get__foot">No long-term contracts. No retainers locking you in. The system is yours, and you've got a partner who thinks about your growth every week.</p>
