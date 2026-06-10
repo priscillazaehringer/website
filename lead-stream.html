@@ -152,7 +152,9 @@
 .pz-hero { background: var(--pink-soft); padding: 56px 0 64px; position: relative; }
 .pz-hero__stage { max-width: 1180px; margin: 0 auto; padding: 0 24px; position: relative; }
 .pz-hero__photo { position: absolute; top: 40px; width: 42%; z-index: 1; }
-.pz-hero__photo .ph { min-height: 340px; background: rgba(255,255,255,0.45); }
+.pz-hero__photo img { width: 100%; display: block; object-fit: cover; border-radius: 2px; box-shadow: var(--shadow); }
+.pz-hero__photo--l img { height: 300px; object-position: left bottom; }
+.pz-hero__photo--r img { height: 480px; object-position: center 18%; }
 .pz-hero__photo--l { left: 24px; }
 .pz-hero__photo--r { right: 24px; top: 150px; }
 .pz-hero__card {
@@ -184,6 +186,13 @@
 .pz-stats__num { font-family: 'Playfair Display', serif; font-weight: 500; font-size: 2.1rem; line-height: 1.1; margin-bottom: 8px; }
 .pz-stats__num span { color: var(--pink-deep); }
 .pz-stats__txt { font-size: 0.9rem; color: var(--ink-soft); }
+
+/* ---- who I've worked with ---- */
+.pz-clients { background: var(--cream-lt); padding: 50px 0; text-align: center; }
+.pz-clients__label { font-family: 'Space Mono', monospace; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.76rem; color: var(--pink-deep); margin-bottom: 20px; }
+.pz-clients__row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; max-width: 800px; margin: 0 auto; }
+.pz-clients__chip { background: var(--white); border: 1px solid var(--line); border-radius: 999px; padding: 9px 20px; font-weight: 700; font-size: 0.92rem; color: var(--ink); box-shadow: 0 4px 14px rgba(33,30,28,0.04); }
+.pz-clients__chip--more { background: transparent; border-style: dashed; color: var(--ink-soft); font-weight: 600; }
 
 /* ============================================
    STORY
@@ -254,36 +263,14 @@
 .pz-get__foot { text-align: center; max-width: 720px; margin: 44px auto 0; font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.2rem; }
 
 /* ============================================
-   PROOF
+   PROOF — two plain-language results, nothing else
    ============================================ */
 .pz-proof { background: var(--cream-lt); }
-.pz-proof__head { text-align: center; max-width: 640px; margin: 0 auto 46px; }
+.pz-proof__head { text-align: center; max-width: 640px; margin: 0 auto 44px; }
 .pz-proof__head h2 { font-size: clamp(1.9rem, 3.6vw, 2.6rem); font-weight: 500; margin-top: 8px; }
-.pz-proof__cards { max-width: 920px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px; }
-.pz-proof__card { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); padding: 40px 44px; display: grid; grid-template-columns: minmax(180px, 0.8fr) 1.2fr; gap: 44px; align-items: center; }
-.pz-proof__card--flip { grid-template-columns: 1.2fr minmax(180px, 0.8fr); }
-.pz-proof__card--flip .pz-proof__figure { order: 2; }
-.pz-proof__big { font-family: 'Playfair Display', serif; font-weight: 700; font-size: clamp(4rem, 10vw, 7.5rem); line-height: 0.9; text-align: center; }
-.pz-proof__big-sym { color: var(--pink-deep); font-size: 0.5em; vertical-align: 0.12em; }
-.pz-proof__big-cap { text-align: center; font-family: 'Space Mono', monospace; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); margin-top: 12px; }
-.pz-proof__client { color: var(--pink-deep); margin-bottom: 8px; }
-.pz-proof__headline { font-size: 1.5rem; font-weight: 600; margin-bottom: 10px; }
-.pz-proof__body { color: var(--ink-soft); margin-bottom: 22px; font-size: 0.98rem; }
-.pz-proof__cbar { margin-bottom: 13px; }
-.pz-proof__cbar-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
-.pz-proof__cbar-key { font-family: 'Space Mono', monospace; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); }
-.pz-proof__cbar-val { font-family: 'Playfair Display', serif; font-size: 0.98rem; }
-.pz-proof__cbar-track { height: 10px; background: rgba(33,30,28,0.07); border-radius: 999px; overflow: hidden; }
-.pz-proof__cbar-fill { height: 100%; width: 0; border-radius: 999px; transition: width 1.3s cubic-bezier(0.2,0.7,0.2,1); }
-.pz-proof__cbar-fill--us { background: var(--pink); }
-.pz-proof__cbar-fill--them { background: rgba(33,30,28,0.16); }
-.pz .pz-proof__card.vis .pz-proof__cbar-fill { width: var(--w); }
-.pz-proof__receipt { display: flex; flex-wrap: wrap; gap: 8px 24px; padding-top: 16px; border-top: 1px solid var(--line); }
-.pz-proof__receipt span { font-size: 0.84rem; color: var(--ink-soft); }
-.pz-proof__receipt strong { font-family: 'Playfair Display', serif; color: var(--ink); }
-.pz-testi { margin-top: 52px; }
-.pz-testi__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1060px; margin: 0 auto; }
-.pz-testi .ph { min-height: 220px; }
+.pz-proof__results { max-width: 760px; margin: 0 auto; }
+.pz-proof__result { font-family: 'Playfair Display', serif; font-weight: 500; font-size: clamp(1.3rem, 2.4vw, 1.7rem); line-height: 1.45; text-align: center; color: var(--ink); }
+.pz-proof__result + .pz-proof__result { margin-top: 30px; padding-top: 30px; border-top: 1px solid var(--line); }
 
 /* ============================================
    ABOUT
@@ -392,6 +379,41 @@
 .pz-footer__small { font-family: 'Space Mono', monospace; font-size: 0.74rem; letter-spacing: 0.08em; margin-top: 14px; color: rgba(236,232,224,0.55); }
 
 /* ============================================
+   TESTIMONIAL (featured)
+   ============================================ */
+.pz-testimonial { background: var(--pink-soft); text-align: center; }
+.pz-testimonial__inner { max-width: 760px; margin: 0 auto; }
+.pz-testimonial__mark { font-family: 'Playfair Display', serif; font-size: 4rem; line-height: 0.5; color: var(--pink-deep); }
+.pz-testimonial__quote { font-family: 'Playfair Display', serif; font-weight: 500; font-style: italic; font-size: clamp(1.4rem, 2.8vw, 2rem); line-height: 1.4; color: var(--ink); margin: 16px 0 28px; }
+.pz-testimonial__who { display: inline-flex; align-items: center; gap: 14px; }
+.pz-testimonial__avatar { width: 52px; height: 52px; border-radius: 50%; background: var(--white); border: 1px dashed var(--pink-deep); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-weight: 700; color: var(--pink-deep); font-size: 1.1rem; }
+.pz-testimonial__name { font-family: 'Space Mono', monospace; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.84rem; color: var(--ink); text-align: left; }
+
+/* ROI callout in pricing */
+.pz-price__roi { max-width: 760px; margin: 36px auto 0; background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius); padding: 26px 30px; text-align: center; }
+.pz-price__roi h3 { color: var(--white); font-family: 'Playfair Display', serif; font-style: italic; font-weight: 500; font-size: 1.35rem; margin-bottom: 8px; }
+.pz-price__roi p { color: rgba(255,255,255,0.92); font-size: 0.98rem; max-width: 580px; margin: 0 auto; }
+
+/* soft CTA / free guide capture */
+.pz-soft { background: var(--cream); }
+.pz-soft__box { max-width: 720px; margin: 0 auto; text-align: center; }
+.pz-soft__box .tag { color: var(--pink-deep); display: block; margin-bottom: 12px; }
+.pz-soft__box h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 500; margin-bottom: 12px; }
+.pz-soft__box p { color: var(--ink-soft); margin-bottom: 24px; }
+.pz-soft__form { display: flex; gap: 12px; max-width: 480px; margin: 0 auto; }
+.pz-soft__form input { flex: 1; border: 1.6px solid var(--line); border-radius: 6px; padding: 14px 16px; font-family: 'Mulish', sans-serif; font-size: 1rem; background: var(--white); color: var(--ink); }
+.pz-soft__form input:focus { outline: none; border-color: var(--pink); }
+.pz-soft__form .btn { white-space: nowrap; }
+.pz-soft__fine { font-size: 0.8rem; color: var(--ink-soft); margin-top: 12px; }
+
+/* sticky CTA bar */
+.pz-sticky { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; background: var(--white); box-shadow: 0 -8px 30px rgba(33,30,28,0.14); display: flex; align-items: center; justify-content: center; gap: 20px; padding: 12px 20px; transform: translateY(120%); transition: transform 0.35s ease; }
+.pz-sticky.show { transform: translateY(0); }
+.pz-sticky__txt { font-family: 'Space Mono', monospace; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.78rem; color: var(--ink); }
+.pz-sticky__txt span { color: var(--pink-deep); }
+.pz-sticky .btn { padding: 12px 24px; font-size: 0.82rem; }
+
+/* ============================================
    RESPONSIVE
    ============================================ */
 @media (max-width: 920px) {
@@ -407,13 +429,14 @@
   .pz-real__photo { order: -1; }
   .pz-reveal__steps { grid-template-columns: 1fr; }
   .pz-get__grid { grid-template-columns: 1fr; }
-  .pz-proof__card, .pz-proof__card--flip { grid-template-columns: 1fr; gap: 22px; padding: 28px 24px; }
-  .pz-proof__card--flip .pz-proof__figure { order: 0; }
-  .pz-testi__grid { grid-template-columns: 1fr; }
   .pz-about__grid { grid-template-columns: 1fr; gap: 30px; }
   .pz-about__photo { order: -1; }
   .pz-fit__cols, .pz-honest__cols, .pz-price__grid { grid-template-columns: 1fr; }
   .pz-final__steps { grid-template-columns: 1fr 1fr; gap: 24px 16px; }
+  .pz-soft__form { flex-direction: column; }
+  .pz-sticky { gap: 12px; padding: 10px 14px; }
+  .pz-sticky__txt { display: none; }
+  .pz-sticky .btn { width: 100%; justify-content: center; }
 }
 @media (max-width: 520px) { .pz-final__steps { grid-template-columns: 1fr; } }
 </style>
@@ -429,13 +452,13 @@
   <!-- HERO -->
   <header class="pz-hero">
     <div class="pz-hero__stage">
-      <!-- TODO: PHOTO (left) — a bright lifestyle / flatlay / desk shot. -->
+      <!-- LEFT PHOTO — daisies on yellow flatlay. Add file at: assets/hero-flowers.jpg -->
       <div class="pz-hero__photo pz-hero__photo--l">
-        <div class="ph"><div class="ph__label">Photo — left</div><div class="ph__hint">Bright flatlay or workspace shot.</div></div>
+        <img src="assets/hero-flowers.jpg" alt="" loading="lazy">
       </div>
-      <!-- TODO: PHOTO (right) — a bright candid of you working (at the laptop, etc.). -->
+      <!-- RIGHT PHOTO — Priscilla writing at her desk. Add file at: assets/hero-priscilla.jpg -->
       <div class="pz-hero__photo pz-hero__photo--r">
-        <div class="ph"><div class="ph__label">Photo — right</div><div class="ph__hint">Candid of you working.</div></div>
+        <img src="assets/hero-priscilla.jpg" alt="Priscilla Zaehringer working at her desk">
       </div>
 
       <div class="pz-hero__card anim">
@@ -456,6 +479,21 @@
       <div class="pz-stats__card anim"><div class="pz-stats__num">🌱 <span>[##]+</span></div><div class="pz-stats__txt">Businesses served by The Lead Stream</div></div>
       <div class="pz-stats__card anim d1"><div class="pz-stats__num">📈 <span>6×</span></div><div class="pz-stats__txt">More signups for the same spend on a real client build</div></div>
       <div class="pz-stats__card anim d2"><div class="pz-stats__num">🤝 <span>Yours</span></div><div class="pz-stats__txt">Full handoff, no lock-in. The system is yours to keep</div></div>
+    </div>
+  </section>
+
+  <!-- WHO I'VE WORKED WITH -->
+  <section class="pz-clients">
+    <div class="wrap anim">
+      <div class="pz-clients__label">Who I've worked with</div>
+      <div class="pz-clients__row">
+        <span class="pz-clients__chip">Dietitians</span>
+        <span class="pz-clients__chip">Online coaches</span>
+        <span class="pz-clients__chip">Business strategists</span>
+        <span class="pz-clients__chip">Dentists</span>
+        <span class="pz-clients__chip">Artists</span>
+        <span class="pz-clients__chip pz-clients__chip--more">and more</span>
+      </div>
     </div>
   </section>
 
@@ -621,61 +659,24 @@
         <span class="tag tag--pink">Proof it works</span>
         <h2>What it looks like when it works.</h2>
       </div>
-      <div class="pz-proof__cards">
-        <!-- CARD 1 — DATA: signups=425, $4.56/signup, $1,936 spend, ~70 typical, 6x.
-             TODO: confirm ~70 / 6x. TODO: real, approved client descriptor. -->
-        <article class="pz-proof__card anim">
-          <div class="pz-proof__figure">
-            <div class="pz-proof__big">6<span class="pz-proof__big-sym">×</span></div>
-            <div class="pz-proof__big-cap">more signups, same spend</div>
-          </div>
-          <div>
-            <span class="tag pz-proof__client">Wellness Coach</span>
-            <h3 class="pz-proof__headline">A masterclass that <span class="hl">filled itself</span>.</h3>
-            <p class="pz-proof__body">We put her offer in front of the right people and kept the cost per signup low. The budget that usually brings in around 70 leads brought in 425.</p>
-            <div class="pz-proof__cbar">
-              <div class="pz-proof__cbar-head"><span class="pz-proof__cbar-key">The Lead Stream</span><span class="pz-proof__cbar-val">425 signups</span></div>
-              <div class="pz-proof__cbar-track"><div class="pz-proof__cbar-fill pz-proof__cbar-fill--us" style="--w: 100%;"></div></div>
-            </div>
-            <div class="pz-proof__cbar">
-              <div class="pz-proof__cbar-head"><span class="pz-proof__cbar-key">Typical rate</span><span class="pz-proof__cbar-val">~70 signups</span></div>
-              <div class="pz-proof__cbar-track"><div class="pz-proof__cbar-fill pz-proof__cbar-fill--them" style="--w: 16.5%;"></div></div>
-            </div>
-            <div class="pz-proof__receipt">
-              <span><strong>$4.56</strong> per signup</span>
-              <span><strong>$1,936</strong> spent</span>
-              <span><strong>$27.66</strong> typical CPL</span>
-            </div>
-          </div>
-        </article>
-        <!-- CARD 2 — DATA: 7 leads/day, $0.70/lead, $5/day. TODO: real client descriptor. -->
-        <article class="pz-proof__card pz-proof__card--flip anim">
-          <div class="pz-proof__figure">
-            <div class="pz-proof__big"><span class="pz-proof__big-sym">$</span>5</div>
-            <div class="pz-proof__big-cap">a day, seven new leads</div>
-          </div>
-          <div>
-            <span class="tag pz-proof__client">Solo Practitioner</span>
-            <h3 class="pz-proof__headline">Steady leads on a <span class="hl">coffee budget</span>.</h3>
-            <p class="pz-proof__body">A small daily spend, set up with care, brought fresh leads in every morning. Strong strategy did the work a big budget usually gets credit for.</p>
-            <div class="pz-proof__cbar">
-              <div class="pz-proof__cbar-head"><span class="pz-proof__cbar-key">The Lead Stream</span><span class="pz-proof__cbar-val">7 leads / day</span></div>
-              <div class="pz-proof__cbar-track"><div class="pz-proof__cbar-fill pz-proof__cbar-fill--us" style="--w: 100%;"></div></div>
-            </div>
-            <div class="pz-proof__receipt">
-              <span><strong>$0.70</strong> per lead</span>
-              <span><strong>$5</strong> a day</span>
-            </div>
-          </div>
-        </article>
+      <div class="pz-proof__results anim">
+        <!-- TODO: confirm the ~$28 wellness-niche cost-per-lead average and the 425 / $4.56 figures. -->
+        <p class="pz-proof__result">One client filled a masterclass with <span class="hl">425 new email subscribers</span> at $4.56 each, when her industry usually pays around $28 a lead.</p>
+        <p class="pz-proof__result">Another brought in <span class="hl">7 new leads a day</span> on a $5 budget, about 70 cents a lead.</p>
       </div>
+    </div>
+  </section>
 
-      <div class="pz-testi">
-        <div class="pz-testi__grid">
-          <!-- TODO x3: real testimonials. Name, photo, role/business, quote, specific result, date. Do not invent. -->
-          <div class="ph anim"><div class="ph__label">Testimonial 1</div><div class="ph__hint">Name · photo · role · quote · result · date.</div></div>
-          <div class="ph anim d1"><div class="ph__label">Testimonial 2</div><div class="ph__hint">Name · photo · role · quote · result · date.</div></div>
-          <div class="ph anim d2"><div class="ph__label">Testimonial 3</div><div class="ph__hint">Name · photo · role · quote · result · date.</div></div>
+  <!-- TESTIMONIAL — real quote from Kaye Putnam.
+       TODO: add Kaye's role/business and a headshot if you have permission, and add more testimonials over time. -->
+  <section class="pz-testimonial">
+    <div class="wrap">
+      <div class="pz-testimonial__inner anim">
+        <div class="pz-testimonial__mark">&ldquo;</div>
+        <p class="pz-testimonial__quote">She's the type of person you can give a goal to, and she figures out the process. She's highly detail-oriented, very process-driven, and more than that, she genuinely cares about the work she does. She goes above and beyond.</p>
+        <div class="pz-testimonial__who">
+          <span class="pz-testimonial__avatar">KP</span>
+          <span class="pz-testimonial__name">Kaye Putnam</span>
         </div>
       </div>
     </div>
@@ -807,6 +808,10 @@
           <a href="https://scheduler.zoom.us/priscilla-zaehringer/clarity-call" class="btn btn--fill">Book a clarity call →</a>
         </div>
       </div>
+      <div class="pz-price__roi anim">
+        <h3>Put it in perspective.</h3>
+        <p>One new client likely covers the entire investment. Everything after that is your email list growing month after month, an asset you keep and sell to for years.</p>
+      </div>
     </div>
   </section>
 
@@ -839,10 +844,48 @@
           <div class="pz-faq__a"><p>If you'd like to. Ongoing management is $397/mo, and beta clients lock in $297/mo for their first 6 months. There's no obligation. The whole point is that the system is yours either way.</p></div>
         </div>
         <div class="pz-faq__item">
+          <button class="pz-faq__q">How is this different from hiring an agency?</button>
+          <div class="pz-faq__a"><p>Two big ways. First, you own it. An agency rents you a system and keeps the keys, so the day you stop paying, it all stops. With The Lead Stream you keep everything: the system, the SOPs, the training. Second, it's me in your account, not a junior on a templated playbook, and there's no $2,000 to $5,000 a month retainer just to stay in the game.</p></div>
+        </div>
+        <div class="pz-faq__item">
+          <button class="pz-faq__q">What if my email list or audience is small?</button>
+          <div class="pz-faq__a"><p>That's kind of the point. Ads grow your list from wherever you are right now. You don't need a big following, you need a validated offer and a little room in the budget to test. We build the audience from scratch.</p></div>
+        </div>
+        <div class="pz-faq__item">
+          <button class="pz-faq__q">What if I don't have a freebie or lead magnet yet?</button>
+          <div class="pz-faq__a"><p>No problem. We build one together in the first two weeks, during the Foundation phase. A strong freebie is part of the system, so if you don't have one, that's something we create.</p></div>
+        </div>
+        <div class="pz-faq__item">
+          <button class="pz-faq__q">How much time will this take from me?</button>
+          <div class="pz-faq__a"><p>Very little. This is done-for-you. I handle the strategy, the build, the launch, and the daily management. Your only real job is to approve things along the way. Think an hour here and there, not another job on your plate.</p></div>
+        </div>
+        <div class="pz-faq__item">
+          <button class="pz-faq__q">What happens after I book the call?</button>
+          <div class="pz-faq__a"><p>We hop on for about 30 minutes. You tell me about your business, your goals, and what you've tried. It's honest and low-key, no hard sell. If we're a fit, you'll get an onboarding link, your contract, and a kickoff date. If we're not, I'll point you somewhere better.</p></div>
+        </div>
+        <div class="pz-faq__item">
           <button class="pz-faq__q">When can we start?</button>
           <!-- TODO: add real start dates / cohort timing. -->
           <div class="pz-faq__a"><p>[PLACEHOLDER: add your current availability or next start date here. For example, "I take on a small number of builds at a time. Book a clarity call and I'll share the next open kickoff date."]</p></div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOFT CTA / FREE GUIDE — lower-commitment option to capture the not-ready-yet visitors.
+       TODO: name the freebie, and connect this form to your email platform (ConvertKit / Flodesk / etc).
+       Right now the form is not wired up and won't deliver anything. -->
+  <section class="pz-soft">
+    <div class="wrap">
+      <div class="pz-soft__box anim">
+        <span class="tag">Not ready to book a call?</span>
+        <h2>Grab the free guide instead.</h2>
+        <p>[PLACEHOLDER: name your free guide here, e.g. "The $5-a-Day Lead Starter: the exact setup I use to turn a tiny ad budget into steady leads."] No pressure, no spam. Just the good stuff, and a way for us to stay in touch.</p>
+        <form class="pz-soft__form" onsubmit="return false;">
+          <input type="email" placeholder="Your email" aria-label="Your email">
+          <button type="submit" class="btn btn--fill">Send it to me →</button>
+        </form>
+        <div class="pz-soft__fine">TODO: connect this form to your email platform so subscribers actually receive the guide.</div>
       </div>
     </div>
   </section>
@@ -872,6 +915,12 @@
     <div class="pz-footer__small">The Lead Stream · Done-for-you Meta ads by Priscilla Zaehringer</div>
   </footer>
 
+  <!-- STICKY CTA — appears on scroll, hides near the bottom -->
+  <div class="pz-sticky" id="pzSticky">
+    <span class="pz-sticky__txt">The Lead Stream · Beta · <span>$997</span> · 5 spots</span>
+    <a href="https://scheduler.zoom.us/priscilla-zaehringer/clarity-call" class="btn btn--fill">Book a clarity call →</a>
+  </div>
+
 </div>
 
 <script>
@@ -889,5 +938,18 @@
       if (!open) { item.classList.add('open'); }
     });
   });
+
+  // sticky CTA: show after scrolling past the hero, hide near the bottom
+  var sticky = document.getElementById('pzSticky');
+  if (sticky) {
+    var onScroll = function () {
+      var y = window.pageYOffset || document.documentElement.scrollTop;
+      var nearBottom = (window.innerHeight + y) > (document.body.offsetHeight - 640);
+      if (y > 760 && !nearBottom) { sticky.classList.add('show'); }
+      else { sticky.classList.remove('show'); }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
 })();
 </script>
