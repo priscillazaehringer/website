@@ -152,7 +152,9 @@
 .pz-hero { background: var(--pink-soft); padding: 56px 0 64px; position: relative; }
 .pz-hero__stage { max-width: 1180px; margin: 0 auto; padding: 0 24px; position: relative; }
 .pz-hero__photo { position: absolute; top: 40px; width: 42%; z-index: 1; }
-.pz-hero__photo .ph { min-height: 340px; background: rgba(255,255,255,0.45); }
+.pz-hero__photo img { width: 100%; display: block; object-fit: cover; border-radius: 2px; box-shadow: var(--shadow); }
+.pz-hero__photo--l img { height: 300px; object-position: left bottom; }
+.pz-hero__photo--r img { height: 480px; object-position: center 18%; }
 .pz-hero__photo--l { left: 24px; }
 .pz-hero__photo--r { right: 24px; top: 150px; }
 .pz-hero__card {
@@ -450,13 +452,13 @@
   <!-- HERO -->
   <header class="pz-hero">
     <div class="pz-hero__stage">
-      <!-- TODO: PHOTO (left) — a bright lifestyle / flatlay / desk shot. -->
+      <!-- LEFT PHOTO — daisies on yellow flatlay. Add file at: assets/hero-flowers.jpg -->
       <div class="pz-hero__photo pz-hero__photo--l">
-        <div class="ph"><div class="ph__label">Photo — left</div><div class="ph__hint">Bright flatlay or workspace shot.</div></div>
+        <img src="assets/hero-flowers.jpg" alt="" loading="lazy">
       </div>
-      <!-- TODO: PHOTO (right) — a bright candid of you working (at the laptop, etc.). -->
+      <!-- RIGHT PHOTO — Priscilla writing at her desk. Add file at: assets/hero-priscilla.jpg -->
       <div class="pz-hero__photo pz-hero__photo--r">
-        <div class="ph"><div class="ph__label">Photo — right</div><div class="ph__hint">Candid of you working.</div></div>
+        <img src="assets/hero-priscilla.jpg" alt="Priscilla Zaehringer working at her desk">
       </div>
 
       <div class="pz-hero__card anim">
