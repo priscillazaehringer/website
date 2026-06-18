@@ -1,13 +1,15 @@
 /* ------------------------------------------------------------------
-   Shared font system for priscillazaehringer.com
+   Shared font variables for priscillazaehringer.com
 
-   To change fonts across the ENTIRE site, edit this one file:
-     1. Update the @import URL below with your new Google Fonts.
-     2. Update the three variables in :root.
-   Every page reads from these variables, so nothing else needs touching.
+   To change fonts across the ENTIRE site:
+     1. Update the two variables below.
+     2. Update the matching Google Fonts <link> in each page's <head>
+        (search the project for "fonts.googleapis.com" to find them).
+
+   The actual font files are loaded via <link> tags in each <head>
+   (more reliable than @import), so they must name the same families
+   you set here.
 ------------------------------------------------------------------ */
-
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Allura&display=swap');
 
 :root {
   --font-display: 'Jost', sans-serif;  /* headlines */
