@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Priscilla Zaehringer — new site (staging)</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--bg); color: var(--text); font-family: var(--font-body); line-height: var(--lh-body); }
+    .wrap { max-width: var(--container); margin: 0 auto; padding: var(--section-y) var(--s-3); }
+    .tag { font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-muted); }
+    h1 { font-family: var(--font-display); font-size: var(--h1); line-height: var(--lh-tight); margin: var(--s-2) 0 var(--s-3); }
+    p { font-size: var(--body); color: var(--text-muted); max-width: 60ch; }
+    .swatches { display: flex; flex-wrap: wrap; gap: var(--s-2); margin-top: var(--s-5); }
+    .sw { width: 120px; }
+    .sw__chip { height: 80px; border-radius: var(--radius); border: 1px solid var(--line); }
+    .sw__name { font-size: 0.75rem; margin-top: var(--s-1); color: var(--text-muted); }
+    .note { margin-top: var(--s-6); padding: var(--s-3); border: 1px dashed var(--line); border-radius: var(--radius); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <span class="tag">Staging · work in progress</span>
+    <h1>New site foundation is live.</h1>
+    <p>This is the staging build on the v2 branch. The design system below is in place. Fonts and the real homepage layout come next, once the custom fonts and layout references are in.</p>
+
+    <div class="swatches">
+      <div class="sw"><div class="sw__chip" style="background:var(--c-cream)"></div><div class="sw__name">Cream / bg</div></div>
+      <div class="sw"><div class="sw__chip" style="background:var(--c-ink)"></div><div class="sw__name">Ink</div></div>
+      <div class="sw"><div class="sw__chip" style="background:var(--c-pink)"></div><div class="sw__name">Pink / accent</div></div>
+      <div class="sw"><div class="sw__chip" style="background:var(--c-blue)"></div><div class="sw__name">Blue</div></div>
+      <div class="sw"><div class="sw__chip" style="background:var(--c-olive)"></div><div class="sw__name">Olive</div></div>
+    </div>
+
+    <div class="note">Placeholder page. Colors are approximated from the Option 2 swatch — send exact hex codes to lock them in.</div>
+  </main>
+</body>
+</html>

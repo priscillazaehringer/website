@@ -1,0 +1,57 @@
+/* ==================================================================
+   DESIGN TOKENS — new site (v2)
+   The single source of truth for color, type, spacing, and shape.
+   Change the brand here and it propagates everywhere.
+
+   NOTE: hex values for Palette Option 2 are approximated from the
+   swatch image — replace with exact codes when you have them.
+   ================================================================== */
+
+:root {
+  /* ---- Color: Palette Option 2 ---------------------------------- */
+  /* neutrals (base + anchors) */
+  --c-cream:      #F4F0E8;  /* warm off-white — page background */
+  --c-cream-soft: #FAF8F3;  /* lighter neutral — alt sections */
+  --c-ink:        #1A1820;  /* near-black — text, dark sections, primary buttons */
+  --c-ink-soft:   #4F4A55;  /* muted body text */
+
+  /* accents (pastels — used sparingly) */
+  --c-pink:       #F2C7D9;  /* signature accent / soft section bg / highlight */
+  --c-blue:       #C2DEE6;  /* secondary accent */
+  --c-olive:      #C7C75C;  /* tertiary accent — use the least */
+
+  /* ---- Semantic roles (reference these in components) ----------- */
+  --bg:            var(--c-cream);
+  --bg-alt:        var(--c-cream-soft);
+  --bg-feature:    var(--c-ink);     /* dark feature sections */
+  --text:          var(--c-ink);
+  --text-muted:    var(--c-ink-soft);
+  --text-on-dark:  var(--c-cream);
+  --action:        var(--c-ink);     /* ONE primary action color (editorial) */
+  --action-text:   var(--c-cream);
+  --accent:        var(--c-pink);    /* the signature highlight */
+  --line:          rgba(26,24,32,0.12);
+
+  /* ---- Type ----------------------------------------------------- */
+  /* Custom fonts get wired in here once provided + self-hosted. */
+  --font-display: 'Times New Roman', serif;   /* PLACEHOLDER — replace */
+  --font-body:    system-ui, sans-serif;      /* PLACEHOLDER — replace */
+  --font-script:  cursive;                    /* PLACEHOLDER — replace */
+
+  --h1: clamp(2.6rem, 6vw, 4.5rem);
+  --h2: clamp(2rem, 4vw, 3rem);
+  --h3: clamp(1.4rem, 2.5vw, 1.75rem);
+  --body: clamp(1rem, 1.2vw, 1.125rem);
+  --lh-tight: 1.15;
+  --lh-body: 1.6;
+
+  /* ---- Spacing (8px baseline grid) ------------------------------ */
+  --s-1: 8px;   --s-2: 16px;  --s-3: 24px;  --s-4: 32px;
+  --s-5: 48px;  --s-6: 64px;  --s-7: 96px;  --s-8: 120px;
+  --section-y: clamp(var(--s-6), 10vw, var(--s-8));
+  --container: 1120px;
+
+  /* ---- Shape & depth (pick one, use everywhere) ----------------- */
+  --radius: 4px;                 /* editorial = small/sharp */
+  --shadow: 0 18px 50px rgba(26,24,32,0.12);
+}
