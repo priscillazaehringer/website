@@ -6,6 +6,16 @@
    Palette Option 2 — exact brand hex codes.
    ================================================================== */
 
+/* ---- Self-hosted fonts ------------------------------------------ */
+@font-face {
+  font-family: 'Golden Batch';
+  src: url('/assets/fonts/golden-batch.woff2') format('woff2'),
+       url('/assets/fonts/golden-batch.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* ---- Color: Palette Option 2 ---------------------------------- */
   /* neutrals (base + anchors) */
@@ -33,9 +43,9 @@
 
   /* ---- Type ----------------------------------------------------- */
   /* Custom fonts get wired in here once provided + self-hosted. */
-  --font-display: 'Times New Roman', serif;   /* PLACEHOLDER — replace */
-  --font-body:    system-ui, sans-serif;      /* PLACEHOLDER — replace */
-  --font-script:  cursive;                    /* PLACEHOLDER — replace */
+  --font-display: 'Golden Batch', Georgia, serif;  /* elegant serif — headlines */
+  --font-body:    system-ui, sans-serif;           /* PLACEHOLDER — needs a body font */
+  --font-script:  cursive;                          /* PLACEHOLDER — optional accent */
 
   --h1: clamp(2.6rem, 6vw, 4.5rem);
   --h2: clamp(2rem, 4vw, 3rem);
