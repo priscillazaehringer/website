@@ -12,21 +12,21 @@
 <meta property="og:url" content="https://priscillazaehringer.com/" />
   <meta property="og:type" content="website" />
   <link rel="canonical" href="https://priscillazaehringer.com/" />
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Karla:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/fonts.css">
   <style>
 /* ============================================
    CHROME — header + footer styles
    ============================================ */
 * { box-sizing: border-box; }
-body { margin: 0; padding: 0; font-family: 'Karla', sans-serif; color: #3D3535; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+body { margin: 0; padding: 0; font-family: var(--font-body); color: #3D3535; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
 img { max-width: 100%; height: auto; display: block; }
 a { text-decoration: none; color: inherit; }
 
 /* ANNOUNCEMENT BAR */
 .pz-banner { background: #F2E8E6; padding: 12px 20px; text-align: center; line-height: 1.4; }
-.pz-banner__text { font-family: 'Karla', sans-serif; font-weight: 400; font-size: 0.75rem; letter-spacing: 0.06em; color: #6B6B6B; }
+.pz-banner__text { font-family: var(--font-body); font-weight: 400; font-size: 0.75rem; letter-spacing: 0.06em; color: #6B6B6B; }
 .pz-banner__dot { display: inline-block; width: 3px; height: 3px; border-radius: 50%; background: rgba(201,160,155,0.5); vertical-align: middle; margin: 0 8px; }
-.pz-banner__cta { font-family: 'Karla', sans-serif; font-weight: 600; font-size: 0.75rem; letter-spacing: 0.06em; color: #C9A09B; text-decoration: underline; text-underline-offset: 3px; }
+.pz-banner__cta { font-family: var(--font-body); font-weight: 600; font-size: 0.75rem; letter-spacing: 0.06em; color: #C9A09B; text-decoration: underline; text-underline-offset: 3px; }
 
 /* SHIMMER LINE */
 .pz-shimmer { height: 2px; background: linear-gradient(90deg, transparent 0%, #E8DCD0 15%, #C9A09B 30%, #E8DCD0 50%, #C9A09B 70%, #E8DCD0 85%, transparent 100%); }
@@ -35,19 +35,19 @@ a { text-decoration: none; color: inherit; }
 .pz-hdr-desk { display: none; background: #F7F3EF; height: 100px; padding: 0 40px; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(200,196,196,0.2); }
 .pz-hdr-desk__logo { display: inline-flex; align-items: center; }
 .pz-hdr-desk__nav { display: flex; align-items: center; gap: 6px; }
-.pz-hdr-desk__link { font-family: 'Karla', sans-serif; font-weight: 400; font-size: 0.9rem; color: #6B6B6B; padding: 8px 14px; border-radius: 50px; transition: all 0.2s; }
+.pz-hdr-desk__link { font-family: var(--font-body); font-weight: 400; font-size: 0.9rem; color: #6B6B6B; padding: 8px 14px; border-radius: 50px; transition: all 0.2s; }
 .pz-hdr-desk__link:hover { color: #C9A09B; background: rgba(201,160,155,0.06); }
 .pz-hdr-desk__sep { width: 1px; height: 20px; background: #C8C4C4; margin: 0 8px; display: inline-block; vertical-align: middle; opacity: 0.4; }
-.pz-hdr-desk__cta { font-family: 'Karla', sans-serif; font-weight: 500; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: #FFFFFF; background: #C9A09B; padding: 12px 28px; border-radius: 50px; display: inline-flex; align-items: center; gap: 6px; transition: background 0.3s ease; }
+.pz-hdr-desk__cta { font-family: var(--font-body); font-weight: 500; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: #FFFFFF; background: #C9A09B; padding: 12px 28px; border-radius: 50px; display: inline-flex; align-items: center; gap: 6px; transition: background 0.3s ease; }
 .pz-hdr-desk__cta:hover { background: #3D3535; color: #FFFFFF; }
 
 /* HEADER — mobile */
 .pz-hdr-mob { display: block; background: #F7F3EF; border-bottom: 1px solid rgba(200,196,196,0.2); }
 .pz-hdr-mob__nav { display: flex; flex-wrap: wrap; padding: 12px 24px; }
-.pz-hdr-mob__link { font-family: 'Karla', sans-serif; font-weight: 400; font-size: 0.85rem; color: #6B6B6B; padding: 8px 12px; }
+.pz-hdr-mob__link { font-family: var(--font-body); font-weight: 400; font-size: 0.85rem; color: #6B6B6B; padding: 8px 12px; }
 .pz-hdr-mob__link:first-child { padding-left: 0; }
 .pz-hdr-mob__cta-wrap { padding: 0 24px 16px; }
-.pz-hdr-mob__cta { display: block; font-family: 'Karla', sans-serif; font-weight: 500; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: #FFFFFF; background: #C9A09B; padding: 14px 24px; text-align: center; border-radius: 50px; }
+.pz-hdr-mob__cta { display: block; font-family: var(--font-body); font-weight: 500; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: #FFFFFF; background: #C9A09B; padding: 14px 24px; text-align: center; border-radius: 50px; }
 
 @media (min-width: 901px) {
   .pz-hdr-desk { display: flex; }
@@ -58,25 +58,25 @@ a { text-decoration: none; color: inherit; }
 .pz-footer { background: #F5F0EB; padding: 40px 24px 0; color: #3D3535; }
 .pz-footer__inner { max-width: 1100px; margin: 0 auto; }
 .pz-footer__grid { display: grid; grid-template-columns: 0.7fr 1.3fr; gap: 40px; padding-bottom: 32px; align-items: start; }
-.pz-footer__nav-heading { font-family: 'Libre Caslon Text', serif; font-weight: 700; font-size: 1.2rem; color: #3D3535; margin-bottom: 6px; }
+.pz-footer__nav-heading { font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; color: #3D3535; margin-bottom: 6px; }
 .pz-footer__nav-line { width: 36px; height: 1.5px; background: #C9A09B; margin-bottom: 18px; }
 .pz-footer__nav-links { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 36px; }
-.pz-footer__nav-link { font-family: 'Karla', sans-serif; font-weight: 400; font-size: 0.92rem; color: #6B6B6B; padding: 6px 0; transition: color 0.3s ease; }
+.pz-footer__nav-link { font-family: var(--font-body); font-weight: 400; font-size: 0.92rem; color: #6B6B6B; padding: 6px 0; transition: color 0.3s ease; }
 .pz-footer__nav-link:hover { color: #C9A09B; }
-.pz-footer__cta { display: inline-flex; align-items: center; gap: 8px; font-family: 'Karla', sans-serif; font-weight: 500; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: #FFFFFF; background: #C9A09B; padding: 12px 26px; border-radius: 50px; transition: all 0.4s ease; width: 100%; justify-content: center; margin-bottom: 28px; }
+.pz-footer__cta { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-body); font-weight: 500; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: #FFFFFF; background: #C9A09B; padding: 12px 26px; border-radius: 50px; transition: all 0.4s ease; width: 100%; justify-content: center; margin-bottom: 28px; }
 .pz-footer__cta:hover { background: #3D3535; transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.1); }
 .pz-footer__brand-logo { margin-bottom: 18px; }
-.pz-footer__brand-tagline { font-family: 'Dancing Script', cursive; font-weight: 400; font-size: 1.15rem; color: #C9A09B; margin-bottom: 14px; }
-.pz-footer__brand-bio { font-family: 'Karla', sans-serif; font-weight: 300; font-size: 0.92rem; line-height: 1.8; color: #6B6B6B; max-width: 400px; margin-bottom: 14px; }
+.pz-footer__brand-tagline { font-family: var(--font-script); font-weight: 400; font-size: 1.15rem; color: #C9A09B; margin-bottom: 14px; }
+.pz-footer__brand-bio { font-family: var(--font-body); font-weight: 300; font-size: 0.92rem; line-height: 1.8; color: #6B6B6B; max-width: 400px; margin-bottom: 14px; }
 .pz-footer__socials { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; max-width: 380px; }
-.pz-footer__social-link { display: flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 50px; border: 1px solid rgba(200,196,196,0.25); font-family: 'Karla', sans-serif; font-weight: 400; font-size: 0.72rem; letter-spacing: 0.08em; color: #6B6B6B; transition: all 0.3s ease; }
+.pz-footer__social-link { display: flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 50px; border: 1px solid rgba(200,196,196,0.25); font-family: var(--font-body); font-weight: 400; font-size: 0.72rem; letter-spacing: 0.08em; color: #6B6B6B; transition: all 0.3s ease; }
 .pz-footer__social-link:hover { border-color: #C9A09B; color: #C9A09B; background: rgba(201,160,155,0.06); }
 .pz-footer__social-link svg { width: 15px; height: 15px; flex-shrink: 0; opacity: 0.5; }
 .pz-footer__social-link:hover svg { opacity: 0.8; }
 .pz-footer__bottom { border-top: 1px solid rgba(200,196,196,0.2); padding: 20px 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
-.pz-footer__copy { font-family: 'Karla', sans-serif; font-weight: 300; font-size: 0.78rem; color: #B0A1A1; }
+.pz-footer__copy { font-family: var(--font-body); font-weight: 300; font-size: 0.78rem; color: #B0A1A1; }
 .pz-footer__legal { display: flex; gap: 18px; }
-.pz-footer__legal a { font-family: 'Karla', sans-serif; font-weight: 300; font-size: 0.78rem; color: #B0A1A1; }
+.pz-footer__legal a { font-family: var(--font-body); font-weight: 300; font-size: 0.78rem; color: #B0A1A1; }
 .pz-footer__legal a:hover { color: #C9A09B; }
 
 @media (max-width: 768px) {
@@ -122,7 +122,7 @@ a { text-decoration: none; color: inherit; }
 .pz-home * { margin: 0; padding: 0; box-sizing: border-box; }
 
 .pz-home {
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-body);
   font-weight: 400;
   color: var(--dark);
   line-height: 1.7;
@@ -137,21 +137,21 @@ a { text-decoration: none; color: inherit; }
    TYPOGRAPHY — sizes bumped up noticeably
    ============================================ */
 .pz-home .heading-xl {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--font-display);
   font-weight: 400;
   font-size: clamp(2.6rem, 5.5vw, 4.5rem);
   line-height: 1.12;
 }
 
 .pz-home .heading-lg {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--font-display);
   font-weight: 400;
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
   line-height: 1.2;
 }
 
 .pz-home .heading-md {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--font-display);
   font-weight: 700;
   font-size: clamp(1.5rem, 2.5vw, 2.1rem);
   line-height: 1.3;
@@ -159,7 +159,7 @@ a { text-decoration: none; color: inherit; }
 
 /* EYEBROW — was 0.78rem, now 0.95rem */
 .pz-home .heading-sm {
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-body);
   font-weight: 600;
   font-size: 0.95rem;
   letter-spacing: 0.2em;
@@ -168,14 +168,14 @@ a { text-decoration: none; color: inherit; }
 
 /* BODY — was 1.08rem, now 1.2rem */
 .pz-home .body-text {
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-body);
   font-weight: 400;
   font-size: 1.08rem;
   line-height: 1.85;
 }
 
 .pz-home .cursive {
-  font-family: 'Dancing Script', cursive;
+  font-family: var(--font-script);
   font-weight: 400;
 }
 
@@ -191,7 +191,7 @@ a { text-decoration: none; color: inherit; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-body);
   font-weight: 500;
   font-size: 0.92rem;
   letter-spacing: 0.12em;
@@ -222,7 +222,7 @@ a { text-decoration: none; color: inherit; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-body);
   font-weight: 500;
   font-size: 0.92rem;
   letter-spacing: 0.12em;
@@ -245,7 +245,7 @@ a { text-decoration: none; color: inherit; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-body);
   font-weight: 500;
   font-size: 0.88rem;
   letter-spacing: 0.12em;
@@ -264,7 +264,7 @@ a { text-decoration: none; color: inherit; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-body);
   font-weight: 500;
   font-size: 0.88rem;
   letter-spacing: 0.12em;
@@ -318,7 +318,7 @@ a { text-decoration: none; color: inherit; }
 .pz-home .float-heart--light { color: var(--soft-cream); opacity: 0.1; }
 
 .pz-home .float-callout {
-  font-family: 'Dancing Script', cursive;
+  font-family: var(--font-script);
   font-weight: 600; font-size: 1.1rem;
   color: var(--blush); opacity: 0.45;
   white-space: nowrap;
@@ -371,7 +371,7 @@ a { text-decoration: none; color: inherit; }
 
 /* HERO EYEBROW — was 0.78rem, now 0.95rem */
 .pzh-hero__eyebrow {
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-body);
   font-weight: 600; font-size: 0.95rem;
   letter-spacing: 0.2em; text-transform: uppercase;
   color: var(--blush); margin-bottom: 8px;
@@ -379,7 +379,7 @@ a { text-decoration: none; color: inherit; }
 
 .pzh-hero__line-top {
   display: block;
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--font-display);
   font-weight: 400;
   font-size: clamp(1.4rem, 2.5vw, 2rem);
   line-height: 1.1; color: var(--soft-cream);
@@ -387,7 +387,7 @@ a { text-decoration: none; color: inherit; }
 
 .pzh-hero__line-pop {
   display: block;
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--font-display);
   font-weight: 700;
   font-size: clamp(1.8rem, 4vw, 3.2rem);
   line-height: 0.95; color: var(--blush); margin: 2px 0 4px;
@@ -395,7 +395,7 @@ a { text-decoration: none; color: inherit; }
 
 .pzh-hero__line-script {
   display: block;
-  font-family: 'Dancing Script', cursive;
+  font-family: var(--font-script);
   font-weight: 400;
   font-size: clamp(2.2rem, 4vw, 3.2rem);
   color: var(--soft-cream); margin-top: 2px;
@@ -440,7 +440,7 @@ a { text-decoration: none; color: inherit; }
 
 /* MARQUEE — was 0.75rem, now 0.88rem */
 .pzh-marquee__item {
-  font-family: 'Karla', sans-serif; font-weight: 500;
+  font-family: var(--font-body); font-weight: 500;
   font-size: 0.88rem; letter-spacing: 0.22em;
   text-transform: uppercase; color: var(--soft-cream);
   white-space: nowrap; padding: 0 28px; opacity: 0.3;
@@ -466,7 +466,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .pzh-problem__intro h2 {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--font-display);
   font-weight: 400;
   font-size: clamp(2rem, 4vw, 3.2rem);
   color: var(--dark);
@@ -475,7 +475,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .pzh-problem__intro p {
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-body);
   font-weight: 400;
   font-size: 1.2rem;
   color: #4A4A4A;
@@ -514,7 +514,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .pzh-problem__card h3 {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--font-display);
   font-weight: 700; font-size: 1.15rem;
   margin-bottom: 6px; color: var(--dark);
 }
@@ -581,7 +581,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .pzh-flip__front h3 {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.4rem;
   color: var(--dark);
@@ -589,7 +589,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .pzh-flip__stat {
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-body);
   font-weight: 400;
   font-size: 1.1rem;
   color: #4A4A4A;
@@ -599,7 +599,7 @@ a { text-decoration: none; color: inherit; }
 /* FLIP HINT — was 0.68rem, now 0.8rem */
 .pzh-flip__hint {
   margin-top: 6px;
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.8rem;
   letter-spacing: 0.08em;
   color: var(--blush);
@@ -624,7 +624,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .pzh-problem__bottom p {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--font-display);
   font-weight: 400;
   font-size: 1.5rem; color: var(--dark); line-height: 1.5;
 }
@@ -673,13 +673,13 @@ a { text-decoration: none; color: inherit; }
 
 /* QUOTE CARD — was 1.1rem, now 1.2rem */
 .pzh-about__quote-card p {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--font-display);
   font-size: 1.2rem; font-style: italic;
   line-height: 1.5; color: var(--dark); margin-bottom: 0;
 }
 
 .pzh-about__quote-card .quote-attr {
-  font-family: 'Dancing Script', cursive;
+  font-family: var(--font-script);
   font-size: 1.1rem; color: var(--blush); margin-top: 8px;
 }
 
@@ -736,12 +736,12 @@ a { text-decoration: none; color: inherit; }
 }
 
 .pzh-services__card-num {
-  font-family: 'Dancing Script', cursive; font-weight: 700;
+  font-family: var(--font-script); font-weight: 700;
   font-size: 3rem; color: var(--blush); opacity: 0.3; line-height: 1; text-align: center;
 }
 
 .pzh-services__card-body h3 {
-  font-family: 'Libre Caslon Text', serif; font-weight: 700;
+  font-family: var(--font-display); font-weight: 700;
   font-size: 1.4rem; color: var(--dark); margin-bottom: 6px;
 }
 
@@ -751,13 +751,13 @@ a { text-decoration: none; color: inherit; }
 }
 
 .pzh-services__card-body .pzh-coming {
-  font-family: 'Dancing Script', cursive;
+  font-family: var(--font-script);
   font-size: 1rem; color: var(--blush); opacity: 0.5; margin-top: 4px;
 }
 
 .pzh-services__badge {
   position: absolute; top: 12px; right: 12px;
-  font-family: 'Karla', sans-serif; font-size: 0.68rem;
+  font-family: var(--font-body); font-size: 0.68rem;
   letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--blush); background: var(--soft-blush);
   padding: 4px 12px; border-radius: 50px;
@@ -807,13 +807,13 @@ a { text-decoration: none; color: inherit; }
 }
 
 .pzh-testimonial__quote-mark {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--font-display);
   font-size: 8rem; color: var(--blush); opacity: 0.18; line-height: 0.6; margin-bottom: -20px;
 }
 
 /* TESTIMONIAL TEXT — was clamp(1.1rem, 2vw, 1.35rem), now clamp(1.2rem, 2vw, 1.5rem) */
 .pzh-testimonial__text {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--font-display);
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
   line-height: 1.5; color: var(--soft-cream); font-style: italic; margin-bottom: 24px;
 }
@@ -881,7 +881,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .pzh-why__statement {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--font-display);
   font-size: clamp(2rem, 4vw, 3.2rem);
   font-style: italic;
   font-weight: 400;
@@ -923,7 +923,7 @@ a { text-decoration: none; color: inherit; }
 
 /* WHY POINT TITLE — was 1.25rem, now 1.35rem */
 .pzh-why__point-content h3 {
-  font-family: 'Libre Caslon Text', serif; font-weight: 700;
+  font-family: var(--font-display); font-weight: 700;
   font-size: 1.6rem; color: var(--dark); margin-bottom: 4px; margin-top: 4px;
 }
 
@@ -936,7 +936,7 @@ a { text-decoration: none; color: inherit; }
 
 /* WHY BOTTOM — was 1.15rem, now 1.3rem */
 .pzh-why__bottom p {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--font-display);
   font-size: 1.3rem; font-weight: 700; color: var(--dark); line-height: 1.65;
 }
 
@@ -1063,7 +1063,7 @@ a { text-decoration: none; color: inherit; }
 
 /* PICK PROMPT — was 1.1rem, now 1.2rem */
 .pzh-pick__prompt {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.2rem;
   color: #3D3535;
@@ -1147,7 +1147,7 @@ fbq('init','1234678451585086');fbq('track','PageView');
 <div class="pz-shimmer"></div>
 <div class="pz-hdr-desk">
   <a href="https://priscillazaehringer.com/" class="pz-hdr-desk__logo" aria-label="Home">
-    <svg width="44" height="44" viewBox="0 0 130 130"><circle cx="65" cy="65" r="52" fill="#C9A09B"/><text x="65" y="73" text-anchor="middle" font-family="'Libre Caslon Text', serif" font-weight="400" font-size="36" fill="#FFFFFF" letter-spacing="3">PZ</text><circle cx="65" cy="65" r="46" fill="none" stroke="#FFFFFF" stroke-width="0.5" opacity="0.3"/></svg>
+    <svg width="44" height="44" viewBox="0 0 130 130"><circle cx="65" cy="65" r="52" fill="#C9A09B"/><text x="65" y="73" text-anchor="middle" font-family="var(--font-display)" font-weight="400" font-size="36" fill="#FFFFFF" letter-spacing="3">PZ</text><circle cx="65" cy="65" r="46" fill="none" stroke="#FFFFFF" stroke-width="0.5" opacity="0.3"/></svg>
   </a>
   <nav class="pz-hdr-desk__nav">
     <a href="https://priscillazaehringer.com/" class="pz-hdr-desk__link">Home</a>
@@ -1284,7 +1284,7 @@ fbq('init','1234678451585086');fbq('track','PageView');
         <span class="accent-line accent-line--center"></span>
         <h2 class="heading-lg">What brings you here?</h2>
       </div>
-      <p class="pzh-services__sub body-text fade-up" style="text-align:center;max-width:480px;margin:0 auto 24px;font-family:'Dancing Script',cursive;font-size:1.3rem;color:#C9A09B;">which one sounds like you? ♥</p>
+      <p class="pzh-services__sub body-text fade-up" style="text-align:center;max-width:480px;margin:0 auto 24px;font-family:var(--font-script);font-size:1.3rem;color:#C9A09B;">which one sounds like you? ♥</p>
 
       <div class="pzh-pick__grid">
         <div class="pzh-pick__card fade-up stagger-1">
@@ -1292,8 +1292,8 @@ fbq('init','1234678451585086');fbq('track','PageView');
           <div class="pzh-pick__prompt">I want to start or grow a podcast</div>
           <div class="pzh-pick__reveal">
             <p>You've been thinking about this for a while. You know a podcast could be powerful for your business, but you need someone who handles everything so you can just show up and talk.</p>
-            <p style="font-family:'Dancing Script',cursive;color:#C9A09B;font-size:1.2rem;margin:10px 0;">that's exactly what I do. ♥</p>
-            <a href="https://priscillazaehringer.com/services/podcast/" class="btn-primary" style="display:inline-flex;align-items:center;gap:6px;background:#C9A09B;color:#fff;padding:17px 38px;border-radius:50px;font-family:'Karla',sans-serif;font-weight:500;font-size:0.88rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;margin-top:6px;">♥ Learn About Podcast Production</a>
+            <p style="font-family:var(--font-script);color:#C9A09B;font-size:1.2rem;margin:10px 0;">that's exactly what I do. ♥</p>
+            <a href="https://priscillazaehringer.com/services/podcast/" class="btn-primary" style="display:inline-flex;align-items:center;gap:6px;background:#C9A09B;color:#fff;padding:17px 38px;border-radius:50px;font-family:var(--font-body);font-weight:500;font-size:0.88rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;margin-top:6px;">♥ Learn About Podcast Production</a>
           </div>
         </div>
 
@@ -1302,8 +1302,8 @@ fbq('init','1234678451585086');fbq('track','PageView');
           <div class="pzh-pick__prompt">I'm ready to run ads that actually work</div>
           <div class="pzh-pick__reveal">
             <p>You've outgrown organic, maybe you've tried ads before and it didn't go well. You need someone who builds a real strategy around your business, not a recycled template.</p>
-            <p style="font-family:'Dancing Script',cursive;color:#C9A09B;font-size:1.2rem;margin:10px 0;">let's make your ad spend count. ♥</p>
-            <a href="https://priscillazaehringer.com/ads/" class="btn-primary" style="display:inline-flex;align-items:center;gap:6px;background:#C9A09B;color:#fff;padding:17px 38px;border-radius:50px;font-family:'Karla',sans-serif;font-weight:500;font-size:0.88rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;margin-top:6px;">♥ Learn About Ad Management</a>
+            <p style="font-family:var(--font-script);color:#C9A09B;font-size:1.2rem;margin:10px 0;">let's make your ad spend count. ♥</p>
+            <a href="https://priscillazaehringer.com/ads/" class="btn-primary" style="display:inline-flex;align-items:center;gap:6px;background:#C9A09B;color:#fff;padding:17px 38px;border-radius:50px;font-family:var(--font-body);font-weight:500;font-size:0.88rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;margin-top:6px;">♥ Learn About Ad Management</a>
           </div>
         </div>
 
@@ -1312,8 +1312,8 @@ fbq('init','1234678451585086');fbq('track','PageView');
           <div class="pzh-pick__prompt">I need someone to run the backend of my business</div>
           <div class="pzh-pick__reveal">
             <p>You're doing everything yourself and it's not sustainable. You need an operations partner who keeps the wheels turning so you can focus on the work that actually moves the needle.</p>
-            <p style="font-family:'Dancing Script',cursive;color:#C9A09B;font-size:1.2rem;margin:10px 0;">this is coming soon, but let's talk. ♥</p>
-            <a href="https://scheduler.zoom.us/priscilla-zaehringer/clarity-call" class="btn-primary" style="display:inline-flex;align-items:center;gap:6px;background:#C9A09B;color:#fff;padding:17px 38px;border-radius:50px;font-family:'Karla',sans-serif;font-weight:500;font-size:0.88rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;margin-top:6px;">♥ Book a Clarity Call</a>
+            <p style="font-family:var(--font-script);color:#C9A09B;font-size:1.2rem;margin:10px 0;">this is coming soon, but let's talk. ♥</p>
+            <a href="https://scheduler.zoom.us/priscilla-zaehringer/clarity-call" class="btn-primary" style="display:inline-flex;align-items:center;gap:6px;background:#C9A09B;color:#fff;padding:17px 38px;border-radius:50px;font-family:var(--font-body);font-weight:500;font-size:0.88rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;margin-top:6px;">♥ Book a Clarity Call</a>
           </div>
         </div>
       </div>
@@ -1413,9 +1413,9 @@ fbq('init','1234678451585086');fbq('track','PageView');
           <h3 class="heading-md" style="margin-bottom:6px!important;">Pitch Yourself Confidently</h3>
           <p style="margin-bottom:0!important;">A free resource to help you put yourself out there with clarity and confidence.</p>
           <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;">
-            <span style="display:inline-flex;align-items:center;gap:4px;font-family:'Karla',sans-serif;font-weight:500;font-size:0.78rem;padding:5px 12px;border-radius:50px;background:#fff;color:#C9A09B;box-shadow:0 2px 8px rgba(61,53,53,0.08);">🎙️ great for podcast pitches</span>
-            <span style="display:inline-flex;align-items:center;gap:4px;font-family:'Karla',sans-serif;font-weight:500;font-size:0.78rem;padding:5px 12px;border-radius:50px;background:#C9A09B;color:#fff;">🎨 Canva template included</span>
-            <span style="display:inline-flex;align-items:center;gap:4px;font-family:'Karla',sans-serif;font-weight:500;font-size:0.78rem;padding:5px 12px;border-radius:50px;background:#fff;color:#4A4A4A;box-shadow:0 2px 8px rgba(61,53,53,0.06);">📋 guided experience</span>
+            <span style="display:inline-flex;align-items:center;gap:4px;font-family:var(--font-body);font-weight:500;font-size:0.78rem;padding:5px 12px;border-radius:50px;background:#fff;color:#C9A09B;box-shadow:0 2px 8px rgba(61,53,53,0.08);">🎙️ great for podcast pitches</span>
+            <span style="display:inline-flex;align-items:center;gap:4px;font-family:var(--font-body);font-weight:500;font-size:0.78rem;padding:5px 12px;border-radius:50px;background:#C9A09B;color:#fff;">🎨 Canva template included</span>
+            <span style="display:inline-flex;align-items:center;gap:4px;font-family:var(--font-body);font-weight:500;font-size:0.78rem;padding:5px 12px;border-radius:50px;background:#fff;color:#4A4A4A;box-shadow:0 2px 8px rgba(61,53,53,0.06);">📋 guided experience</span>
           </div>
         </div>
         <div class="pzh-freebie__form">
@@ -1462,7 +1462,7 @@ fbq('init','1234678451585086');fbq('track','PageView');
       </div>
       <div class="pz-footer__brand">
         <div class="pz-footer__brand-logo">
-          <svg width="48" height="48" viewBox="0 0 130 130"><circle cx="65" cy="65" r="52" fill="#C9A09B"/><text x="65" y="73" text-anchor="middle" font-family="'Libre Caslon Text', serif" font-weight="400" font-size="36" fill="#FFFFFF" letter-spacing="3">PZ</text><circle cx="65" cy="65" r="46" fill="none" stroke="#FFFFFF" stroke-width="0.5" opacity="0.3"/></svg>
+          <svg width="48" height="48" viewBox="0 0 130 130"><circle cx="65" cy="65" r="52" fill="#C9A09B"/><text x="65" y="73" text-anchor="middle" font-family="var(--font-display)" font-weight="400" font-size="36" fill="#FFFFFF" letter-spacing="3">PZ</text><circle cx="65" cy="65" r="46" fill="none" stroke="#FFFFFF" stroke-width="0.5" opacity="0.3"/></svg>
         </div>
         <div class="pz-footer__brand-tagline">just me, doing work I care about ♥</div>
         <p class="pz-footer__brand-bio">Iowa-based business operations, podcast production, and Meta ad management for small business owners who want a real partner, not just another vendor.</p>

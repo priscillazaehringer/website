@@ -4,7 +4,7 @@
 <meta property="og:description" content="The Lead Stream: an 8-week done-for-you Meta ad system for established online business owners. I build it, run it, hand it off. Beta pricing $997 (5 spots)." />
 <meta property="og:image" content="https://priscillazaehringer.com/wp-content/uploads/2026/03/pexels-leticia-alvares-1805702-32922278-scaled.jpg" />
 <meta property="og:url" content="https://priscillazaehringer.com/lead-stream/" />
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&family=Mulish:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/fonts.css">
 
 <style>
 /* ============================================
@@ -42,7 +42,7 @@
 .pz * { margin: 0; padding: 0; box-sizing: border-box; }
 
 .pz {
-  font-family: 'Mulish', sans-serif;
+  font-family: var(--font-body);
   font-weight: 400;
   color: var(--ink);
   line-height: 1.7;
@@ -52,7 +52,7 @@
 }
 
 .pz h1, .pz h2, .pz h3, .pz h4 {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-display);
   font-weight: 500;
   line-height: 1.14;
   color: var(--ink);
@@ -67,7 +67,7 @@
 
 /* typewriter tag */
 .pz .tag {
-  font-family: 'Space Mono', monospace;
+  font-family: var(--font-body);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.14em;
@@ -95,7 +95,7 @@
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  font-family: 'Mulish', sans-serif;
+  font-family: var(--font-body);
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.07em;
@@ -122,7 +122,7 @@
   color: var(--pink-deep);
   display: flex; flex-direction: column; justify-content: center;
 }
-.pz .ph__label { font-family: 'Space Mono', monospace; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.72rem; }
+.pz .ph__label { font-family: var(--font-body); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.72rem; }
 .pz .ph__hint { font-size: 0.88rem; color: var(--ink-soft); margin-top: 6px; line-height: 1.5; }
 .pz .ph--tall { min-height: 100%; }
 
@@ -142,7 +142,7 @@
   display: flex; align-items: center; justify-content: center; gap: 22px; flex-wrap: wrap;
   padding: 12px 20px;
 }
-.pz-announce__txt { font-family: 'Space Mono', monospace; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem; }
+.pz-announce__txt { font-family: var(--font-body); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem; }
 .pz-announce .btn { padding: 9px 18px; font-size: 0.76rem; background: var(--ink); color: var(--white); }
 .pz-announce .btn:hover { background: var(--pink-deep); }
 
@@ -169,7 +169,7 @@
 .pz-hero__card .tag { display: block; margin-bottom: 18px; color: var(--ink); }
 .pz-hero h1 { font-size: clamp(1.9rem, 3.4vw, 2.7rem); font-weight: 400; margin-bottom: 20px; }
 .pz-hero__sub { font-size: 1rem; color: var(--ink-soft); max-width: 460px; margin: 0 auto 26px; }
-.pz-hero__micro { margin-top: 18px; font-family: 'Space Mono', monospace; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); }
+.pz-hero__micro { margin-top: 18px; font-family: var(--font-body); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); }
 .pz-scroll-cue {
   width: 50px; height: 50px; border: 2px solid var(--pink-deep); border-radius: 50%;
   display: flex; align-items: center; justify-content: center; color: var(--pink-deep);
@@ -183,13 +183,13 @@
 .pz-stats { background: var(--pink); padding: 60px 0; }
 .pz-stats__grid { max-width: 980px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 .pz-stats__card { background: var(--white); border-radius: var(--radius); padding: 28px 24px; text-align: center; box-shadow: 0 12px 30px rgba(201,57,106,0.18); }
-.pz-stats__num { font-family: 'Playfair Display', serif; font-weight: 500; font-size: 2.1rem; line-height: 1.1; margin-bottom: 8px; }
+.pz-stats__num { font-family: var(--font-display); font-weight: 500; font-size: 2.1rem; line-height: 1.1; margin-bottom: 8px; }
 .pz-stats__num span { color: var(--pink-deep); }
 .pz-stats__txt { font-size: 0.9rem; color: var(--ink-soft); }
 
 /* ---- who I've worked with ---- */
 .pz-clients { background: var(--cream-lt); padding: 50px 0; text-align: center; }
-.pz-clients__label { font-family: 'Space Mono', monospace; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.76rem; color: var(--pink-deep); margin-bottom: 20px; }
+.pz-clients__label { font-family: var(--font-body); font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.76rem; color: var(--pink-deep); margin-bottom: 20px; }
 .pz-clients__row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; max-width: 800px; margin: 0 auto; }
 .pz-clients__chip { background: var(--white); border: 1px solid var(--line); border-radius: 999px; padding: 9px 20px; font-weight: 700; font-size: 0.92rem; color: var(--ink); box-shadow: 0 4px 14px rgba(33,30,28,0.04); }
 .pz-clients__chip--more { background: transparent; border-style: dashed; color: var(--ink-soft); font-weight: 600; }
@@ -224,7 +224,7 @@
 .pz-real__box .tag { color: var(--pink-deep); display: block; margin-bottom: 18px; }
 .pz-real__box p { color: #4a3f12; margin-bottom: 18px; }
 .pz-real__tagline { display: inline-block; color: var(--pink-deep); margin: 6px 0 18px; }
-.pz-real__kicker { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 500; line-height: 1.4; color: var(--ink); }
+.pz-real__kicker { font-family: var(--font-display); font-size: 1.35rem; font-weight: 500; line-height: 1.4; color: var(--ink); }
 .pz-real__photo .ph { min-height: 320px; background: rgba(255,255,255,0.5); }
 .pz-real__photo img { width: 100%; border-radius: var(--radius); }
 
@@ -232,11 +232,11 @@
    REVEAL / INTRODUCING — big overlapping type
    ============================================ */
 .pz-reveal { background: var(--cream-lt); text-align: center; }
-.pz-reveal__badge { display: inline-block; background: var(--pink-soft); color: var(--ink); font-family: 'Space Mono', monospace; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.8rem; padding: 7px 16px; }
+.pz-reveal__badge { display: inline-block; background: var(--pink-soft); color: var(--ink); font-family: var(--font-body); font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.8rem; padding: 7px 16px; }
 .pz-reveal__display { position: relative; margin: 18px 0 8px; line-height: 0.92; }
-.pz-reveal__big { font-family: 'Playfair Display', serif; font-weight: 800; font-size: clamp(2.8rem, 11vw, 8rem); color: var(--pink-soft); position: relative; z-index: 2; letter-spacing: -0.01em; }
-.pz-reveal__ghost { font-family: 'Playfair Display', serif; font-weight: 800; font-size: clamp(2.8rem, 11vw, 8rem); color: transparent; -webkit-text-stroke: 1.5px var(--pink-deep); position: absolute; left: 0; right: 0; top: -10px; z-index: 1; opacity: 0.5; letter-spacing: -0.01em; }
-.pz-reveal__sub { font-family: 'Space Mono', monospace; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.82rem; color: var(--pink-deep); margin-top: 6px; }
+.pz-reveal__big { font-family: var(--font-display); font-weight: 800; font-size: clamp(2.8rem, 11vw, 8rem); color: var(--pink-soft); position: relative; z-index: 2; letter-spacing: -0.01em; }
+.pz-reveal__ghost { font-family: var(--font-display); font-weight: 800; font-size: clamp(2.8rem, 11vw, 8rem); color: transparent; -webkit-text-stroke: 1.5px var(--pink-deep); position: absolute; left: 0; right: 0; top: -10px; z-index: 1; opacity: 0.5; letter-spacing: -0.01em; }
+.pz-reveal__sub { font-family: var(--font-body); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.82rem; color: var(--pink-deep); margin-top: 6px; }
 .pz-reveal__lead { max-width: 640px; margin: 22px auto 56px; color: var(--ink-soft); font-size: 1.1rem; }
 .pz-reveal__steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; text-align: left; }
 .pz-reveal__step { background: var(--white); border-radius: var(--radius); padding: 30px 28px; box-shadow: 0 8px 24px rgba(33,30,28,0.06); border-top: 5px solid var(--pink); }
@@ -256,11 +256,11 @@
 .pz-get__card { background: var(--white); border-radius: var(--radius); padding: 32px 34px; box-shadow: 0 10px 28px rgba(33,30,28,0.07); }
 .pz-get__timing { color: var(--pink-deep); }
 .pz-get__card h3 { font-size: 1.45rem; font-weight: 600; margin: 8px 0 6px; }
-.pz-get__outcome { font-family: 'Playfair Display', serif; font-style: italic; color: var(--ink); font-size: 1.05rem; margin-bottom: 16px; }
+.pz-get__outcome { font-family: var(--font-display); font-style: italic; color: var(--ink); font-size: 1.05rem; margin-bottom: 16px; }
 .pz-get__card ul { list-style: none; }
 .pz-get__card li { position: relative; padding-left: 26px; margin-bottom: 9px; color: var(--ink-soft); font-size: 0.96rem; }
 .pz-get__card li::before { content: "♥"; position: absolute; left: 0; color: var(--pink); }
-.pz-get__foot { text-align: center; max-width: 720px; margin: 44px auto 0; font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.2rem; }
+.pz-get__foot { text-align: center; max-width: 720px; margin: 44px auto 0; font-family: var(--font-display); font-style: italic; font-size: 1.2rem; }
 
 /* ============================================
    PROOF — two plain-language results, nothing else
@@ -269,7 +269,7 @@
 .pz-proof__head { text-align: center; max-width: 640px; margin: 0 auto 44px; }
 .pz-proof__head h2 { font-size: clamp(1.9rem, 3.6vw, 2.6rem); font-weight: 500; margin-top: 8px; }
 .pz-proof__results { max-width: 760px; margin: 0 auto; }
-.pz-proof__result { font-family: 'Playfair Display', serif; font-weight: 500; font-size: clamp(1.3rem, 2.4vw, 1.7rem); line-height: 1.45; text-align: center; color: var(--ink); }
+.pz-proof__result { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.3rem, 2.4vw, 1.7rem); line-height: 1.45; text-align: center; color: var(--ink); }
 .pz-proof__result + .pz-proof__result { margin-top: 30px; padding-top: 30px; border-top: 1px solid var(--line); }
 
 /* ============================================
@@ -283,7 +283,7 @@
 .pz-about__text h2 { font-size: clamp(1.8rem, 3.4vw, 2.5rem); font-weight: 500; margin-bottom: 18px; }
 .pz-about__text p { color: var(--ink-soft); margin-bottom: 15px; }
 .pz-about__stats { display: flex; gap: 34px; flex-wrap: wrap; margin-top: 24px; }
-.pz-about__stat-num { font-family: 'Playfair Display', serif; font-weight: 600; font-size: 2rem; color: var(--pink-deep); line-height: 1; }
+.pz-about__stat-num { font-family: var(--font-display); font-weight: 600; font-size: 2rem; color: var(--pink-deep); line-height: 1; }
 .pz-about__stat-lbl { font-size: 0.8rem; color: var(--ink-soft); margin-top: 4px; }
 
 /* ============================================
@@ -301,7 +301,7 @@
 .pz-fit__col li { position: relative; padding-left: 28px; margin-bottom: 11px; color: var(--ink-soft); }
 .pz-fit__col--yes li::before { content: "♥"; position: absolute; left: 0; color: var(--pink); }
 .pz-fit__col--no li::before { content: "✕"; position: absolute; left: 2px; color: var(--ink); font-weight: 800; }
-.pz-fit__cta { text-align: center; margin-top: 34px; font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.12rem; }
+.pz-fit__cta { text-align: center; margin-top: 34px; font-family: var(--font-display); font-style: italic; font-size: 1.12rem; }
 
 /* ============================================
    HONESTY
@@ -336,12 +336,12 @@
 .pz-price__finehead { margin-top: 22px; color: var(--yellow); display: block; }
 .pz-price__fine { color: rgba(255,255,255,0.85); font-size: 0.9rem; margin-top: 8px; }
 .pz-price__card { background: var(--white); border-radius: var(--radius); padding: 36px 32px; text-align: center; box-shadow: var(--shadow); }
-.pz-price__amount { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 4rem; line-height: 1; margin: 6px 0 2px; }
+.pz-price__amount { font-family: var(--font-display); font-weight: 700; font-size: 4rem; line-height: 1; margin: 6px 0 2px; }
 .pz-price__was { color: var(--ink-soft); text-decoration: line-through; font-size: 0.92rem; }
 .pz-price__split { margin-top: 14px; font-weight: 800; color: var(--pink-deep); }
 .pz-price__split span { font-weight: 400; color: var(--ink-soft); }
 .pz-price__trade { margin-top: 16px; font-size: 0.88rem; color: var(--ink-soft); background: var(--cream); border-radius: 6px; padding: 14px 16px; text-align: left; }
-.pz-price__spots { margin-top: 14px; font-family: 'Space Mono', monospace; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem; color: var(--pink-deep); }
+.pz-price__spots { margin-top: 14px; font-family: var(--font-body); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem; color: var(--pink-deep); }
 .pz-price__card .btn { margin-top: 16px; width: 100%; justify-content: center; }
 
 /* ============================================
@@ -352,8 +352,8 @@
 .pz-faq__head h2 { font-size: clamp(1.9rem, 3.6vw, 2.6rem); font-weight: 500; margin-top: 8px; }
 .pz-faq__list { max-width: 760px; margin: 0 auto; }
 .pz-faq__item { border-bottom: 1px solid var(--line); }
-.pz-faq__q { width: 100%; text-align: left; background: none; border: none; cursor: pointer; font-family: 'Playfair Display', serif; font-weight: 600; font-size: 1.16rem; color: var(--ink); padding: 22px 40px 22px 0; position: relative; }
-.pz-faq__q::after { content: "+"; position: absolute; right: 4px; top: 18px; font-size: 1.6rem; color: var(--pink-deep); transition: transform 0.3s ease; font-family: 'Mulish', sans-serif; }
+.pz-faq__q { width: 100%; text-align: left; background: none; border: none; cursor: pointer; font-family: var(--font-display); font-weight: 600; font-size: 1.16rem; color: var(--ink); padding: 22px 40px 22px 0; position: relative; }
+.pz-faq__q::after { content: "+"; position: absolute; right: 4px; top: 18px; font-size: 1.6rem; color: var(--pink-deep); transition: transform 0.3s ease; font-family: var(--font-body); }
 .pz-faq__item.open .pz-faq__q::after { transform: rotate(45deg); }
 .pz-faq__a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
 .pz-faq__item.open .pz-faq__a { max-height: 340px; }
@@ -376,22 +376,22 @@
 .pz-footer { background: var(--ink); color: rgba(236,232,224,0.85); text-align: center; padding: 52px 24px; }
 .pz-footer__logo { height: 38px; margin-bottom: 16px; }
 .pz-footer a { color: var(--pink); text-decoration: none; font-weight: 700; }
-.pz-footer__small { font-family: 'Space Mono', monospace; font-size: 0.74rem; letter-spacing: 0.08em; margin-top: 14px; color: rgba(236,232,224,0.55); }
+.pz-footer__small { font-family: var(--font-body); font-size: 0.74rem; letter-spacing: 0.08em; margin-top: 14px; color: rgba(236,232,224,0.55); }
 
 /* ============================================
    TESTIMONIAL (featured)
    ============================================ */
 .pz-testimonial { background: var(--pink-soft); text-align: center; }
 .pz-testimonial__inner { max-width: 760px; margin: 0 auto; }
-.pz-testimonial__mark { font-family: 'Playfair Display', serif; font-size: 4rem; line-height: 0.5; color: var(--pink-deep); }
-.pz-testimonial__quote { font-family: 'Playfair Display', serif; font-weight: 500; font-style: italic; font-size: clamp(1.4rem, 2.8vw, 2rem); line-height: 1.4; color: var(--ink); margin: 16px 0 28px; }
+.pz-testimonial__mark { font-family: var(--font-display); font-size: 4rem; line-height: 0.5; color: var(--pink-deep); }
+.pz-testimonial__quote { font-family: var(--font-display); font-weight: 500; font-style: italic; font-size: clamp(1.4rem, 2.8vw, 2rem); line-height: 1.4; color: var(--ink); margin: 16px 0 28px; }
 .pz-testimonial__who { display: inline-flex; align-items: center; gap: 14px; }
-.pz-testimonial__avatar { width: 52px; height: 52px; border-radius: 50%; background: var(--white); border: 1px dashed var(--pink-deep); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-weight: 700; color: var(--pink-deep); font-size: 1.1rem; }
-.pz-testimonial__name { font-family: 'Space Mono', monospace; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.84rem; color: var(--ink); text-align: left; }
+.pz-testimonial__avatar { width: 52px; height: 52px; border-radius: 50%; background: var(--white); border: 1px dashed var(--pink-deep); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 700; color: var(--pink-deep); font-size: 1.1rem; }
+.pz-testimonial__name { font-family: var(--font-body); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.84rem; color: var(--ink); text-align: left; }
 
 /* ROI callout in pricing */
 .pz-price__roi { max-width: 760px; margin: 36px auto 0; background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius); padding: 26px 30px; text-align: center; }
-.pz-price__roi h3 { color: var(--white); font-family: 'Playfair Display', serif; font-style: italic; font-weight: 500; font-size: 1.35rem; margin-bottom: 8px; }
+.pz-price__roi h3 { color: var(--white); font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: 1.35rem; margin-bottom: 8px; }
 .pz-price__roi p { color: rgba(255,255,255,0.92); font-size: 0.98rem; max-width: 580px; margin: 0 auto; }
 
 /* soft CTA / free guide capture */
@@ -401,7 +401,7 @@
 .pz-soft__box h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 500; margin-bottom: 12px; }
 .pz-soft__box p { color: var(--ink-soft); margin-bottom: 24px; }
 .pz-soft__form { display: flex; gap: 12px; max-width: 480px; margin: 0 auto; }
-.pz-soft__form input { flex: 1; border: 1.6px solid var(--line); border-radius: 6px; padding: 14px 16px; font-family: 'Mulish', sans-serif; font-size: 1rem; background: var(--white); color: var(--ink); }
+.pz-soft__form input { flex: 1; border: 1.6px solid var(--line); border-radius: 6px; padding: 14px 16px; font-family: var(--font-body); font-size: 1rem; background: var(--white); color: var(--ink); }
 .pz-soft__form input:focus { outline: none; border-color: var(--pink); }
 .pz-soft__form .btn { white-space: nowrap; }
 .pz-soft__fine { font-size: 0.8rem; color: var(--ink-soft); margin-top: 12px; }
@@ -409,7 +409,7 @@
 /* sticky CTA bar */
 .pz-sticky { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; background: var(--white); box-shadow: 0 -8px 30px rgba(33,30,28,0.14); display: flex; align-items: center; justify-content: center; gap: 20px; padding: 12px 20px; transform: translateY(120%); transition: transform 0.35s ease; }
 .pz-sticky.show { transform: translateY(0); }
-.pz-sticky__txt { font-family: 'Space Mono', monospace; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.78rem; color: var(--ink); }
+.pz-sticky__txt { font-family: var(--font-body); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.78rem; color: var(--ink); }
 .pz-sticky__txt span { color: var(--pink-deep); }
 .pz-sticky .btn { padding: 12px 24px; font-size: 0.82rem; }
 
