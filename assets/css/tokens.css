@@ -3,22 +3,21 @@
    The single source of truth for color, type, spacing, and shape.
    Change the brand here and it propagates everywhere.
 
-   NOTE: hex values for Palette Option 2 are approximated from the
-   swatch image — replace with exact codes when you have them.
+   Palette Option 2 — exact brand hex codes.
    ================================================================== */
 
 :root {
   /* ---- Color: Palette Option 2 ---------------------------------- */
   /* neutrals (base + anchors) */
-  --c-cream:      #F4F0E8;  /* warm off-white — page background */
-  --c-cream-soft: #FAF8F3;  /* lighter neutral — alt sections */
-  --c-ink:        #1A1820;  /* near-black — text, dark sections, primary buttons */
-  --c-ink-soft:   #4F4A55;  /* muted body text */
+  --c-cream:      #F7EEE7;  /* warm off-white — page background */
+  --c-cream-soft: #FBF6F1;  /* lighter neutral — alt sections */
+  --c-ink:        #1D1E26;  /* near-black — text, dark sections, primary buttons */
+  --c-ink-soft:   #4C4D57;  /* muted body text */
 
   /* accents (pastels — used sparingly) */
-  --c-pink:       #F2C7D9;  /* signature accent / soft section bg / highlight */
-  --c-blue:       #C2DEE6;  /* secondary accent */
-  --c-olive:      #C7C75C;  /* tertiary accent — use the least */
+  --c-pink:       #FFC8E5;  /* signature accent / soft section bg / highlight */
+  --c-blue:       #B1DED9;  /* secondary accent (mint) */
+  --c-olive:      #D5CC7D;  /* tertiary accent — use the least */
 
   /* ---- Semantic roles (reference these in components) ----------- */
   --bg:            var(--c-cream);
@@ -30,7 +29,7 @@
   --action:        var(--c-ink);     /* ONE primary action color (editorial) */
   --action-text:   var(--c-cream);
   --accent:        var(--c-pink);    /* the signature highlight */
-  --line:          rgba(26,24,32,0.12);
+  --line:          rgba(29,30,38,0.12);
 
   /* ---- Type ----------------------------------------------------- */
   /* Custom fonts get wired in here once provided + self-hosted. */
@@ -53,5 +52,5 @@
 
   /* ---- Shape & depth (pick one, use everywhere) ----------------- */
   --radius: 4px;                 /* editorial = small/sharp */
-  --shadow: 0 18px 50px rgba(26,24,32,0.12);
+  --shadow: 0 18px 50px rgba(29,30,38,0.12);
 }
