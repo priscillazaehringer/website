@@ -5,7 +5,7 @@
 <meta property="og:description" content="Iowa-based Meta ads management, podcast production, and business operations support for small business owners who want a real partner, not just a vendor." />
 <meta property="og:image" content="https://priscillazaehringer.com/wp-content/uploads/2026/02/freepik__priscilla-black-and-white-editorial-lifestyle-phot__98082.png" />
 <meta property="og:url" content="https://priscillazaehringer.com/" />
-<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Karla:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/fonts.css">
 
 <style>
 /* ============================================
@@ -37,7 +37,7 @@
 .pz-home * { margin: 0; padding: 0; box-sizing: border-box; }
 
 .pz-home {
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-body);
   font-weight: 400;
   color: var(--dark);
   line-height: 1.7;
@@ -52,28 +52,28 @@
    TYPOGRAPHY
    ============================================ */
 .pz-home .heading-xl {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--font-display);
   font-weight: 400;
   font-size: clamp(2.6rem, 5.5vw, 4.5rem);
   line-height: 1.12;
 }
 
 .pz-home .heading-lg {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--font-display);
   font-weight: 400;
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
   line-height: 1.2;
 }
 
 .pz-home .heading-md {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--font-display);
   font-weight: 700;
   font-size: clamp(1.5rem, 2.5vw, 2.1rem);
   line-height: 1.3;
 }
 
 .pz-home .heading-sm {
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-body);
   font-weight: 600;
   font-size: 0.75rem;
   letter-spacing: 0.2em;
@@ -81,14 +81,14 @@
 }
 
 .pz-home .body-text {
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-body);
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.7;
 }
 
 .pz-home .cursive {
-  font-family: 'Dancing Script', cursive;
+  font-family: var(--font-script);
   font-weight: 400;
 }
 
@@ -104,7 +104,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-body);
   font-weight: 500;
   font-size: 0.92rem;
   letter-spacing: 0.12em;
@@ -135,7 +135,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-body);
   font-weight: 500;
   font-size: 0.92rem;
   letter-spacing: 0.12em;
@@ -158,7 +158,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-body);
   font-weight: 500;
   font-size: 0.88rem;
   letter-spacing: 0.12em;
@@ -177,7 +177,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-body);
   font-weight: 500;
   font-size: 0.88rem;
   letter-spacing: 0.12em;
@@ -233,7 +233,7 @@ html { scroll-behavior: smooth; }
 .pz-home .float-heart--light { color: var(--soft-cream); opacity: 0.1; }
 
 .pz-home .float-callout {
-  font-family: 'Dancing Script', cursive;
+  font-family: var(--font-script);
   font-weight: 600; font-size: 1.1rem;
   color: var(--blush); opacity: 0.45;
   white-space: nowrap;
@@ -294,14 +294,14 @@ html { scroll-behavior: smooth; }
 }
 
 .pz-home .pzh-hero__eyebrow {
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-body);
   font-weight: 600; font-size: 0.75rem;
   letter-spacing: 0.24em; text-transform: uppercase;
   color: var(--blush); margin-bottom: 16px;
 }
 
 .pz-home .pzh-hero__h1 {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--font-display);
   font-weight: 400;
   font-size: clamp(2.6rem, 7vw, 5.4rem);
   line-height: 1;
@@ -312,7 +312,7 @@ html { scroll-behavior: smooth; }
 
 .pz-home .pzh-hero__h1 .pzh-hero__script {
   display: block;
-  font-family: 'Dancing Script', cursive;
+  font-family: var(--font-script);
   font-weight: 500;
   font-style: normal;
   color: var(--blush);
@@ -322,7 +322,7 @@ html { scroll-behavior: smooth; }
 }
 
 .pz-home .pzh-hero__lead {
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-body);
   font-weight: 500;
   font-size: clamp(1rem, 1.5vw, 1.15rem);
   letter-spacing: 0.02em;
@@ -371,7 +371,7 @@ html { scroll-behavior: smooth; }
 }
 
 .pzh-problem__intro h2 {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--font-display);
   font-weight: 400;
   font-size: clamp(2rem, 4vw, 3.2rem);
   color: var(--dark);
@@ -380,7 +380,7 @@ html { scroll-behavior: smooth; }
 }
 
 .pzh-problem__intro p {
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-body);
   font-weight: 400;
   font-size: 1rem;
   color: var(--gray);
@@ -420,7 +420,7 @@ html { scroll-behavior: smooth; }
 }
 
 .pzh-problem__card h3 {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--font-display);
   font-weight: 700; font-size: 1.15rem;
   margin: 0 0 8px; color: var(--dark);
 }
@@ -432,7 +432,7 @@ html { scroll-behavior: smooth; }
 }
 
 .pzh-problem__bottom p {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--font-display);
   font-weight: 400;
   font-size: 1.2rem; color: var(--dark); line-height: 1.5;
   margin: 0;
@@ -480,13 +480,13 @@ html { scroll-behavior: smooth; }
 }
 
 .pzh-about__quote-card p {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--font-display);
   font-size: 1.05rem; font-style: italic;
   line-height: 1.5; color: var(--dark); margin-bottom: 0;
 }
 
 .pzh-about__quote-card .quote-attr {
-  font-family: 'Dancing Script', cursive;
+  font-family: var(--font-script);
   font-size: 1.05rem; color: var(--blush); margin-top: 6px;
 }
 
@@ -520,12 +520,12 @@ html { scroll-behavior: smooth; }
 }
 
 .pzh-testimonial__quote-mark {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--font-display);
   font-size: 8rem; color: var(--blush); opacity: 0.18; line-height: 0.6; margin-bottom: -20px;
 }
 
 .pzh-testimonial__text {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--font-display);
   font-size: clamp(1.3rem, 2.2vw, 1.75rem);
   line-height: 1.5; color: var(--soft-cream); font-style: italic; margin: 0 0 14px;
 }
@@ -570,7 +570,7 @@ html { scroll-behavior: smooth; }
 }
 
 .pz-home .pzh-cta__eyebrow {
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-body);
   font-weight: 600;
   font-size: 0.85rem;
   letter-spacing: 0.22em;
@@ -580,7 +580,7 @@ html { scroll-behavior: smooth; }
 }
 
 .pz-home .pzh-cta__title {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--font-display);
   font-weight: 400;
   font-size: clamp(2.2rem, 4.8vw, 3.6rem);
   line-height: 1.15;
@@ -595,7 +595,7 @@ html { scroll-behavior: smooth; }
 }
 
 .pz-home .pzh-cta__body {
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-body);
   font-weight: 400;
   font-size: 1.02rem;
   line-height: 1.8;
@@ -608,7 +608,7 @@ html { scroll-behavior: smooth; }
   display: inline-block;
   background: var(--soft-cream);
   color: var(--blush);
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-body);
   font-weight: 600;
   font-size: 0.88rem;
   letter-spacing: 0.18em;
@@ -689,7 +689,7 @@ html { scroll-behavior: smooth; }
   box-shadow: 0 12px 36px rgba(61,53,53,0.08);
 }
 .pz-home .pzh-process__num {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--font-display);
   font-style: italic;
   font-weight: 400;
   font-size: 4.2rem;
@@ -697,7 +697,7 @@ html { scroll-behavior: smooth; }
   color: var(--blush);
 }
 .pz-home .pzh-process__step h3 {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--font-display);
   font-weight: 400;
   font-size: 1.5rem;
   line-height: 1.25;
@@ -705,7 +705,7 @@ html { scroll-behavior: smooth; }
   color: var(--dark);
 }
 .pz-home .pzh-process__step p {
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.96rem;
   line-height: 1.7;
   color: var(--gray);
@@ -745,7 +745,7 @@ html { scroll-behavior: smooth; }
 .pz-home .pzh-hero__secondary {
   display: inline-block;
   margin: 22px 0 0 24px;
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-body);
   font-weight: 500;
   font-size: 0.85rem;
   letter-spacing: 0.08em;
@@ -794,7 +794,7 @@ html { scroll-behavior: smooth; }
 }
 
 .pz-home .pzh-obm__subhead {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--font-display);
   font-style: italic;
   font-size: 1.15rem;
   color: var(--gray);
@@ -809,7 +809,7 @@ html { scroll-behavior: smooth; }
 }
 
 .pz-home .pzh-obm__intro p {
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-body);
   font-size: 1.05rem;
   line-height: 1.65;
   color: var(--gray);
@@ -826,7 +826,7 @@ html { scroll-behavior: smooth; }
 }
 
 .pz-home .pzh-obm__scope-label {
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-body);
   font-weight: 600;
   font-size: 0.78rem;
   letter-spacing: 0.22em;
@@ -848,7 +848,7 @@ html { scroll-behavior: smooth; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-body);
   font-weight: 500;
   font-size: 0.92rem;
   color: var(--dark);
@@ -868,7 +868,7 @@ html { scroll-behavior: smooth; }
 
 .pz-home .pzh-obm__scope-more {
   text-align: center;
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--font-display);
   font-style: italic;
   font-size: 1rem;
   color: var(--mauve);
@@ -882,7 +882,7 @@ html { scroll-behavior: smooth; }
 }
 
 .pz-home .pzh-obm__close p {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--font-display);
   font-style: italic;
   font-size: 1.2rem;
   color: var(--dark);
@@ -932,7 +932,7 @@ html { scroll-behavior: smooth; }
 }
 
 .pz-home .pzh-testimonial__card .pzh-testimonial__text {
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-body);
   font-size: 1.02rem;
   line-height: 1.75;
   color: var(--soft-cream);
@@ -975,7 +975,7 @@ html { scroll-behavior: smooth; }
 }
 
 .pz-home .pzh-also__intro {
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.7;
   color: var(--gray);
@@ -1011,7 +1011,7 @@ html { scroll-behavior: smooth; }
 }
 
 .pz-home .pzh-also__block h3 {
-  font-family: 'Libre Caslon Text', serif;
+  font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.4rem;
   color: var(--dark);
@@ -1020,7 +1020,7 @@ html { scroll-behavior: smooth; }
 }
 
 .pz-home .pzh-also__meta {
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.78rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -1029,7 +1029,7 @@ html { scroll-behavior: smooth; }
 }
 
 .pz-home .pzh-also__block p {
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.75;
   color: var(--gray);
@@ -1037,7 +1037,7 @@ html { scroll-behavior: smooth; }
 }
 
 .pz-home .pzh-also__link {
-  font-family: 'Karla', sans-serif;
+  font-family: var(--font-body);
   font-weight: 500;
   font-size: 0.88rem;
   letter-spacing: 0.08em;
