@@ -7,11 +7,23 @@
    ================================================================== */
 
 /* ---- Self-hosted fonts ------------------------------------------ */
+/* Golden Batch — elegant serif for headlines. REGULAR (400) ONLY.
+   Never bold: it crowds. font-synthesis is disabled below to stop
+   browsers faking a bold weight. */
 @font-face {
   font-family: 'Golden Batch';
   src: url('/assets/fonts/golden-batch.woff2') format('woff2'),
        url('/assets/fonts/golden-batch.woff') format('woff');
   font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Hanken Grotesk — body. Variable font, weights 100–900. */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  src: url('/assets/fonts/hanken-grotesk-var.woff2') format('woff2');
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
@@ -43,9 +55,9 @@
 
   /* ---- Type ----------------------------------------------------- */
   /* Custom fonts get wired in here once provided + self-hosted. */
-  --font-display: 'Golden Batch', Georgia, serif;  /* elegant serif — headlines */
-  --font-body:    system-ui, sans-serif;           /* PLACEHOLDER — needs a body font */
-  --font-script:  cursive;                          /* PLACEHOLDER — optional accent */
+  --font-display: 'Golden Batch', Georgia, serif;          /* elegant serif — headlines, weight 400 only */
+  --font-body:    'Hanken Grotesk', system-ui, sans-serif; /* clean sans — body, buttons, labels */
+  --font-script:  cursive;                                  /* PLACEHOLDER — optional accent, not chosen */
 
   --h1: clamp(2.6rem, 6vw, 4.5rem);
   --h2: clamp(2rem, 4vw, 3rem);

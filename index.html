@@ -3,48 +3,189 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Priscilla Zaehringer — new site (staging)</title>
+  <title>Brand Guidelines — Priscilla Zaehringer (staging)</title>
   <meta name="robots" content="noindex">
   <link rel="stylesheet" href="/assets/css/tokens.css">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background: var(--bg); color: var(--text); font-family: var(--font-body); line-height: var(--lh-body); }
-    .wrap { max-width: var(--container); margin: 0 auto; padding: var(--section-y) var(--s-3); }
-    .tag { font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-muted); }
-    h1 { font-family: var(--font-display); font-size: var(--h1); line-height: var(--lh-tight); margin: var(--s-2) 0 var(--s-3); }
-    p { font-size: var(--body); color: var(--text-muted); max-width: 60ch; }
-    .swatches { display: flex; flex-wrap: wrap; gap: var(--s-2); margin-top: var(--s-5); }
-    .sw { width: 120px; }
-    .sw__chip { height: 80px; border-radius: var(--radius); border: 1px solid var(--line); }
-    .sw__name { font-size: 0.75rem; margin-top: var(--s-1); color: var(--text-muted); }
-    .note { margin-top: var(--s-6); padding: var(--s-3); border: 1px dashed var(--line); border-radius: var(--radius); font-size: 0.9rem; }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    /* Golden Batch is regular-only: never let the browser fake a bold/italic */
+    html { font-synthesis: none; }
+    body { background: var(--bg); color: var(--text); font-family: var(--font-body); line-height: var(--lh-body); -webkit-font-smoothing: antialiased; }
+
+    .wrap { max-width: var(--container); margin: 0 auto; padding: 0 var(--s-3); }
+    h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: var(--lh-tight); }
+
+    /* page header */
+    .masthead { padding: var(--s-8) 0 var(--s-6); border-bottom: 1px solid var(--line); }
+    .masthead .eyebrow { font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); }
+    .masthead h1 { font-size: var(--h1); margin: var(--s-2) 0 var(--s-3); }
+    .masthead p { font-size: var(--body); color: var(--text-muted); max-width: 60ch; }
+
+    /* section scaffolding */
+    section { padding: var(--section-y) 0; border-bottom: 1px solid var(--line); }
+    .sec-label { font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); margin-bottom: var(--s-4); }
+    h2 { font-size: var(--h2); margin-bottom: var(--s-4); }
+    h3 { font-size: var(--h3); margin-bottom: var(--s-2); }
+    .lead { font-size: var(--body); color: var(--text-muted); max-width: 60ch; margin-bottom: var(--s-5); }
+
+    /* color swatches */
+    .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: var(--s-3); }
+    .sw__chip { height: 120px; border-radius: var(--radius); border: 1px solid var(--line); display: flex; align-items: flex-end; padding: var(--s-2); }
+    .sw__hex { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; }
+    .sw__name { font-weight: 600; margin-top: var(--s-2); }
+    .sw__use { font-size: 0.85rem; color: var(--text-muted); margin-top: 2px; }
+
+    /* type specimens */
+    .specimen { border: 1px solid var(--line); border-radius: var(--radius); padding: var(--s-4); margin-bottom: var(--s-4); }
+    .specimen__meta { font-size: 0.8rem; color: var(--text-muted); margin-top: var(--s-3); padding-top: var(--s-2); border-top: 1px solid var(--line); }
+    .scale > * { margin-bottom: var(--s-2); }
+    .alphabet { font-family: var(--font-display); font-size: 1.6rem; color: var(--text-muted); }
+    .rule-note { display: inline-block; background: var(--c-pink); color: var(--ink); font-family: var(--font-body); font-weight: 600; font-size: 0.8rem; padding: 6px 12px; border-radius: var(--radius); margin-top: var(--s-2); }
+    .weights span { margin-right: var(--s-3); }
+
+    /* buttons */
+    .btn { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-body); font-weight: 600; font-size: 0.95rem; letter-spacing: 0.02em; padding: 14px 28px; border-radius: var(--radius); border: 1.5px solid transparent; cursor: pointer; text-decoration: none; transition: transform 0.2s ease, background 0.2s ease; }
+    .btn--primary { background: var(--action); color: var(--action-text); box-shadow: var(--shadow); }
+    .btn--primary:hover { transform: translateY(-2px); }
+    .btn--ghost { background: transparent; border-color: var(--ink); color: var(--ink); }
+    .btn--ghost:hover { background: var(--ink); color: var(--action-text); }
+    .btn-row { display: flex; gap: var(--s-2); flex-wrap: wrap; align-items: center; }
+
+    /* spacing scale */
+    .space-row { display: flex; align-items: center; gap: var(--s-3); margin-bottom: var(--s-2); }
+    .space-bar { height: 16px; background: var(--c-mint, var(--c-blue)); border-radius: 2px; }
+    .space-label { font-size: 0.85rem; color: var(--text-muted); width: 90px; }
+
+    /* dark feature demo */
+    .feature { background: var(--bg-feature); color: var(--text-on-dark); border-radius: var(--radius); padding: var(--s-6) var(--s-5); margin-top: var(--s-4); }
+    .feature h3 { color: var(--text-on-dark); }
+    .feature p { color: rgba(247,238,231,0.7); max-width: 50ch; margin-top: var(--s-2); }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-5); }
+    @media (max-width: 720px){ .grid-2 { grid-template-columns: 1fr; } }
+
+    footer { padding: var(--s-6) 0; color: var(--text-muted); font-size: 0.85rem; }
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <span class="tag">Staging · work in progress</span>
-    <h1>New site foundation is live.</h1>
-    <p>This is the staging build on the v2 branch. The design system below is in place. Fonts and the real homepage layout come next, once the custom fonts and layout references are in.</p>
+  <div class="wrap">
 
-    <div class="swatches">
-      <div class="sw"><div class="sw__chip" style="background:var(--c-cream)"></div><div class="sw__name">Cream / bg</div></div>
-      <div class="sw"><div class="sw__chip" style="background:var(--c-ink)"></div><div class="sw__name">Ink</div></div>
-      <div class="sw"><div class="sw__chip" style="background:var(--c-pink)"></div><div class="sw__name">Pink / accent</div></div>
-      <div class="sw"><div class="sw__chip" style="background:var(--c-blue)"></div><div class="sw__name">Blue</div></div>
-      <div class="sw"><div class="sw__chip" style="background:var(--c-olive)"></div><div class="sw__name">Olive</div></div>
-    </div>
+    <header class="masthead">
+      <div class="eyebrow">Brand Guidelines · Staging · Work in progress</div>
+      <h1>The reference for the new site.</h1>
+      <p>Every color, font, and component for the rebuild lives here. We lock these details first, then build the pages on top of them. Nothing here touches the live site.</p>
+    </header>
 
-    <section style="margin-top:var(--s-7)">
-      <span class="tag">Display font · Golden Batch</span>
-      <p style="font-family:var(--font-display); font-size:clamp(2rem,5vw,3.4rem); line-height:1.1; color:var(--text); max-width:none; margin-top:var(--s-2)">
-        Your marketing, finally handled.
-      </p>
-      <p style="font-family:var(--font-display); font-size:1.5rem; color:var(--text-muted); margin-top:var(--s-2)">
-        ABCDEFGHIJKLM NOPQRSTUVWXYZ<br>abcdefghijklm nopqrstuvwxyz 1234567890
-      </p>
+    <!-- COLORS -->
+    <section>
+      <div class="sec-label">01 — Color</div>
+      <h2>Palette</h2>
+      <p class="lead">Cream is the canvas, ink is the anchor. Pink is the one signature accent. Mint and olive are support, used sparingly. One color owns the action: ink.</p>
+      <div class="swatches">
+        <div class="sw">
+          <div class="sw__chip" style="background:var(--c-cream)"><span class="sw__hex">#F7EEE7</span></div>
+          <div class="sw__name">Cream</div><div class="sw__use">Page background</div>
+        </div>
+        <div class="sw">
+          <div class="sw__chip" style="background:var(--c-cream-soft)"><span class="sw__hex">#FBF6F1</span></div>
+          <div class="sw__name">Cream Soft</div><div class="sw__use">Alternate sections</div>
+        </div>
+        <div class="sw">
+          <div class="sw__chip" style="background:var(--c-ink); color:var(--c-cream)"><span class="sw__hex">#1D1E26</span></div>
+          <div class="sw__name">Ink</div><div class="sw__use">Text · dark sections · buttons</div>
+        </div>
+        <div class="sw">
+          <div class="sw__chip" style="background:var(--c-pink)"><span class="sw__hex">#FFC8E5</span></div>
+          <div class="sw__name">Pink</div><div class="sw__use">Signature accent · highlights</div>
+        </div>
+        <div class="sw">
+          <div class="sw__chip" style="background:var(--c-blue)"><span class="sw__hex">#B1DED9</span></div>
+          <div class="sw__name">Mint</div><div class="sw__use">Secondary accent</div>
+        </div>
+        <div class="sw">
+          <div class="sw__chip" style="background:var(--c-olive)"><span class="sw__hex">#D5CC7D</span></div>
+          <div class="sw__name">Olive</div><div class="sw__use">Tertiary accent · use the least</div>
+        </div>
+      </div>
+
+      <div class="feature">
+        <h3>Dark feature section</h3>
+        <p>Every few sections, ink carries a full block for emphasis — testimonials, a call to action, pricing. Cream text on ink, pink as the accent.</p>
+      </div>
     </section>
 
-    <div class="note">Headlines now use Golden Batch (self-hosted). Still to choose: a body font, and an optional script accent.</div>
-  </main>
+    <!-- TYPOGRAPHY -->
+    <section>
+      <div class="sec-label">02 — Typography</div>
+      <h2>Two fonts, clear roles.</h2>
+      <p class="lead">Golden Batch sets the tone in headlines. Hanken Grotesk does the reading. That's the whole system.</p>
+
+      <div class="grid-2">
+        <div class="specimen">
+          <h3 style="font-size:2.4rem">Golden Batch</h3>
+          <div class="alphabet">ABCDEFGHIJKLM<br>abcdefghijklm 1234567890</div>
+          <span class="rule-note">Regular weight only — never bold</span>
+          <div class="specimen__meta">Display / headlines. Elegant serif. Used at weight 400 always; bold crowds the letterforms, so it is disabled.</div>
+        </div>
+        <div class="specimen">
+          <h3 style="font-family:var(--font-body); font-weight:600; font-size:2.4rem">Hanken Grotesk</h3>
+          <div style="font-family:var(--font-body); font-size:1.2rem; color:var(--text-muted)">ABCDEFGHIJKLM<br>abcdefghijklm 1234567890</div>
+          <div class="weights" style="margin-top:var(--s-2)">
+            <span style="font-weight:400">Regular</span>
+            <span style="font-weight:500">Medium</span>
+            <span style="font-weight:600">Semibold</span>
+            <span style="font-weight:700">Bold</span>
+          </div>
+          <div class="specimen__meta">Body, buttons, labels. Clean sans. Variable weights 100–900; emphasis via 600/700.</div>
+        </div>
+      </div>
+
+      <h3 style="margin-top:var(--s-5)">Type scale</h3>
+      <div class="scale" style="margin-top:var(--s-3)">
+        <div style="font-family:var(--font-display); font-size:var(--h1); line-height:1.1">Your marketing, finally handled.</div>
+        <div style="font-family:var(--font-display); font-size:var(--h2)">A second brain for your growth</div>
+        <div style="font-family:var(--font-display); font-size:var(--h3)">How the work gets done</div>
+        <p style="font-size:var(--body); color:var(--text); max-width:60ch; margin-top:var(--s-2)">Body copy in Hanken Grotesk. You're past the startup phase and ready to grow, but you don't want to build a team to do it. This is the size and rhythm real paragraphs will use.</p>
+        <p style="font-size:0.85rem; color:var(--text-muted)">Small print and captions sit here.</p>
+      </div>
+    </section>
+
+    <!-- BUTTONS -->
+    <section>
+      <div class="sec-label">03 — Buttons</div>
+      <h2>One action color.</h2>
+      <p class="lead">Solid ink is the primary action. A ghost button handles the secondary path. Same radius everywhere, soft lift on hover.</p>
+      <div class="btn-row">
+        <a href="#" class="btn btn--primary">Book a clarity call</a>
+        <a href="#" class="btn btn--ghost">See if this is you</a>
+      </div>
+    </section>
+
+    <!-- SPACING + SHAPE -->
+    <section>
+      <div class="sec-label">04 — Spacing &amp; shape</div>
+      <h2>8px rhythm.</h2>
+      <p class="lead">Every gap is a multiple of 8. Corners use one radius. One shadow recipe throughout.</p>
+      <div class="space-row"><span class="space-label">8 / s-1</span><div class="space-bar" style="width:8px"></div></div>
+      <div class="space-row"><span class="space-label">16 / s-2</span><div class="space-bar" style="width:16px"></div></div>
+      <div class="space-row"><span class="space-label">24 / s-3</span><div class="space-bar" style="width:24px"></div></div>
+      <div class="space-row"><span class="space-label">32 / s-4</span><div class="space-bar" style="width:32px"></div></div>
+      <div class="space-row"><span class="space-label">48 / s-5</span><div class="space-bar" style="width:48px"></div></div>
+      <div class="space-row"><span class="space-label">64 / s-6</span><div class="space-bar" style="width:64px"></div></div>
+      <div class="space-row"><span class="space-label">96 / s-7</span><div class="space-bar" style="width:96px"></div></div>
+      <div class="space-row"><span class="space-label">120 / s-8</span><div class="space-bar" style="width:120px"></div></div>
+      <p style="margin-top:var(--s-3); font-size:0.9rem; color:var(--text-muted)">Radius: 4px (editorial). Shadow: soft, low, single recipe.</p>
+    </section>
+
+    <!-- VOICE -->
+    <section style="border-bottom:none">
+      <div class="sec-label">05 — Voice</div>
+      <h2>Warm, direct, specific.</h2>
+      <p class="lead">Talk to the reader. Plain language. No em dashes, no jargon, no "elevate / unlock / seamless." Name the person, name the outcome.</p>
+    </section>
+
+    <footer>Staging reference · v2 branch · not indexed</footer>
+
+  </div>
 </body>
 </html>
